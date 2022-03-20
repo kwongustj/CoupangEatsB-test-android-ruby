@@ -1183,6 +1183,8 @@ bool m3_sys_typescale_title_small_text_all_caps
 bool mtrl_btn_textappearance_all_caps
 color BottomButtonClickBackground
 color BottomButtonClickText
+color CoupangBlue
+color Line
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -2450,6 +2452,9 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable banner1
+drawable banner2
+drawable black_round_radius
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2464,8 +2469,11 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable find_icon
 drawable heart_icon
 drawable home_icon
+drawable ic_baseline_keyboard_arrow_down_24
+drawable ic_baseline_near_me_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2508,6 +2516,7 @@ drawable mtrl_popupmenu_background_overlay
 drawable mtrl_tabs_default_indicator
 drawable my_page_icon
 drawable navigation_empty_icon
+drawable new_restaurant
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -2521,6 +2530,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable order_icon
+drawable person_1
 drawable ripple_background
 drawable search_icon
 drawable test_custom_background
@@ -2630,6 +2640,8 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id banner_ad
+id banner_image
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2641,6 +2653,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_arrow_down
+id btn_find
+id btn_location_icon
+id btn_my_location
+id btn_see_all
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2751,10 +2768,6 @@ id header_title
 id hideable
 id home
 id homeAsUp
-id home_btn_try_post_http_method
-id home_button_try_get_jwt
-id home_et_id
-id home_et_pw
 id honorRequest
 id horizontal_only
 id icon
@@ -2763,6 +2776,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id img_type
 id immediateStop
 id included
 id info
@@ -2778,9 +2792,12 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layout_home_top
+id layout_type
 id left
 id leftToRight
 id legacy
+id line
 id line1
 id line3
 id linear
@@ -2894,6 +2911,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerview_type
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3013,6 +3031,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txt_page_all
+id txt_page_now
+id txt_type
 id unchecked
 id uniform
 id unlabeled
@@ -3144,6 +3165,7 @@ layout fragment_home
 layout fragment_my_page
 layout fragment_order
 layout fragment_search
+layout item_layout_banner
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3224,6 +3246,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout type_item
 menu example_menu
 menu example_menu2
 menu menu_main_bottom_nav
@@ -3364,8 +3387,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
-string my_page_btn_counting_number
-string my_page_tv_counter
+string my_location
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

@@ -13,5 +13,7 @@
     <color name="blackForText">#4a4a4a</color>
     <color name="BottomButtonClickText">#818e9c</color>
     <color name="BottomButtonClickBackground">#B8B6B6</color>
+    <color name = "CoupangBlue">#169DFF</color>
+    <color name = "Line">#F4F4F4</color>
 
 </resources>

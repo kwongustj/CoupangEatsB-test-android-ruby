@@ -4,13 +4,18 @@ package com.example.android_coupangeats.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import androidx.viewpager2.widget.ViewPager2;
 import com.example.android_coupangeats.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,26 +26,61 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final AppCompatButton homeBtnTryPostHttpMethod;
+  public final ViewPager2 bannerAd;
 
   @NonNull
-  public final AppCompatButton homeButtonTryGetJwt;
+  public final AppCompatButton btnArrowDown;
 
   @NonNull
-  public final EditText homeEtId;
+  public final AppCompatButton btnFind;
 
   @NonNull
-  public final EditText homeEtPw;
+  public final AppCompatButton btnLocationIcon;
 
-  private FragmentHomeBinding(@NonNull LinearLayout rootView,
-      @NonNull AppCompatButton homeBtnTryPostHttpMethod,
-      @NonNull AppCompatButton homeButtonTryGetJwt, @NonNull EditText homeEtId,
-      @NonNull EditText homeEtPw) {
+  @NonNull
+  public final AppCompatTextView btnMyLocation;
+
+  @NonNull
+  public final TextView btnSeeAll;
+
+  @NonNull
+  public final ConstraintLayout layoutHomeTop;
+
+  @NonNull
+  public final HorizontalScrollView layoutType;
+
+  @NonNull
+  public final View line;
+
+  @NonNull
+  public final RecyclerView recyclerviewType;
+
+  @NonNull
+  public final TextView txtPageAll;
+
+  @NonNull
+  public final TextView txtPageNow;
+
+  private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull ViewPager2 bannerAd,
+      @NonNull AppCompatButton btnArrowDown, @NonNull AppCompatButton btnFind,
+      @NonNull AppCompatButton btnLocationIcon, @NonNull AppCompatTextView btnMyLocation,
+      @NonNull TextView btnSeeAll, @NonNull ConstraintLayout layoutHomeTop,
+      @NonNull HorizontalScrollView layoutType, @NonNull View line,
+      @NonNull RecyclerView recyclerviewType, @NonNull TextView txtPageAll,
+      @NonNull TextView txtPageNow) {
     this.rootView = rootView;
-    this.homeBtnTryPostHttpMethod = homeBtnTryPostHttpMethod;
-    this.homeButtonTryGetJwt = homeButtonTryGetJwt;
-    this.homeEtId = homeEtId;
-    this.homeEtPw = homeEtPw;
+    this.bannerAd = bannerAd;
+    this.btnArrowDown = btnArrowDown;
+    this.btnFind = btnFind;
+    this.btnLocationIcon = btnLocationIcon;
+    this.btnMyLocation = btnMyLocation;
+    this.btnSeeAll = btnSeeAll;
+    this.layoutHomeTop = layoutHomeTop;
+    this.layoutType = layoutType;
+    this.line = line;
+    this.recyclerviewType = recyclerviewType;
+    this.txtPageAll = txtPageAll;
+    this.txtPageNow = txtPageNow;
   }
 
   @Override
@@ -70,32 +110,81 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.home_btn_try_post_http_method;
-      AppCompatButton homeBtnTryPostHttpMethod = ViewBindings.findChildViewById(rootView, id);
-      if (homeBtnTryPostHttpMethod == null) {
+      id = R.id.banner_ad;
+      ViewPager2 bannerAd = ViewBindings.findChildViewById(rootView, id);
+      if (bannerAd == null) {
         break missingId;
       }
 
-      id = R.id.home_button_try_get_jwt;
-      AppCompatButton homeButtonTryGetJwt = ViewBindings.findChildViewById(rootView, id);
-      if (homeButtonTryGetJwt == null) {
+      id = R.id.btn_arrow_down;
+      AppCompatButton btnArrowDown = ViewBindings.findChildViewById(rootView, id);
+      if (btnArrowDown == null) {
         break missingId;
       }
 
-      id = R.id.home_et_id;
-      EditText homeEtId = ViewBindings.findChildViewById(rootView, id);
-      if (homeEtId == null) {
+      id = R.id.btn_find;
+      AppCompatButton btnFind = ViewBindings.findChildViewById(rootView, id);
+      if (btnFind == null) {
         break missingId;
       }
 
-      id = R.id.home_et_pw;
-      EditText homeEtPw = ViewBindings.findChildViewById(rootView, id);
-      if (homeEtPw == null) {
+      id = R.id.btn_location_icon;
+      AppCompatButton btnLocationIcon = ViewBindings.findChildViewById(rootView, id);
+      if (btnLocationIcon == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((LinearLayout) rootView, homeBtnTryPostHttpMethod,
-          homeButtonTryGetJwt, homeEtId, homeEtPw);
+      id = R.id.btn_my_location;
+      AppCompatTextView btnMyLocation = ViewBindings.findChildViewById(rootView, id);
+      if (btnMyLocation == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_see_all;
+      TextView btnSeeAll = ViewBindings.findChildViewById(rootView, id);
+      if (btnSeeAll == null) {
+        break missingId;
+      }
+
+      id = R.id.layout_home_top;
+      ConstraintLayout layoutHomeTop = ViewBindings.findChildViewById(rootView, id);
+      if (layoutHomeTop == null) {
+        break missingId;
+      }
+
+      id = R.id.layout_type;
+      HorizontalScrollView layoutType = ViewBindings.findChildViewById(rootView, id);
+      if (layoutType == null) {
+        break missingId;
+      }
+
+      id = R.id.line;
+      View line = ViewBindings.findChildViewById(rootView, id);
+      if (line == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerview_type;
+      RecyclerView recyclerviewType = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerviewType == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_page_all;
+      TextView txtPageAll = ViewBindings.findChildViewById(rootView, id);
+      if (txtPageAll == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_page_now;
+      TextView txtPageNow = ViewBindings.findChildViewById(rootView, id);
+      if (txtPageNow == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((LinearLayout) rootView, bannerAd, btnArrowDown, btnFind,
+          btnLocationIcon, btnMyLocation, btnSeeAll, layoutHomeTop, layoutType, line,
+          recyclerviewType, txtPageAll, txtPageNow);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
