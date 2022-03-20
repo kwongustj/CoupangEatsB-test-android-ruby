@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-30:12
+ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-40:12
 MERGED from [androidx.databinding:viewbinding:7.0.3] /Users/kwonapple/.gradle/caches/transforms-3/198141b3b58992b0988750ca5ffcef44/transformed/jetified-viewbinding-7.0.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0-alpha03] /Users/kwonapple/.gradle/caches/transforms-3/b465c8f7297c7e3d29c649936a091be1/transformed/jetified-lifecycle-viewmodel-ktx-2.5.0-alpha03/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.5.0] /Users/kwonapple/.gradle/caches/transforms-3/39dc0d6c9b4b207637dd7f79cac9d989/transformed/material-1.5.0/AndroidManifest.xml:17:1-24:12
@@ -53,25 +53,25 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/kwonapple/.grad
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.0-alpha03] /Users/kwonapple/.gradle/caches/transforms-3/1aa7e3cfe3c3453a35b4d0b5b0522c08/transformed/lifecycle-livedata-core-2.5.0-alpha03/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/kwonapple/.gradle/caches/transforms-3/47a67f589c963a5ce56c190a1f042f90/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/kwonapple/.gradle/caches/transforms-3/efb5ab150b0e2afb73890aef5887c8ac/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml
-		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-40:12
 		INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml
-		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:1-40:12
 		INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:5:5-28:19
+ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:5:5-38:19
 MERGED from [com.google.android.material:material:1.5.0] /Users/kwonapple/.gradle/caches/transforms-3/39dc0d6c9b4b207637dd7f79cac9d989/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] /Users/kwonapple/.gradle/caches/transforms-3/39dc0d6c9b4b207637dd7f79cac9d989/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/kwonapple/.gradle/caches/transforms-3/9515da6f9cbb172ce8001fa4ff57b26f/transformed/constraintlayout-2.1.3/AndroidManifest.xml:9:5-20
@@ -130,6 +130,26 @@ ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/a
 		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:26:13-56
 	android:name
 		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:24:13-50
+activity#com.example.android_coupangeats.src.main.login.LoginActivity
+ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:28:9-32:38
+	android:screenOrientation
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:30:13-49
+	android:exported
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:31:13-56
+	android:name
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:29:13-57
+activity#com.example.android_coupangeats.src.main.login.BottomActivity
+ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:33:9-37:38
+	android:screenOrientation
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:35:13-49
+	android:exported
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:37:13-36
+	android:theme
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:36:13-75
+	android:name
+		ADDED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:34:13-58
 uses-sdk
 INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml

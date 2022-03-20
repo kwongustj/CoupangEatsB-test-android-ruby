@@ -1,24 +1,20 @@
 package com.example.android_coupangeats.src.main.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.os.Message
 import android.util.Log
-import android.view.Gravity.apply
 import android.view.View
-import androidx.core.view.GravityCompat.apply
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.BaseFragment
 import com.example.android_coupangeats.databinding.FragmentHomeBinding
-import com.example.android_coupangeats.src.main.home.models.PostSignUpRequest
+import com.example.android_coupangeats.src.main.login.BottomActivity
 import com.example.android_coupangeats.src.main.home.models.SignUpResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
-import java.util.logging.Handler as Handler1
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind, R.layout.fragment_home),
 
@@ -27,25 +23,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     private var adapterType: RecyclerView.Adapter<TypeRecyclerViewAdapter.ViewHolder>? = null
     private var bannerViewPagerAdapter: RecyclerView.Adapter<BannerViewPagerAdapter.ViewHolder>? = null
     var currentPage : Int = 1
+    var issigned = false
 
-    val handler= Handler(Looper.getMainLooper()){
-        setPage()
-        true
-    }
 
     val TypeList = arrayListOf<Type>(
-        Type(R.drawable.new_restaurant,"신규 맛집"),
-        Type(R.drawable.person_1,"1인분"),
-        Type(R.drawable.new_restaurant,"신규 맛집"),
-        Type(R.drawable.person_1,"1인분"),
-        Type(R.drawable.new_restaurant,"신규 맛집"),
-        Type(R.drawable.person_1,"1인분"),
-        Type(R.drawable.new_restaurant,"신규 맛집"),
-        Type(R.drawable.person_1,"1인분"),
-        Type(R.drawable.new_restaurant,"신규 맛집"),
-        Type(R.drawable.person_1,"1인분"),
-        Type(R.drawable.new_restaurant,"신규 맛집"),
-        Type(R.drawable.person_1,"1인분")
+        Type(R.drawable.out,"포장"),
+        Type(R.drawable.korea,"한식"),
+        Type(R.drawable.chicken,"치킨"),
+        Type(R.drawable.boon,"분식"),
+        Type(R.drawable.dong,"돈까스"),
+        Type(R.drawable.foot,"족발/보쌈"),
+        Type(R.drawable.tang,"찜/탕"),
+        Type(R.drawable.gogi,"구이"),
+        Type(R.drawable.pizza,"피자"),
+        Type(R.drawable.china,"중식")
 
     )
 
@@ -57,28 +48,78 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
         Banner(R.drawable.banner1),
         Banner(R.drawable.banner2))
 
+    val handler = HomeBannerHandler()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
-        // HomeFragment 음식 type 고르기
+        binding.btnLocationIcon.setOnClickListener {
+
+            if(issigned == false) {
+                val intent = Intent(activity, BottomActivity::class.java)
+                startActivity(intent)
+                Log.e("logined", " false ")
+            }
+
+        }
+
+        // HomeFragment 음식 type 고르기_ RecyclerView
         adapterType = TypeRecyclerViewAdapter(TypeList)
         binding.recyclerviewType.adapter = adapterType
 
-        // HomeFragment Banner
+        // HomeFragment Banner _ viewPager
         binding.bannerAd.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         bannerViewPagerAdapter = BannerViewPagerAdapter(BannerList)
         binding.txtPageNow.setText("1")
         binding.bannerAd.adapter = bannerViewPagerAdapter
         binding.txtPageAll.text = (" / ${BannerList.size}")
 
-        val thread = Thread(PagerRunnable())
-        thread.start()
+        binding.bannerAd.apply {
+            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+
+                override fun onPageScrollStateChanged(state: Int) {
+                    super.onPageScrollStateChanged(state)
+                    when (state) {
+                        // 뷰페이저에서 손 떼었을때 / 뷰페이저 멈춰있을 때
+                        ViewPager2.SCROLL_STATE_IDLE -> autoScrollStart()
+                        // 뷰페이저 움직이는 중
+                        ViewPager2.SCROLL_STATE_DRAGGING -> autoScrollStop()
+                    }
+                }
+
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    binding.txtPageNow.text = "${(position % BannerList.size) + 1}"
+                    currentPage = position
+                    autoScrollStart()
+                }
+            })
+        }
+    }
+
+
+    //BannerAd Handler
+    inner class HomeBannerHandler: Handler(Looper.getMainLooper()) {
+        override fun handleMessage(msg: Message) {
+            super.handleMessage(msg)
+            if(msg.what == 0){
+                currentPage += 1
+                binding.bannerAd.setCurrentItem(currentPage, true)
+                autoScrollStart()
+            }
+        }
+    }
+
+    private fun autoScrollStart() {
+        handler.removeMessages(0)
+        handler.sendEmptyMessageDelayed(0, 2000)
     }
 
     private fun autoScrollStop(){
-        handler.removeMessages(0) // 핸들러를 중지시킴
+        handler.removeMessages(0)
     }
+
 
     override fun onGetUserSuccess(response: UserResponse) {
         TODO("Not yet implemented")
@@ -96,22 +137,4 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
         TODO("Not yet implemented")
     }
 
-    inner class PagerRunnable:Runnable{
-        override fun run() {
-            while(true){
-                try {
-                    Thread.sleep(2000)
-                    handler.sendEmptyMessage(0)
-                } catch (e : InterruptedException){
-                    Log.d("interupt", "interupt발생")
-                }
-            }
-        }
-    }
-
-    fun setPage() {
-        binding.txtPageNow.setText("${(currentPage % BannerList.size) + 1}")
-        binding.bannerAd.setCurrentItem(currentPage, true)
-        currentPage += 1
-    }
 }

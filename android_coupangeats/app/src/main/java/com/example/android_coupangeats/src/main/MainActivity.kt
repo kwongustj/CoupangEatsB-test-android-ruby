@@ -1,9 +1,12 @@
 package com.example.android_coupangeats.src.main
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.databinding.ActivityMainBinding
+import com.example.android_coupangeats.src.main.login.BottomActivity
 import com.example.android_coupangeats.src.main.heart.HeartFragment
 import com.example.android_coupangeats.src.main.home.HomeFragment
 import com.example.android_coupangeats.src.main.myPage.MyPageFragment
@@ -16,6 +19,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        var logined = false
         supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment()).commitAllowingStateLoss()
 
         binding.mainBtmNav.setOnNavigationItemSelectedListener(
@@ -40,16 +44,30 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.menu_main_btm_nav_order -> {
-                        supportFragmentManager.beginTransaction()
-                            .replace(R.id.main_frm, OrderFragment())
-                            .commitAllowingStateLoss()
-                        return@OnNavigationItemSelectedListener true
+                        if(logined == false ) {
+                            val intent = Intent(this, BottomActivity::class.java)
+                            startActivity(intent)
+                            Log.e("logined", " false ")
+
+                        }else {
+                            supportFragmentManager.beginTransaction()
+                                .replace(R.id.main_frm, OrderFragment())
+                                .commitAllowingStateLoss()
+                            return@OnNavigationItemSelectedListener true
+                        }
                     }
                     R.id.menu_main_btm_nav_my_page -> {
-                        supportFragmentManager.beginTransaction()
-                            .replace(R.id.main_frm, MyPageFragment())
-                            .commitAllowingStateLoss()
-                        return@OnNavigationItemSelectedListener true
+                        if(logined == false ) {
+                            val intent = Intent(this, BottomActivity::class.java)
+                            startActivity(intent)
+                            Log.e("logined", " false ")
+
+                        }else {
+                            supportFragmentManager.beginTransaction()
+                                .replace(R.id.main_frm, MyPageFragment())
+                                .commitAllowingStateLoss()
+                            return@OnNavigationItemSelectedListener true
+                        }
                     }
                 }
                 false

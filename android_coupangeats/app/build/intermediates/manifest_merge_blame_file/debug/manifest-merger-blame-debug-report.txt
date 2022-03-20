@@ -11,7 +11,7 @@
 9-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:5:5-28:19
+11-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:5:5-38:19
 12        android:allowBackup="true"
 12-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -60,28 +60,48 @@
 36-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:25:13-49
 37            android:theme="@style/AppTheme.NoActionBar" />
 37-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:26:13-56
-38
-39        <provider
-39-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-40            android:name="androidx.startup.InitializationProvider"
-40-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-41            android:authorities="com.example.android_coupangeats.androidx-startup"
-41-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-42            android:exported="false" >
-42-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-43            <meta-data
-43-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-44                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-44-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-45                android:value="androidx.startup" />
-45-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-46            <meta-data
-46-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-47                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-47-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-48                android:value="androidx.startup" />
-48-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-49        </provider>
-50    </application>
-51
-52</manifest>
+38        <activity
+38-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:28:9-32:38
+39            android:name="com.example.android_coupangeats.src.main.login.LoginActivity"
+39-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:29:13-57
+40            android:exported="true"
+40-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:32:13-36
+41            android:screenOrientation="portrait"
+41-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:30:13-49
+42            android:theme="@style/AppTheme.NoActionBar" />
+42-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:31:13-56
+43        <activity
+43-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:33:9-37:38
+44            android:name="com.example.android_coupangeats.src.main.login.BottomActivity"
+44-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:34:13-58
+45            android:exported="true"
+45-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:37:13-36
+46            android:screenOrientation="portrait"
+46-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:35:13-49
+47            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+47-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:36:13-75
+48
+49        <provider
+49-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+50            android:name="androidx.startup.InitializationProvider"
+50-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+51            android:authorities="com.example.android_coupangeats.androidx-startup"
+51-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+52            android:exported="false" >
+52-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+53            <meta-data
+53-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+54                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+54-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+55                android:value="androidx.startup" />
+55-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+56            <meta-data
+56-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+57                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+57-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+58                android:value="androidx.startup" />
+58-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+59        </provider>
+60    </application>
+61
+62</manifest>
