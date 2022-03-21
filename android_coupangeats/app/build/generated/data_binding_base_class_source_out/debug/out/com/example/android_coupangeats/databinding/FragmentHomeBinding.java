@@ -4,7 +4,6 @@ package com.example.android_coupangeats.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -12,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -47,7 +47,7 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final ConstraintLayout layoutHomeTop;
 
   @NonNull
-  public final HorizontalScrollView layoutType;
+  public final NestedScrollView layoutType;
 
   @NonNull
   public final View line;
@@ -65,7 +65,7 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull AppCompatButton btnArrowDown, @NonNull AppCompatButton btnFind,
       @NonNull AppCompatButton btnLocationIcon, @NonNull AppCompatTextView btnMyLocation,
       @NonNull TextView btnSeeAll, @NonNull ConstraintLayout layoutHomeTop,
-      @NonNull HorizontalScrollView layoutType, @NonNull View line,
+      @NonNull NestedScrollView layoutType, @NonNull View line,
       @NonNull RecyclerView recyclerviewType, @NonNull TextView txtPageAll,
       @NonNull TextView txtPageNow) {
     this.rootView = rootView;
@@ -153,7 +153,7 @@ public final class FragmentHomeBinding implements ViewBinding {
       }
 
       id = R.id.layout_type;
-      HorizontalScrollView layoutType = ViewBindings.findChildViewById(rootView, id);
+      NestedScrollView layoutType = ViewBindings.findChildViewById(rootView, id);
       if (layoutType == null) {
         break missingId;
       }

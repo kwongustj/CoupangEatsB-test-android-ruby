@@ -27,26 +27,26 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
 
 
     val TypeList = arrayListOf<Type>(
-        Type(R.drawable.out,"포장"),
-        Type(R.drawable.korea,"한식"),
-        Type(R.drawable.chicken,"치킨"),
-        Type(R.drawable.boon,"분식"),
-        Type(R.drawable.dong,"돈까스"),
-        Type(R.drawable.foot,"족발/보쌈"),
-        Type(R.drawable.tang,"찜/탕"),
-        Type(R.drawable.gogi,"구이"),
-        Type(R.drawable.pizza,"피자"),
-        Type(R.drawable.china,"중식")
-
+        Type(R.drawable.out,"포장"), Type(R.drawable.korea,"한식"),
+        Type(R.drawable.chicken,"치킨"), Type(R.drawable.boon,"분식"),
+        Type(R.drawable.dong,"돈까스"), Type(R.drawable.foot,"족발/보쌈"),
+        Type(R.drawable.tang,"찜/탕"), Type(R.drawable.gogi,"구이"),
+        Type(R.drawable.pizza,"피자"), Type(R.drawable.china,"중식"),
+        Type(R.drawable.japan,"일식"), Type(R.drawable.fish,"회/해물"),
+        Type(R.drawable.pasta,"양식"), Type(R.drawable.coffee,"커피/차"),
+        Type(R.drawable.dessert,"디저트"), Type(R.drawable.snack,"간식"),
+        Type(R.drawable.asian,"아시안"), Type(R.drawable.sandwitch,"샌드위치"),
+        Type(R.drawable.salad,"샐러드"), Type(R.drawable.burger,"버거"),
+        Type(R.drawable.mexican,"멕시칸"), Type(R.drawable.dosirak,"도시락"),
+        Type(R.drawable.soup,"죽"), Type(R.drawable.franchise,"프랜차이즈"),
+        Type(R.drawable.new_restaurant,"신규 맛집"), Type(R.drawable.person_1,"1인분")
     )
 
     val BannerList = arrayListOf<Banner>(
         Banner(R.drawable.banner1),
         Banner(R.drawable.banner2),
-        Banner(R.drawable.banner1),
-        Banner(R.drawable.banner2),
-        Banner(R.drawable.banner1),
-        Banner(R.drawable.banner2))
+        Banner(R.drawable.banner3)
+    )
 
     val handler = HomeBannerHandler()
 
@@ -113,7 +113,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
 
     private fun autoScrollStart() {
         handler.removeMessages(0)
-        handler.sendEmptyMessageDelayed(0, 2000)
+        handler.sendEmptyMessageDelayed(0, 3000)
     }
 
     private fun autoScrollStop(){

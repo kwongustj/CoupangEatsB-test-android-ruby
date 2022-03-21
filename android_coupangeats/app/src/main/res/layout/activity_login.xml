@@ -22,7 +22,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_logo"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:src="@drawable/coupang_logo"
         app:layout_constraintTop_toBottomOf="@id/btn_x"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@id/img_logo"
         android:orientation="horizontal"
         android:paddingStart="13dp"
-        android:background="@drawable/edtxt_login">
+        android:background="@drawable/etxt_login_nofocused">
 
         <TextView
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
             />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_pw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,18 +67,22 @@
         android:orientation="horizontal"
         android:paddingStart="13dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/edtxt_login">
+        android:background="@drawable/etxt_login_nofocused">
 
         <TextView
+            android:id="@+id/txt_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="비밀번호"
             android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:textSize="13sp"/>
 
         <EditText
             android:id="@+id/etxt_pw"
-            android:layout_width="260dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:hint="비밀번호 입력"
             android:textSize="13sp"
@@ -86,21 +90,28 @@
             android:layout_marginStart="10dp"
             android:inputType="textPassword"
             android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@id/txt_password"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_pw_eye"
             />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btn_pw_eye"
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/noeye"
             android:scaleType="fitCenter"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
             android:background="@color/white"
             android:layout_gravity="center"
-            android:layout_marginEnd="10dp"/>
+            android:paddingEnd="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etxt_pw"
+            />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -121,19 +132,68 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/txt_sign_in"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_find_id"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="아이디 찾기  |  비밀번호 찾기  |  회원가입"
+        android:layout_height="16dp"
+        android:text="아이디 찾기"
         app:layout_constraintTop_toBottomOf="@id/btn_login"
-        android:textSize="14sp"
+        android:textSize="13dp"
+        android:textColor="@color/black"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toStartOf="@id/bar_1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:background="@null"/>
 
+    <TextView
+        android:id="@+id/bar_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:paddingStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/txt_find_id"
+        app:layout_constraintEnd_toStartOf="@id/txt_find_pw"
+        app:layout_constraintTop_toTopOf="@id/txt_find_id"
+        app:layout_constraintBottom_toBottomOf="@id/txt_find_id"/>
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_find_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:text="비밀번호 찾기"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/txt_find_id"
+        android:textSize="13dp"
+        android:paddingStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/bar_1"
+        app:layout_constraintEnd_toStartOf="@id/bar_2"
+        android:background="@null"/>
 
+    <TextView
+        android:id="@+id/bar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:paddingStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/txt_find_pw"
+        app:layout_constraintEnd_toStartOf="@id/txt_sign_in"
+        app:layout_constraintTop_toTopOf="@id/txt_find_id"
+        app:layout_constraintBottom_toBottomOf="@id/txt_find_id"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:text="회원가입"
+        android:paddingStart="12dp"
+        android:textColor="@color/CoupangBlue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/txt_find_id"
+        android:textSize="13dp"
+        app:layout_constraintStart_toEndOf="@id/bar_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@null"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

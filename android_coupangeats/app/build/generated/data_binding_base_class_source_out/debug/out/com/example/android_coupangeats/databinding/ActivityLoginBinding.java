@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
@@ -23,6 +24,12 @@ import java.lang.String;
 public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final TextView bar1;
+
+  @NonNull
+  public final TextView bar2;
 
   @NonNull
   public final AppCompatButton btnLogin;
@@ -46,17 +53,30 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final LinearLayoutCompat layoutId;
 
   @NonNull
-  public final LinearLayoutCompat layoutPw;
+  public final ConstraintLayout layoutPw;
 
   @NonNull
-  public final TextView txtSignIn;
+  public final AppCompatTextView txtFindId;
 
-  private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
-      @NonNull AppCompatButton btnLogin, @NonNull AppCompatImageButton btnPwEye,
-      @NonNull AppCompatImageButton btnX, @NonNull EditText etxtId, @NonNull EditText etxtPw,
-      @NonNull AppCompatImageView imgLogo, @NonNull LinearLayoutCompat layoutId,
-      @NonNull LinearLayoutCompat layoutPw, @NonNull TextView txtSignIn) {
+  @NonNull
+  public final AppCompatTextView txtFindPw;
+
+  @NonNull
+  public final TextView txtPassword;
+
+  @NonNull
+  public final AppCompatTextView txtSignIn;
+
+  private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull TextView bar1,
+      @NonNull TextView bar2, @NonNull AppCompatButton btnLogin,
+      @NonNull AppCompatImageButton btnPwEye, @NonNull AppCompatImageButton btnX,
+      @NonNull EditText etxtId, @NonNull EditText etxtPw, @NonNull AppCompatImageView imgLogo,
+      @NonNull LinearLayoutCompat layoutId, @NonNull ConstraintLayout layoutPw,
+      @NonNull AppCompatTextView txtFindId, @NonNull AppCompatTextView txtFindPw,
+      @NonNull TextView txtPassword, @NonNull AppCompatTextView txtSignIn) {
     this.rootView = rootView;
+    this.bar1 = bar1;
+    this.bar2 = bar2;
     this.btnLogin = btnLogin;
     this.btnPwEye = btnPwEye;
     this.btnX = btnX;
@@ -65,6 +85,9 @@ public final class ActivityLoginBinding implements ViewBinding {
     this.imgLogo = imgLogo;
     this.layoutId = layoutId;
     this.layoutPw = layoutPw;
+    this.txtFindId = txtFindId;
+    this.txtFindPw = txtFindPw;
+    this.txtPassword = txtPassword;
     this.txtSignIn = txtSignIn;
   }
 
@@ -95,6 +118,18 @@ public final class ActivityLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bar_1;
+      TextView bar1 = ViewBindings.findChildViewById(rootView, id);
+      if (bar1 == null) {
+        break missingId;
+      }
+
+      id = R.id.bar_2;
+      TextView bar2 = ViewBindings.findChildViewById(rootView, id);
+      if (bar2 == null) {
+        break missingId;
+      }
+
       id = R.id.btn_login;
       AppCompatButton btnLogin = ViewBindings.findChildViewById(rootView, id);
       if (btnLogin == null) {
@@ -138,19 +173,38 @@ public final class ActivityLoginBinding implements ViewBinding {
       }
 
       id = R.id.layout_pw;
-      LinearLayoutCompat layoutPw = ViewBindings.findChildViewById(rootView, id);
+      ConstraintLayout layoutPw = ViewBindings.findChildViewById(rootView, id);
       if (layoutPw == null) {
         break missingId;
       }
 
+      id = R.id.txt_find_id;
+      AppCompatTextView txtFindId = ViewBindings.findChildViewById(rootView, id);
+      if (txtFindId == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_find_pw;
+      AppCompatTextView txtFindPw = ViewBindings.findChildViewById(rootView, id);
+      if (txtFindPw == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_password;
+      TextView txtPassword = ViewBindings.findChildViewById(rootView, id);
+      if (txtPassword == null) {
+        break missingId;
+      }
+
       id = R.id.txt_sign_in;
-      TextView txtSignIn = ViewBindings.findChildViewById(rootView, id);
+      AppCompatTextView txtSignIn = ViewBindings.findChildViewById(rootView, id);
       if (txtSignIn == null) {
         break missingId;
       }
 
-      return new ActivityLoginBinding((ConstraintLayout) rootView, btnLogin, btnPwEye, btnX, etxtId,
-          etxtPw, imgLogo, layoutId, layoutPw, txtSignIn);
+      return new ActivityLoginBinding((ConstraintLayout) rootView, bar1, bar2, btnLogin, btnPwEye,
+          btnX, etxtId, etxtPw, imgLogo, layoutId, layoutPw, txtFindId, txtFindPw, txtPassword,
+          txtSignIn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

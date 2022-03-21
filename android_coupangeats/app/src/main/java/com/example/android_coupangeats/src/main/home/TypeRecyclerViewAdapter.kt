@@ -31,14 +31,8 @@ class TypeRecyclerViewAdapter(val dataSet : ArrayList<Type>): RecyclerView.Adapt
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        var txt_type : TextView
-        var img_type : AppCompatImageView
-
-        init {
-            txt_type = itemView.findViewById(R.id.txt_type)
-            img_type = itemView.findViewById(R.id.img_type)
-
-        }
+        var txt_type : TextView = itemView.findViewById(R.id.txt_type)
+        var img_type : AppCompatImageView = itemView.findViewById(R.id.img_type)
 
     }
 }

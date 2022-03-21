@@ -6,10 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.BaseActivity
+import com.example.android_coupangeats.databinding.ActivityBottomBinding
 import com.example.android_coupangeats.databinding.ActivityLoginBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
-class BottomActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::inflate) {
+class BottomActivity : BaseActivity<ActivityBottomBinding>(ActivityBottomBinding::inflate) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
