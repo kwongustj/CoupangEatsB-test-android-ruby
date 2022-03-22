@@ -29,6 +29,7 @@
             android:name=".src.main.login.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
             android:exported="true"/>
         <activity
             android:name=".src.main.login.BottomActivity"
@@ -39,6 +40,7 @@
             android:name=".src.main.signup.SignUpActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
             android:exported="true"/>
     </application>
 

@@ -39,7 +39,8 @@
             android:name="com.example.android_coupangeats.src.main.login.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.example.android_coupangeats.src.main.login.BottomActivity"
             android:exported="true"
@@ -49,7 +50,8 @@
             android:name="com.example.android_coupangeats.src.main.signup.SignUpActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

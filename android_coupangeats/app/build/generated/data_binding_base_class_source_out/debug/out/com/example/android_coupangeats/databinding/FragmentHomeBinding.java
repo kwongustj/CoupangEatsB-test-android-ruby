@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -47,13 +47,19 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final ConstraintLayout layoutHomeTop;
 
   @NonNull
-  public final NestedScrollView layoutType;
+  public final LinearLayoutCompat layoutNested;
 
   @NonNull
   public final View line;
 
   @NonNull
+  public final RecyclerView recyclerviewRestaurant;
+
+  @NonNull
   public final RecyclerView recyclerviewType;
+
+  @NonNull
+  public final TextView txtGoodRestaurant;
 
   @NonNull
   public final TextView txtPageAll;
@@ -65,8 +71,9 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull AppCompatButton btnArrowDown, @NonNull AppCompatButton btnFind,
       @NonNull AppCompatButton btnLocationIcon, @NonNull AppCompatTextView btnMyLocation,
       @NonNull TextView btnSeeAll, @NonNull ConstraintLayout layoutHomeTop,
-      @NonNull NestedScrollView layoutType, @NonNull View line,
-      @NonNull RecyclerView recyclerviewType, @NonNull TextView txtPageAll,
+      @NonNull LinearLayoutCompat layoutNested, @NonNull View line,
+      @NonNull RecyclerView recyclerviewRestaurant, @NonNull RecyclerView recyclerviewType,
+      @NonNull TextView txtGoodRestaurant, @NonNull TextView txtPageAll,
       @NonNull TextView txtPageNow) {
     this.rootView = rootView;
     this.bannerAd = bannerAd;
@@ -76,9 +83,11 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnMyLocation = btnMyLocation;
     this.btnSeeAll = btnSeeAll;
     this.layoutHomeTop = layoutHomeTop;
-    this.layoutType = layoutType;
+    this.layoutNested = layoutNested;
     this.line = line;
+    this.recyclerviewRestaurant = recyclerviewRestaurant;
     this.recyclerviewType = recyclerviewType;
+    this.txtGoodRestaurant = txtGoodRestaurant;
     this.txtPageAll = txtPageAll;
     this.txtPageNow = txtPageNow;
   }
@@ -152,9 +161,9 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.layout_type;
-      NestedScrollView layoutType = ViewBindings.findChildViewById(rootView, id);
-      if (layoutType == null) {
+      id = R.id.layout_nested;
+      LinearLayoutCompat layoutNested = ViewBindings.findChildViewById(rootView, id);
+      if (layoutNested == null) {
         break missingId;
       }
 
@@ -164,9 +173,21 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recyclerview_restaurant;
+      RecyclerView recyclerviewRestaurant = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerviewRestaurant == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerview_type;
       RecyclerView recyclerviewType = ViewBindings.findChildViewById(rootView, id);
       if (recyclerviewType == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_good_restaurant;
+      TextView txtGoodRestaurant = ViewBindings.findChildViewById(rootView, id);
+      if (txtGoodRestaurant == null) {
         break missingId;
       }
 
@@ -183,8 +204,8 @@ public final class FragmentHomeBinding implements ViewBinding {
       }
 
       return new FragmentHomeBinding((LinearLayout) rootView, bannerAd, btnArrowDown, btnFind,
-          btnLocationIcon, btnMyLocation, btnSeeAll, layoutHomeTop, layoutType, line,
-          recyclerviewType, txtPageAll, txtPageNow);
+          btnLocationIcon, btnMyLocation, btnSeeAll, layoutHomeTop, layoutNested, line,
+          recyclerviewRestaurant, recyclerviewType, txtGoodRestaurant, txtPageAll, txtPageNow);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -21,10 +21,28 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     HomeFragmentView {
 
     private var adapterType: RecyclerView.Adapter<TypeRecyclerViewAdapter.ViewHolder>? = null
+    private var adapterRestaurant: RecyclerView.Adapter<RestaurantViewPagerAdapter.ViewHolder>? = null
     private var bannerViewPagerAdapter: RecyclerView.Adapter<BannerViewPagerAdapter.ViewHolder>? = null
     var currentPage : Int = 1
     var issigned = false
 
+    val RestaurantList = arrayListOf<Restaurant>(
+        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true),
+        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
+            "자연을 담은 돈가스 본점","17-20 분","4.4","(400)","1.2km","무료배달",false),
+        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true),
+        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",false),        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
+            "마담순살떡볶이 가경복대점","17-20 분","4.4","(400)","1.2km","무료배달",true),
+        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
+            "자연을 담은 돈가스 본점","17~20분","4.4","(400)","1.2km","무료배달",false),
+        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",false),
+        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true),
+    )
 
     val TypeList = arrayListOf<Type>(
         Type(R.drawable.out,"포장"), Type(R.drawable.korea,"한식"),
@@ -74,6 +92,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
         binding.txtPageNow.setText("1")
         binding.bannerAd.adapter = bannerViewPagerAdapter
         binding.txtPageAll.text = (" / ${BannerList.size}")
+
+        // HomeFragment 가게들 보여주기 _ RecyclerView
+
+        adapterRestaurant = RestaurantViewPagerAdapter(RestaurantList)
+        binding.recyclerviewRestaurant.adapter = adapterRestaurant
 
         binding.bannerAd.apply {
             registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {

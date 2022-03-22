@@ -58,13 +58,14 @@
             android:background="@drawable/find_icon"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/banner_ad"
@@ -124,36 +125,37 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <androidx.core.widget.NestedScrollView
-                android:id="@+id/layout_type"
-                android:layout_width="0dp"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:descendantFocusability="blocksDescendants"
+                android:id="@+id/layout_nested"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none"
                 android:layout_marginTop="15dp"
                 app:layout_constraintTop_toBottomOf="@id/banner_ad"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">>
+                app:layout_constraintEnd_toEndOf="parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerview_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:clipToPadding="false"
+                            android:overScrollMode="never"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            android:nestedScrollingEnabled="false" />
 
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerview_type"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:overScrollMode="never"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    android:nestedScrollingEnabled="false"/>
-
-            </androidx.core.widget.NestedScrollView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
             <View
                 android:id="@+id/line"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                app:layout_constraintTop_toBottomOf="@id/layout_type"
+                app:layout_constraintTop_toBottomOf="@id/layout_nested"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="15dp"
@@ -162,13 +164,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:layout_marginTop="5dp"
                 app:layout_constraintTop_toBottomOf="@id/line">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txt_good_restaurant"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="골라먹는 맛집"
                     android:paddingStart="5dp"
@@ -178,6 +181,15 @@
                     android:textStyle="bold"
                     android:textSize="20dp"/>
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_restaurant"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/txt_good_restaurant"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -186,5 +198,5 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>
