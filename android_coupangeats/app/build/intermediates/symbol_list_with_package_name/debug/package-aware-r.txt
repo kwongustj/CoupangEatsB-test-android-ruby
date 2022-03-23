@@ -2472,6 +2472,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable burger
+drawable check
 drawable chicken
 drawable china
 drawable chita
@@ -2846,6 +2847,9 @@ id image
 id img_1_big
 id img_2_side_1
 id img_2_side_2
+id img_check
+id img_check2
+id img_check3
 id img_logo
 id img_password
 id img_star
@@ -3145,6 +3149,7 @@ id txt_type
 id txt_wrong_id
 id txt_wrong_name
 id txt_wrong_phone
+id txt_wrong_pw
 id unchecked
 id uniform
 id unlabeled

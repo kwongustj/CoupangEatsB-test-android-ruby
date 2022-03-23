@@ -1,3 +1,5 @@
+com/example/android_coupangeats/BuildConfig.java
+ com.example.android_coupangeats.BuildConfig
 com/example/android_coupangeats/databinding/ActivitySplashBinding.java
  com.example.android_coupangeats.databinding.ActivitySplashBinding
 com/example/android_coupangeats/databinding/FragmentHeartBinding.java
@@ -18,8 +20,6 @@ com/example/android_coupangeats/databinding/ActivityLoginBinding.java
  com.example.android_coupangeats.databinding.ActivityLoginBinding
 com/example/android_coupangeats/databinding/DialogLoadingBinding.java
  com.example.android_coupangeats.databinding.DialogLoadingBinding
-com/example/android_coupangeats/BuildConfig.java
- com.example.android_coupangeats.BuildConfig
 com/example/android_coupangeats/databinding/ActivitySignUpBinding.java
  com.example.android_coupangeats.databinding.ActivitySignUpBinding
 com/example/android_coupangeats/databinding/BottomSheetLayoutBinding.java

@@ -26,7 +26,7 @@ public final class ActivitySignUpBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final AppCompatImageButton btnPwEye;
+  public final AppCompatImageView btnPwEye;
 
   @NonNull
   public final AppCompatButton btnSignUpNow;
@@ -48,6 +48,15 @@ public final class ActivitySignUpBinding implements ViewBinding {
 
   @NonNull
   public final EditText etxtPw;
+
+  @NonNull
+  public final AppCompatImageView imgCheck;
+
+  @NonNull
+  public final AppCompatImageView imgCheck2;
+
+  @NonNull
+  public final AppCompatImageView imgCheck3;
 
   @NonNull
   public final AppCompatImageView imgLogo;
@@ -109,19 +118,24 @@ public final class ActivitySignUpBinding implements ViewBinding {
   @NonNull
   public final TextView txtWrongPhone;
 
+  @NonNull
+  public final TextView txtWrongPw;
+
   private ActivitySignUpBinding(@NonNull ConstraintLayout rootView,
-      @NonNull AppCompatImageButton btnPwEye, @NonNull AppCompatButton btnSignUpNow,
+      @NonNull AppCompatImageView btnPwEye, @NonNull AppCompatButton btnSignUpNow,
       @NonNull AppCompatImageButton btnX, @NonNull CheckBox cboxAgree, @NonNull EditText etxtId,
       @NonNull EditText etxtName, @NonNull EditText etxtPhone, @NonNull EditText etxtPw,
-      @NonNull AppCompatImageView imgLogo, @NonNull AppCompatImageView imgPassword,
-      @NonNull LinearLayoutCompat layoutId, @NonNull LinearLayoutCompat layoutName,
-      @NonNull LinearLayoutCompat layoutPhone, @NonNull LinearLayoutCompat layoutPw,
-      @NonNull View lineEmail, @NonNull View lineName, @NonNull View linePhone,
-      @NonNull View linePw, @NonNull TextView txtAgree, @NonNull TextView txtAgreeContent,
-      @NonNull TextView txtContent1, @NonNull TextView txtIAgree,
+      @NonNull AppCompatImageView imgCheck, @NonNull AppCompatImageView imgCheck2,
+      @NonNull AppCompatImageView imgCheck3, @NonNull AppCompatImageView imgLogo,
+      @NonNull AppCompatImageView imgPassword, @NonNull LinearLayoutCompat layoutId,
+      @NonNull LinearLayoutCompat layoutName, @NonNull LinearLayoutCompat layoutPhone,
+      @NonNull LinearLayoutCompat layoutPw, @NonNull View lineEmail, @NonNull View lineName,
+      @NonNull View linePhone, @NonNull View linePw, @NonNull TextView txtAgree,
+      @NonNull TextView txtAgreeContent, @NonNull TextView txtContent1, @NonNull TextView txtIAgree,
       @NonNull AppCompatImageView txtName, @NonNull AppCompatImageView txtPhone,
       @NonNull TextView txtTitleSignIn, @NonNull TextView txtWrongId,
-      @NonNull TextView txtWrongName, @NonNull TextView txtWrongPhone) {
+      @NonNull TextView txtWrongName, @NonNull TextView txtWrongPhone,
+      @NonNull TextView txtWrongPw) {
     this.rootView = rootView;
     this.btnPwEye = btnPwEye;
     this.btnSignUpNow = btnSignUpNow;
@@ -131,6 +145,9 @@ public final class ActivitySignUpBinding implements ViewBinding {
     this.etxtName = etxtName;
     this.etxtPhone = etxtPhone;
     this.etxtPw = etxtPw;
+    this.imgCheck = imgCheck;
+    this.imgCheck2 = imgCheck2;
+    this.imgCheck3 = imgCheck3;
     this.imgLogo = imgLogo;
     this.imgPassword = imgPassword;
     this.layoutId = layoutId;
@@ -151,6 +168,7 @@ public final class ActivitySignUpBinding implements ViewBinding {
     this.txtWrongId = txtWrongId;
     this.txtWrongName = txtWrongName;
     this.txtWrongPhone = txtWrongPhone;
+    this.txtWrongPw = txtWrongPw;
   }
 
   @Override
@@ -181,7 +199,7 @@ public final class ActivitySignUpBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btn_pw_eye;
-      AppCompatImageButton btnPwEye = ViewBindings.findChildViewById(rootView, id);
+      AppCompatImageView btnPwEye = ViewBindings.findChildViewById(rootView, id);
       if (btnPwEye == null) {
         break missingId;
       }
@@ -225,6 +243,24 @@ public final class ActivitySignUpBinding implements ViewBinding {
       id = R.id.etxt_pw;
       EditText etxtPw = ViewBindings.findChildViewById(rootView, id);
       if (etxtPw == null) {
+        break missingId;
+      }
+
+      id = R.id.img_check;
+      AppCompatImageView imgCheck = ViewBindings.findChildViewById(rootView, id);
+      if (imgCheck == null) {
+        break missingId;
+      }
+
+      id = R.id.img_check2;
+      AppCompatImageView imgCheck2 = ViewBindings.findChildViewById(rootView, id);
+      if (imgCheck2 == null) {
+        break missingId;
+      }
+
+      id = R.id.img_check3;
+      AppCompatImageView imgCheck3 = ViewBindings.findChildViewById(rootView, id);
+      if (imgCheck3 == null) {
         break missingId;
       }
 
@@ -348,11 +384,17 @@ public final class ActivitySignUpBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txt_wrong_pw;
+      TextView txtWrongPw = ViewBindings.findChildViewById(rootView, id);
+      if (txtWrongPw == null) {
+        break missingId;
+      }
+
       return new ActivitySignUpBinding((ConstraintLayout) rootView, btnPwEye, btnSignUpNow, btnX,
-          cboxAgree, etxtId, etxtName, etxtPhone, etxtPw, imgLogo, imgPassword, layoutId,
-          layoutName, layoutPhone, layoutPw, lineEmail, lineName, linePhone, linePw, txtAgree,
-          txtAgreeContent, txtContent1, txtIAgree, txtName, txtPhone, txtTitleSignIn, txtWrongId,
-          txtWrongName, txtWrongPhone);
+          cboxAgree, etxtId, etxtName, etxtPhone, etxtPw, imgCheck, imgCheck2, imgCheck3, imgLogo,
+          imgPassword, layoutId, layoutName, layoutPhone, layoutPw, lineEmail, lineName, linePhone,
+          linePw, txtAgree, txtAgreeContent, txtContent1, txtIAgree, txtName, txtPhone,
+          txtTitleSignIn, txtWrongId, txtWrongName, txtWrongPhone, txtWrongPw);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

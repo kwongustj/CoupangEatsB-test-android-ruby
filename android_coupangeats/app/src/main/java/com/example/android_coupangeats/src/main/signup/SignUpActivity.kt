@@ -11,6 +11,7 @@ import android.util.Patterns
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.BaseActivity
@@ -39,91 +40,104 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding>(ActivitySignUpBinding
             }
         }
 
-        // 맨처음 focused 되면 edittext색깔 파란색
-        binding.etxtId.setOnFocusChangeListener { v, hasFocused ->
-            if(hasFocused == true ) {
-                Log.e("true", "true")
-                binding.lineEmail.visibility = View.VISIBLE
-            }
-            else{
+        //맨처음 focused 되면 edittext색깔 파란색
+        first_focused(binding.etxtId, binding.lineEmail, binding.txtWrongId )
 
-            }
-        }
-        // 맨처음 focused 되면 edittext색깔 파란색
-        binding.etxtName.setOnFocusChangeListener { v, hasFocused ->
-            if(hasFocused == true ) {
-                Log.e("true", "true")
-                binding.lineName.visibility = View.VISIBLE
-            }
-            else{
+        first_focused(binding.etxtName, binding.lineName, binding.txtWrongName )
 
-            }
-        }
+        first_focused(binding.etxtPhone, binding.linePhone, binding.txtWrongPhone )
+
+
         // 맨처음 focused 되면 edittext색깔 파란색
         binding.etxtPw.setOnFocusChangeListener { v, hasFocused ->
             if(hasFocused == true ) {
                 Log.e("true", "true")
                 binding.linePw.visibility = View.VISIBLE
-            }
-            else{
-
-            }
-        }
-        // 맨처음 focused 되면 edittext색깔 파란색
-        binding.etxtPhone.setOnFocusChangeListener { v, hasFocused ->
-            Log.e("setOnFocusChangeListener", "setOnFocusChangeListener")
-            if(hasFocused == true ) {
-                Log.e("true", "true")
-                binding.linePhone.visibility = View.VISIBLE
-            }
-            else{
-
+                binding.etxtId.setHint("")
+                binding.txtWrongPw.visibility = View.VISIBLE
+                binding.btnPwEye.setImageResource(R.drawable.eye_close)
+                binding.btnPwEye.isClickable = true
             }
         }
 
         // 이메일 형식이 아닐 때 빨간색 밑줄, 맞으면 파란색 밑줄
-        line_patterns(binding.etxtId,Patterns.EMAIL_ADDRESS, binding.lineEmail, binding.txtWrongId)
+        line_patterns(binding.etxtId,Patterns.EMAIL_ADDRESS, binding.lineEmail, binding.txtWrongId,binding.imgCheck)
 
         // 이름 형식이 아닐 때 빨간색 밑줄, 맞으면 파란색 밑줄
-        line_pattern(binding.etxtName,"^[a-zA-Z가-힣]*$",binding.lineName, binding.txtWrongName)
+        line_pattern(binding.etxtName,"^[a-zA-Z가-힣]*$",binding.lineName, binding.txtWrongName, binding.imgCheck2)
 
         // 휴대폰 번호 형식이 아닐 때 빨간색 밑줄, 맞으면 파란색 밑줄
-        line_pattern(binding.etxtPhone,"^01(?:0|1|[6-9])(?:\\d{4})\\d{4}\$", binding.linePhone, binding.txtWrongPhone)
+        line_pattern(binding.etxtPhone,"^01(?:0|1|[6-9])(?:\\d{4})\\d{4}\$", binding.linePhone, binding.txtWrongPhone, binding.imgCheck3)
 
 
-//        // 비밀번호 형이 아닐 때 빨간색 밑줄, 맞으면 파란색 밑줄
-//        binding.etxtId.addTextChangedListener(object : TextWatcher {
-//            override fun afterTextChanged(p0: Editable?) {
-//
-//                if (Patterns.) {
-//                    //이메일 맞음!
-//                    binding.lineEmail.setBackgroundColor(Color.parseColor("#169DFF"))
-//                    binding.txtWrongId.visibility = View.GONE
-//                } else {
-//                    //이메일 아님!
-//                    binding.lineEmail.setBackgroundColor(Color.parseColor("#ff0000"))
-//                    binding.txtWrongId.visibility = View.VISIBLE
-//                }
-//            }
-//            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-//
-//            }
-//            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-//            }
-//        })
+        // 비밀번호 형식이 아닐 때 빨간색 밑줄, 맞으면 파란색 밑줄
+        binding.etxtPw.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+
+                if (Pattern.matches("^(?=.*[a-zA-Z0-9])(?=.*[a-zA-Z!@#\$%^&*])(?=.*[0-9!@#\$%^&*]).{8,20}\$",binding.etxtPw.text)) {
+                    //이메일 맞음!
+                    Log.e("이메일맞음","이메일맞음")
+                    binding.linePw.setBackgroundColor(Color.parseColor("#169DFF"))
+                    binding.txtWrongPw.setTextColor(Color.parseColor("#009b33"))
+                    binding.txtWrongPw.text = "✓ 영문/숫자/특수문자 2가지 이상 조합 (8~20자)"
+                    binding.btnPwEye.setImageResource(R.drawable.check)
+                    binding.btnPwEye.isClickable = false
+                } else {
+                    //이메일 아님!
+                    Log.e("이메일아님","이메일아님")
+                    binding.linePw.setBackgroundColor(Color.parseColor("#f63240"))
+                    binding.txtWrongPw.setTextColor(Color.parseColor("#f63240"))
+                    binding.txtWrongPw.visibility = View.VISIBLE
+                    binding.btnPwEye.setImageResource(R.drawable.eye_close)
+                    binding.btnPwEye.isClickable = true
+                }
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+        })
 
     }
 
-    fun line_patterns (edit :EditText, pattern: Pattern, line:View,text: TextView) {
+    fun line_patterns (edit :EditText, pattern: Pattern, line:View,text: TextView,appCompatImageView: AppCompatImageView) {
         edit.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
                 if (pattern.matcher(edit.text).matches()) {
                     //이메일 맞음!
                     line.setBackgroundColor(Color.parseColor("#169DFF"))
                     text.visibility = View.GONE
+                    appCompatImageView.visibility = View.VISIBLE
                 } else {
                     //이메일 아님!
                     line.setBackgroundColor(Color.parseColor("#ff0000"))
+                    text.visibility = View.VISIBLE
+                    appCompatImageView.visibility = View.GONE
+                }
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+        })
+    }
+
+    fun line_pattern (edit :EditText, pattern: String, line:View,text: TextView,appCompatImageView: AppCompatImageView) {
+        edit.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+                if (Pattern.matches("$pattern",edit.text)) {
+                    //이메일 맞음!
+                    line.setBackgroundColor(Color.parseColor("#169DFF"))
+                    appCompatImageView.visibility = View.VISIBLE
+                    text.visibility = View.GONE
+
+                } else {
+                    //이메일 아님!
+                    line.setBackgroundColor(Color.parseColor("#ff0000"))
+                    appCompatImageView.visibility = View.GONE
                     text.visibility = View.VISIBLE
                 }
             }
@@ -136,26 +150,23 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding>(ActivitySignUpBinding
         })
     }
 
-    fun line_pattern (edit :EditText, pattern: String, line:View,text: TextView) {
-        edit.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(p0: Editable?) {
-                if (Pattern.matches("$pattern",edit.text)) {
-                    //이메일 맞음!
-                    line.setBackgroundColor(Color.parseColor("#169DFF"))
-                    text.visibility = View.GONE
-                } else {
-                    //이메일 아님!
-                    line.setBackgroundColor(Color.parseColor("#ff0000"))
-                    text.visibility = View.VISIBLE
+    fun first_focused (edit: EditText, view: View, textView: TextView)
+    {
+        // 맨처음 focused 되면 edittext색깔 파란색
+        edit.setOnFocusChangeListener { v, hasFocused ->
+            if(hasFocused == true ) {
+                Log.e("true", "true")
+                view.visibility = View.VISIBLE
+                edit.setHint("")
+            }
+            //focused가 false인데 ""이면 빨간색
+            else if( hasFocused == false) {
+                if(edit.text.toString() == "") {
+                    view.setBackgroundColor(Color.parseColor("#ff0000"))
+                    textView.visibility = View.VISIBLE
                 }
             }
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-        })
+        }
     }
 
 }
