@@ -1,15 +1,22 @@
 package com.example.android_coupangeats.src.main.login
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.util.Log
 import com.example.android_coupangeats.R
+import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.databinding.ActivityLoginBinding
+import com.example.android_coupangeats.src.main.login.models.LoginResponse
+import com.example.android_coupangeats.src.main.login.models.PostLoginRequest
 import com.example.android_coupangeats.src.main.signup.SignUpActivity
 
-class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::inflate) {
+class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::inflate),
+
+    LoginActivityView {
 
     var eye = 0
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,6 +69,29 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
             onBackPressed()
         }
 
+        binding.btnLogin.setOnClickListener {
+            val email = binding.etxtId.text.toString()
+            val password = binding.etxtPw.text.toString()
+            val postRequest = PostLoginRequest(email = email, password = password)
+            LoginService(this).tryLogin(postRequest)
+        }
+
+    }
+
+    override fun onGetUserSuccess(response: LoginResponse) {
+       Log.e("로그인 성공","${response.result.jwt}")
+
+        val sharedPreference = getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
+        val editor: SharedPreferences.Editor = sharedPreference.edit()
+
+        editor.putString("COUPANG", response.result.jwt)
+        editor.commit()
+        finish()
+
+    }
+
+    override fun onGetUserFailure(message: String) {
+        Log.e("로그인 실패", "로그인 실패")
     }
 
 }

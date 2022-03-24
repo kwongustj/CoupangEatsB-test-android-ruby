@@ -19,7 +19,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        var logined = false
+        val sharedPreference = getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
         supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment()).commitAllowingStateLoss()
 
         binding.mainBtmNav.setOnNavigationItemSelectedListener(
@@ -44,7 +44,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.menu_main_btm_nav_order -> {
-                        if(logined == false ) {
+                        if(sharedPreference.getString("COUPANG","데이터 없음 ") == "" ) {
                             val intent = Intent(this, BottomActivity::class.java)
                             startActivity(intent)
                             Log.e("logined", " false ")
@@ -57,7 +57,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         }
                     }
                     R.id.menu_main_btm_nav_my_page -> {
-                        if(logined == false ) {
+                        if(sharedPreference.getString("COUPANG","데이터 없음 ") == "" ) {
                             val intent = Intent(this, BottomActivity::class.java)
                             startActivity(intent)
                             Log.e("logined", " false ")

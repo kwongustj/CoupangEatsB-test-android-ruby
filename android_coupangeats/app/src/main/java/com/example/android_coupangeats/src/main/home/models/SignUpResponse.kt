@@ -1,7 +1,6 @@
 package com.example.android_coupangeats.src.main.home.models
 
 import com.example.android_coupangeats.config.BaseResponse
-import com.example.android_coupangeats.src.main.home.models.ResultSignUp
 import com.google.gson.annotations.SerializedName
 
 data class SignUpResponse(

@@ -2,9 +2,11 @@ package com.example.android_coupangeats.src.main.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.example.android_coupangeats.R
+import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.databinding.ActivityBottomBinding
 import com.example.android_coupangeats.databinding.ActivityLoginBinding
@@ -29,5 +31,17 @@ class BottomActivity : BaseActivity<ActivityBottomBinding>(ActivityBottomBinding
 
         }
         }
+
+    override fun onRestart() {
+        super.onRestart()
+        val sharedPreference = getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
+
+        if(sharedPreference.getString("COUPANG","데이터 없음 ") != ""){
+            finish()
+            }
+        else {
+
+        }
+    }
 
 }

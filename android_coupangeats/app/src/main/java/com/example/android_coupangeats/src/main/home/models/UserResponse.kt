@@ -1,6 +1,5 @@
 package com.example.android_coupangeats.src.main.home.models
 
-import com.example.android_coupangeats.src.main.home.models.ResultUser
 import com.google.gson.annotations.SerializedName
 
 data class UserResponse(

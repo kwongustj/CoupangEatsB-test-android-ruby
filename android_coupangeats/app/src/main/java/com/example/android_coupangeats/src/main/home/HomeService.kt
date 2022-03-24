@@ -4,6 +4,7 @@ import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.src.main.home.models.PostSignUpRequest
 import com.example.android_coupangeats.src.main.home.models.SignUpResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
+import com.example.android_coupangeats.src.main.login.models.LoginResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -25,12 +26,12 @@ class HomeService(val view: HomeFragmentView) {
 
     fun tryPostSignUp(postSignUpRequest: PostSignUpRequest){
         val homeRetrofitInterface = ApplicationClass.sRetrofit.create(HomeRetrofitInterface::class.java)
-        homeRetrofitInterface.postSignUp(postSignUpRequest).enqueue(object : Callback<SignUpResponse>{
-            override fun onResponse(call: Call<SignUpResponse>, response: Response<SignUpResponse>) {
+        homeRetrofitInterface.postSignUp(postSignUpRequest).enqueue(object : Callback<LoginResponse>{
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 view.onPostSignUpSuccess(response.body() as SignUpResponse)
             }
 
-            override fun onFailure(call: Call<SignUpResponse>, t: Throwable) {
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                 view.onPostSignUpFailure(t.message ?: "통신 오류")
             }
         })

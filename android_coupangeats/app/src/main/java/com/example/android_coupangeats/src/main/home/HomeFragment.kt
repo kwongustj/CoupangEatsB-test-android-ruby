@@ -12,9 +12,10 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.BaseFragment
 import com.example.android_coupangeats.databinding.FragmentHomeBinding
-import com.example.android_coupangeats.src.main.login.BottomActivity
 import com.example.android_coupangeats.src.main.home.models.SignUpResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
+import com.example.android_coupangeats.src.main.login.BottomActivity
+import com.example.android_coupangeats.src.main.login.models.LoginResponse
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind, R.layout.fragment_home),
 
@@ -142,7 +143,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     private fun autoScrollStop(){
         handler.removeMessages(0)
     }
-
 
     override fun onGetUserSuccess(response: UserResponse) {
         TODO("Not yet implemented")

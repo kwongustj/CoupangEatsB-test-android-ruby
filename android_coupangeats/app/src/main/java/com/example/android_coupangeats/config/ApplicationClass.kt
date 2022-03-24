@@ -2,6 +2,7 @@ package com.example.android_coupangeats.config
 
 import android.app.Application
 import android.content.SharedPreferences
+import android.util.Log
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -10,7 +11,7 @@ import java.util.concurrent.TimeUnit
 
 // 앱이 실행될때 1번만 실행이 됩니다.
 class ApplicationClass : Application() {
-    val API_URL = "https://members.softsquared.com/"
+    val API_URL = "https://prod.asherchiv.shop"
 
     // 테스트 서버 주소
     // val API_URL = "http://dev-api.test.com/"
@@ -34,9 +35,10 @@ class ApplicationClass : Application() {
     override fun onCreate() {
         super.onCreate()
         sSharedPreferences =
-            applicationContext.getSharedPreferences("SOFTSQUARED_TEMPLATE_APP", MODE_PRIVATE)
+            applicationContext.getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
         // 레트로핏 인스턴스 생성
         initRetrofitInstance()
+        Log.e("레트로핏 인스턴스 생성됨","레트로핏 인스턴스 생성됨")
     }
 
     // 레트로핏 인스턴스를 생성하고, 레트로핏에 각종 설정값들을 지정해줍니다.
