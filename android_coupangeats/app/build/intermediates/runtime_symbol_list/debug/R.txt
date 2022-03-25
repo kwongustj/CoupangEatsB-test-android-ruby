@@ -2541,6 +2541,7 @@ int drawable material_ic_keyboard_arrow_previous_black_24dp 0x7f0700a7
 int drawable material_ic_keyboard_arrow_right_black_24dp 0x7f0700a8
 int drawable material_ic_menu_arrow_down_black_24dp 0x7f0700a9
 int drawable material_ic_menu_arrow_up_black_24dp 0x7f0700aa
+int drawable menu_etxt_background 0x7f0700de
 int drawable mexican 0x7f0700ab
 int drawable mtrl_dialog_background 0x7f0700ac
 int drawable mtrl_dropdown_arrow 0x7f0700ad
@@ -2724,7 +2725,6 @@ int id btn_sign_up_now 0x7f080081
 int id btn_x 0x7f080082
 int id button 0x7f080248
 int id buttonPanel 0x7f080083
-int id button_change_counter_text 0x7f080084
 int id cache_measures 0x7f080085
 int id callMeasure 0x7f080086
 int id cancel_action 0x7f080087
@@ -3101,7 +3101,6 @@ int id textTop 0x7f0801f7
 int id text_input_end_icon 0x7f0801f8
 int id text_input_error_icon 0x7f0801f9
 int id text_input_start_icon 0x7f0801fa
-int id text_view_counter 0x7f0801fb
 int id textinput_counter 0x7f0801fc
 int id textinput_error 0x7f0801fd
 int id textinput_helper_text 0x7f0801fe
