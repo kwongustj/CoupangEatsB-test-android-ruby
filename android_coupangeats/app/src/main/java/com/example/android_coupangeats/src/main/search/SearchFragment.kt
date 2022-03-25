@@ -12,10 +12,6 @@ class SearchFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonChangeCounterText.setOnClickListener {
-            binding.textViewCounter.text =
-                resources.getString( ++mCount)
-        }
 
     }
 
