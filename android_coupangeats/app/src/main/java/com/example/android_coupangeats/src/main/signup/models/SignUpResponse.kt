@@ -1,4 +1,4 @@
-package com.example.android_coupangeats.src.main.home.models
+package com.example.android_coupangeats.src.main.signup.models
 
 import com.example.android_coupangeats.config.BaseResponse
 import com.google.gson.annotations.SerializedName

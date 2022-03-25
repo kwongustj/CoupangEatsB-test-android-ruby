@@ -1,5 +1,6 @@
 package com.example.android_coupangeats.src.main.signup
 
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
@@ -16,13 +17,29 @@ import androidx.core.content.ContextCompat
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.databinding.ActivitySignUpBinding
+import com.example.android_coupangeats.src.main.login.LoginActivityView
+import com.example.android_coupangeats.src.main.login.LoginService
+import com.example.android_coupangeats.src.main.login.models.PostLoginRequest
+import com.example.android_coupangeats.src.main.signup.models.PostSignUpRequest
+import com.example.android_coupangeats.src.main.signup.models.SignUpResponse
 import java.util.regex.Pattern
 
-class SignUpActivity : BaseActivity<ActivitySignUpBinding>(ActivitySignUpBinding::inflate) {
+class SignUpActivity : BaseActivity<ActivitySignUpBinding>(ActivitySignUpBinding::inflate),
+    SignUpFragmentView{
 
     var eye = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+        binding.btnSignUpNow.setOnClickListener {
+            val email = binding.etxtId.text.toString()
+            val password = binding.etxtPw.text.toString()
+            val name = binding.etxtName.text.toString()
+            val phone = binding.etxtPhone.text.toString()
+            val postRequest = PostSignUpRequest(email = email, password = password,name = name, phoneNumber = phone)
+            SignUpService(this).tryPostSignUp(postRequest)
+        }
 
         // 버튼 누르면 PW 보이게 안보이게 처리 해줌
         binding.btnPwEye.setOnClickListener {
@@ -167,6 +184,23 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding>(ActivitySignUpBinding
                 }
             }
         }
+    }
+
+    override fun onPostSignUpSuccess(response: SignUpResponse) {
+        Log.e("회원가입 성공","${response.result.name}")
+
+        val sharedPreference = getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
+//        val editor: SharedPreferences.Editor = sharedPreference.edit()
+//
+//        editor.putString("COUPANG", response.result.jwt)
+//        editor.commit()
+//        finish()
+
+        finish()
+    }
+
+    override fun onPostSignUpFailure(message: String) {
+        Log.e("회원가입 실패","회원가입 실패")
     }
 
 }

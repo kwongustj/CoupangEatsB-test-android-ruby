@@ -44,10 +44,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.menu_main_btm_nav_order -> {
-                        if(sharedPreference.getString("COUPANG","데이터 없음 ") == "" ) {
+                        if(sharedPreference.getString("COUPANG"," ") == " " ) {
                             val intent = Intent(this, BottomActivity::class.java)
                             startActivity(intent)
-                            Log.e("logined", " false ")
 
                         }else {
                             supportFragmentManager.beginTransaction()
@@ -57,16 +56,17 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         }
                     }
                     R.id.menu_main_btm_nav_my_page -> {
-                        if(sharedPreference.getString("COUPANG","데이터 없음 ") == "" ) {
+                        if(sharedPreference.getString("COUPANG"," ") == " " ) {
                             val intent = Intent(this, BottomActivity::class.java)
                             startActivity(intent)
-                            Log.e("logined", " false ")
 
                         }else {
-                            supportFragmentManager.beginTransaction()
-                                .replace(R.id.main_frm, MyPageFragment())
-                                .commitAllowingStateLoss()
-                            return@OnNavigationItemSelectedListener true
+                            val t = sharedPreference.getString("COUPANG","데이터 없음 ")
+                            Log.e("값",t.toString())
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.main_frm, MyPageFragment())
+                            .commitAllowingStateLoss()
+                        return@OnNavigationItemSelectedListener true
                         }
                     }
                 }

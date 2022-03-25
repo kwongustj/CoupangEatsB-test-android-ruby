@@ -1,6 +1,6 @@
 package com.example.android_coupangeats.src.main.home
 
-import com.example.android_coupangeats.src.main.home.models.SignUpResponse
+import com.example.android_coupangeats.src.main.home.models.SignInResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
 
 interface HomeFragmentView {
@@ -9,7 +9,7 @@ interface HomeFragmentView {
 
     fun onGetUserFailure(message: String)
 
-    fun onPostSignUpSuccess(response: SignUpResponse)
+    fun onPostSignUpSuccess(response: SignInResponse)
 
     fun onPostSignUpFailure(message: String)
 }

@@ -12,10 +12,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.BaseFragment
 import com.example.android_coupangeats.databinding.FragmentHomeBinding
-import com.example.android_coupangeats.src.main.home.models.SignUpResponse
+import com.example.android_coupangeats.src.main.home.models.SignInResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
 import com.example.android_coupangeats.src.main.login.BottomActivity
-import com.example.android_coupangeats.src.main.login.models.LoginResponse
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind, R.layout.fragment_home),
 
@@ -72,7 +71,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         binding.btnLocationIcon.setOnClickListener {
 
             if(issigned == false) {
@@ -122,9 +120,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
         }
     }
 
+    override fun onStop() {
+        super.onStop()
+        handler.removeCallbacksAndMessages(null)
+    }
+
+
 
     //BannerAd Handler
     inner class HomeBannerHandler: Handler(Looper.getMainLooper()) {
+
         override fun handleMessage(msg: Message) {
             super.handleMessage(msg)
             if(msg.what == 0){
@@ -152,7 +157,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
         TODO("Not yet implemented")
     }
 
-    override fun onPostSignUpSuccess(response: SignUpResponse) {
+    override fun onPostSignUpSuccess(response: SignInResponse) {
         TODO("Not yet implemented")
     }
 

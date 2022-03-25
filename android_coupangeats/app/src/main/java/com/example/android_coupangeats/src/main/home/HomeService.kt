@@ -1,8 +1,8 @@
 package com.example.android_coupangeats.src.main.home
 
 import com.example.android_coupangeats.config.ApplicationClass
-import com.example.android_coupangeats.src.main.home.models.PostSignUpRequest
-import com.example.android_coupangeats.src.main.home.models.SignUpResponse
+import com.example.android_coupangeats.src.main.home.models.PostSignInRequest
+import com.example.android_coupangeats.src.main.home.models.SignInResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
 import com.example.android_coupangeats.src.main.login.models.LoginResponse
 import retrofit2.Call
@@ -24,11 +24,11 @@ class HomeService(val view: HomeFragmentView) {
         })
     }
 
-    fun tryPostSignUp(postSignUpRequest: PostSignUpRequest){
+    fun tryPostSignUp(postSignUpRequest: PostSignInRequest){
         val homeRetrofitInterface = ApplicationClass.sRetrofit.create(HomeRetrofitInterface::class.java)
         homeRetrofitInterface.postSignUp(postSignUpRequest).enqueue(object : Callback<LoginResponse>{
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-                view.onPostSignUpSuccess(response.body() as SignUpResponse)
+                view.onPostSignUpSuccess(response.body() as SignInResponse)
             }
 
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {

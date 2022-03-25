@@ -2718,6 +2718,7 @@ int id btn_see_all 0x7f08007f
 int id btn_sign_up 0x7f080080
 int id btn_sign_up_now 0x7f080081
 int id btn_x 0x7f080082
+int id button 0x7f080248
 int id buttonPanel 0x7f080083
 int id button_change_counter_text 0x7f080084
 int id cache_measures 0x7f080085

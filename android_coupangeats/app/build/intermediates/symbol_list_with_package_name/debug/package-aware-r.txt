@@ -2719,6 +2719,7 @@ id btn_see_all
 id btn_sign_up
 id btn_sign_up_now
 id btn_x
+id button
 id buttonPanel
 id button_change_counter_text
 id cache_measures

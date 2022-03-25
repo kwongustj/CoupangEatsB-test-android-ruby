@@ -6,7 +6,9 @@
         android:id="@+id/menu_main_btm_nav_home"
         android:icon="@drawable/home_icon"
         android:enabled="true"
-        android:title="@string/main_btm_nav_home_title" />
+        android:title="@string/main_btm_nav_home_title"
+        app:showAsAction="always"
+        android:checkable="true"/>
 
     <item
         android:id="@+id/menu_main_btm_nav_search"

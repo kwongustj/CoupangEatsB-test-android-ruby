@@ -28,7 +28,6 @@ class BottomActivity : BaseActivity<ActivityBottomBinding>(ActivityBottomBinding
         bottomSheetView.findViewById<AppCompatButton>(R.id.btn_login_email).setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
-
         }
         }
 
@@ -36,7 +35,7 @@ class BottomActivity : BaseActivity<ActivityBottomBinding>(ActivityBottomBinding
         super.onRestart()
         val sharedPreference = getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
 
-        if(sharedPreference.getString("COUPANG","데이터 없음 ") != ""){
+        if(sharedPreference.getString("COUPANG"," ") != " "){
             finish()
             }
         else {
