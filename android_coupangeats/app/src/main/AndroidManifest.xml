@@ -13,6 +13,7 @@ xmlns:tools="http://schemas.android.com/tools"
     android:networkSecurityConfig="@xml/network_security_config"
     android:supportsRtl="true"
     android:theme="@style/Theme.Android_coupangeats"
+    tools:replace="android:allowBackup"
     tools:ignore="AllowBackup">
     <activity
         android:name=".src.splash.SplashActivity"

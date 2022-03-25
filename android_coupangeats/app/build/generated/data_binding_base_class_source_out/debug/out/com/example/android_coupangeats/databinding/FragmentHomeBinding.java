@@ -4,6 +4,7 @@ package com.example.android_coupangeats.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -44,6 +45,12 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final TextView btnSeeAll;
 
   @NonNull
+  public final HorizontalScrollView chooseLayout;
+
+  @NonNull
+  public final ConstraintLayout layotMiddle;
+
+  @NonNull
   public final ConstraintLayout layoutHomeTop;
 
   @NonNull
@@ -70,7 +77,8 @@ public final class FragmentHomeBinding implements ViewBinding {
   private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull ViewPager2 bannerAd,
       @NonNull AppCompatButton btnArrowDown, @NonNull AppCompatButton btnFind,
       @NonNull AppCompatButton btnLocationIcon, @NonNull AppCompatTextView btnMyLocation,
-      @NonNull TextView btnSeeAll, @NonNull ConstraintLayout layoutHomeTop,
+      @NonNull TextView btnSeeAll, @NonNull HorizontalScrollView chooseLayout,
+      @NonNull ConstraintLayout layotMiddle, @NonNull ConstraintLayout layoutHomeTop,
       @NonNull LinearLayoutCompat layoutNested, @NonNull View line,
       @NonNull RecyclerView recyclerviewRestaurant, @NonNull RecyclerView recyclerviewType,
       @NonNull TextView txtGoodRestaurant, @NonNull TextView txtPageAll,
@@ -82,6 +90,8 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnLocationIcon = btnLocationIcon;
     this.btnMyLocation = btnMyLocation;
     this.btnSeeAll = btnSeeAll;
+    this.chooseLayout = chooseLayout;
+    this.layotMiddle = layotMiddle;
     this.layoutHomeTop = layoutHomeTop;
     this.layoutNested = layoutNested;
     this.line = line;
@@ -155,6 +165,18 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.choose_layout;
+      HorizontalScrollView chooseLayout = ViewBindings.findChildViewById(rootView, id);
+      if (chooseLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.layot_middle;
+      ConstraintLayout layotMiddle = ViewBindings.findChildViewById(rootView, id);
+      if (layotMiddle == null) {
+        break missingId;
+      }
+
       id = R.id.layout_home_top;
       ConstraintLayout layoutHomeTop = ViewBindings.findChildViewById(rootView, id);
       if (layoutHomeTop == null) {
@@ -204,8 +226,9 @@ public final class FragmentHomeBinding implements ViewBinding {
       }
 
       return new FragmentHomeBinding((LinearLayout) rootView, bannerAd, btnArrowDown, btnFind,
-          btnLocationIcon, btnMyLocation, btnSeeAll, layoutHomeTop, layoutNested, line,
-          recyclerviewRestaurant, recyclerviewType, txtGoodRestaurant, txtPageAll, txtPageNow);
+          btnLocationIcon, btnMyLocation, btnSeeAll, chooseLayout, layotMiddle, layoutHomeTop,
+          layoutNested, line, recyclerviewRestaurant, recyclerviewType, txtGoodRestaurant,
+          txtPageAll, txtPageNow);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

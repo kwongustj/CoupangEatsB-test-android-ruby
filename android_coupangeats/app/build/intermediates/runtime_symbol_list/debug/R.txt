@@ -948,6 +948,8 @@ int attr statusBarForeground 0x7f030372
 int attr statusBarScrim 0x7f030373
 int attr strokeColor 0x7f030374
 int attr strokeWidth 0x7f030375
+int attr stuckShadowDrawable 0x7f03044c
+int attr stuckShadowHeight 0x7f03044d
 int attr subMenuArrow 0x7f030376
 int attr subheaderColor 0x7f030377
 int attr subheaderInsetEnd 0x7f030378
@@ -2497,6 +2499,7 @@ int drawable fish 0x7f07007e
 int drawable foot 0x7f07007f
 int drawable franchise 0x7f070080
 int drawable gogi 0x7f070081
+int drawable good_restaurant 0x7f0700dc
 int drawable heart_icon 0x7f070082
 int drawable home_icon 0x7f070083
 int drawable ic_baseline_close_24 0x7f070084
@@ -2586,6 +2589,7 @@ int drawable test_custom_background 0x7f0700d7
 int drawable test_level_drawable 0x7f0700d8
 int drawable tooltip_frame_dark 0x7f0700d9
 int drawable tooltip_frame_light 0x7f0700da
+int drawable white_round_button 0x7f0700dd
 int drawable white_round_radius 0x7f0700db
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
@@ -2741,6 +2745,7 @@ int id chip2 0x7f080095
 int id chip3 0x7f080096
 int id chip_group 0x7f080097
 int id chita 0x7f080098
+int id choose_layout 0x7f080249
 int id chronometer 0x7f080099
 int id circle_center 0x7f08009a
 int id clear_text 0x7f08009b
@@ -2868,6 +2873,7 @@ int id item_touch_helper_previous_elevation 0x7f080114
 int id jumpToEnd 0x7f080115
 int id jumpToStart 0x7f080116
 int id labeled 0x7f080117
+int id layot_middle 0x7f08024a
 int id layout 0x7f080118
 int id layout_home_top 0x7f080119
 int id layout_id 0x7f08011a
@@ -6285,6 +6291,9 @@ int[] styleable StateListDrawableItem { 0x01010199 }
 int styleable StateListDrawableItem_android_drawable 0
 int[] styleable StateSet { 0x7f030141 }
 int styleable StateSet_defaultState 0
+int[] styleable StickyNestedScrollView { 0x7f03044c, 0x7f03044d }
+int styleable StickyNestedScrollView_stuckShadowDrawable 0
+int styleable StickyNestedScrollView_stuckShadowHeight 1
 int[] styleable SwitchCompat { 0x01010124, 0x01010125, 0x01010142, 0x7f03034e, 0x7f03035d, 0x7f030385, 0x7f030386, 0x7f030388, 0x7f0303f2, 0x7f0303f3, 0x7f0303f4, 0x7f030418, 0x7f03041f, 0x7f030420 }
 int styleable SwitchCompat_android_textOn 0
 int styleable SwitchCompat_android_textOff 1
