@@ -6,6 +6,8 @@ com/example/android_coupangeats/databinding/FragmentHomeBinding.java
  com.example.android_coupangeats.databinding.FragmentHomeBinding
 com/example/android_coupangeats/databinding/FragmentSearchBinding.java
  com.example.android_coupangeats.databinding.FragmentSearchBinding
+com/example/android_coupangeats/databinding/ActivityLocationBinding.java
+ com.example.android_coupangeats.databinding.ActivityLocationBinding
 com/example/android_coupangeats/databinding/ItemLayoutBannerBinding.java
  com.example.android_coupangeats.databinding.ItemLayoutBannerBinding
 com/example/android_coupangeats/databinding/FragmentMyPageBinding.java

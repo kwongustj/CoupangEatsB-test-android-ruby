@@ -2503,6 +2503,7 @@ int drawable gogi 0x7f070081
 int drawable good_restaurant 0x7f070082
 int drawable heart_example 0x7f070083
 int drawable heart_icon 0x7f070084
+int drawable home 0x7f0700e3
 int drawable home_icon 0x7f070085
 int drawable ic_baseline_arrow_back_24 0x7f070086
 int drawable ic_baseline_close_24 0x7f070087
@@ -2525,6 +2526,7 @@ int drawable img_1_big 0x7f070097
 int drawable img_2_side1 0x7f070098
 int drawable img_2_side2 0x7f070099
 int drawable japan 0x7f07009a
+int drawable job 0x7f0700e4
 int drawable korea 0x7f07009b
 int drawable m3_appbar_background 0x7f07009c
 int drawable m3_popupmenu_background_overlay 0x7f07009d
@@ -2587,6 +2589,7 @@ int drawable ripple_background 0x7f0700d5
 int drawable salad 0x7f0700d6
 int drawable sandwitch 0x7f0700d7
 int drawable search_icon 0x7f0700d8
+int drawable search_location 0x7f0700e5
 int drawable snack 0x7f0700d9
 int drawable soup 0x7f0700da
 int drawable star 0x7f0700db
@@ -2862,10 +2865,14 @@ int id img_check 0x7f080105
 int id img_check2 0x7f080106
 int id img_check3 0x7f080107
 int id img_down 0x7f080108
+int id img_find 0x7f080257
 int id img_heart 0x7f080109
 int id img_heart_example 0x7f08010a
+int id img_home 0x7f080258
+int id img_job 0x7f080259
 int id img_logo 0x7f08010b
 int id img_password 0x7f08010c
+int id img_search_lcation 0x7f08025a
 int id img_star 0x7f08010d
 int id img_type 0x7f08010e
 int id immediateStop 0x7f08010f
@@ -2886,11 +2893,13 @@ int id layot_middle 0x7f08011d
 int id layout 0x7f08011e
 int id layout_home_top 0x7f08011f
 int id layout_id 0x7f080120
+int id layout_location 0x7f08025f
 int id layout_name 0x7f080121
 int id layout_nested 0x7f080122
 int id layout_no_heart 0x7f080123
 int id layout_phone 0x7f080124
 int id layout_pw 0x7f080125
+int id layout_top 0x7f08025b
 int id left 0x7f080126
 int id leftToRight 0x7f080127
 int id legacy 0x7f080128
@@ -3145,12 +3154,15 @@ int id txt_filter 0x7f08021f
 int id txt_find_id 0x7f080220
 int id txt_find_pw 0x7f080221
 int id txt_good_restaurant 0x7f080222
+int id txt_home 0x7f08025c
 int id txt_i_agree 0x7f080223
+int id txt_job 0x7f08025d
 int id txt_line1 0x7f080224
 int id txt_line2_1 0x7f080225
 int id txt_line2_2 0x7f080226
 int id txt_min 0x7f080227
 int id txt_modify 0x7f080228
+int id txt_my_location 0x7f08025e
 int id txt_name 0x7f080229
 int id txt_name_restaurant 0x7f08022a
 int id txt_out 0x7f08022b
@@ -3283,6 +3295,7 @@ int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_bottom 0x7f0b001c
 int layout activity_heart 0x7f0b001d
+int layout activity_location 0x7f0b008d
 int layout activity_login 0x7f0b001e
 int layout activity_main 0x7f0b001f
 int layout activity_no_heart 0x7f0b0020

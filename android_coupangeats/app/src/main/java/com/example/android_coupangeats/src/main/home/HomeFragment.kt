@@ -10,11 +10,14 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.android_coupangeats.R
+import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseFragment
 import com.example.android_coupangeats.databinding.FragmentHomeBinding
+import com.example.android_coupangeats.src.main.heart.NoHeartActivity
 import com.example.android_coupangeats.src.main.home.models.SignInResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
 import com.example.android_coupangeats.src.main.login.BottomActivity
+import com.example.android_coupangeats.src.main.map.LocationActivity
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind, R.layout.fragment_home),
 
@@ -24,7 +27,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     private var adapterRestaurant: RecyclerView.Adapter<RestaurantViewPagerAdapter.ViewHolder>? = null
     private var bannerViewPagerAdapter: RecyclerView.Adapter<BannerViewPagerAdapter.ViewHolder>? = null
     var currentPage : Int = 1
-    var issigned = false
 
     val RestaurantList = arrayListOf<Restaurant>(
         Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
@@ -72,54 +74,56 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnLocationIcon.setOnClickListener {
 
-            if(issigned == false) {
-                val intent = Intent(activity, BottomActivity::class.java)
-                startActivity(intent)
-                Log.e("logined", " false ")
+            //HomeFragment 주소 설정하기
+            binding.layoutLocation.setOnClickListener {
+
+                if (ApplicationClass.sSharedPreferences.getString("X_ACCESS_TOKEN", " ") == " ") {
+                    val intent = Intent(activity, LocationActivity::class.java)
+                    startActivity(intent)
+                    Log.e("logined", " false ")
+                }
             }
 
-        }
 
-        // HomeFragment 음식 type 고르기_ RecyclerView
-        adapterType = TypeRecyclerViewAdapter(TypeList)
-        binding.recyclerviewType.adapter = adapterType
+            // HomeFragment 음식 type 고르기_ RecyclerView
+            adapterType = TypeRecyclerViewAdapter(TypeList)
+            binding.recyclerviewType.adapter = adapterType
 
-        // HomeFragment Banner _ viewPager
-        binding.bannerAd.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-        bannerViewPagerAdapter = BannerViewPagerAdapter(BannerList)
-        binding.txtPageNow.setText("1")
-        binding.bannerAd.adapter = bannerViewPagerAdapter
-        binding.txtPageAll.text = (" / ${BannerList.size}")
+            // HomeFragment Banner _ viewPager
+            binding.bannerAd.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+            bannerViewPagerAdapter = BannerViewPagerAdapter(BannerList)
+            binding.txtPageNow.setText("1")
+            binding.bannerAd.adapter = bannerViewPagerAdapter
+            binding.txtPageAll.text = (" / ${BannerList.size}")
 
-        // HomeFragment 가게들 보여주기 _ RecyclerView
+            // HomeFragment 가게들 보여주기 _ RecyclerView
 
-        adapterRestaurant = RestaurantViewPagerAdapter(RestaurantList)
-        binding.recyclerviewRestaurant.adapter = adapterRestaurant
+            adapterRestaurant = RestaurantViewPagerAdapter(RestaurantList)
+            binding.recyclerviewRestaurant.adapter = adapterRestaurant
 
-        binding.bannerAd.apply {
-            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            binding.bannerAd.apply {
+                registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
 
-                override fun onPageScrollStateChanged(state: Int) {
-                    super.onPageScrollStateChanged(state)
-                    when (state) {
-                        // 뷰페이저에서 손 떼었을때 / 뷰페이저 멈춰있을 때
-                        ViewPager2.SCROLL_STATE_IDLE -> autoScrollStart()
-                        // 뷰페이저 움직이는 중
-                        ViewPager2.SCROLL_STATE_DRAGGING -> autoScrollStop()
+                    override fun onPageScrollStateChanged(state: Int) {
+                        super.onPageScrollStateChanged(state)
+                        when (state) {
+                            // 뷰페이저에서 손 떼었을때 / 뷰페이저 멈춰있을 때
+                            ViewPager2.SCROLL_STATE_IDLE -> autoScrollStart()
+                            // 뷰페이저 움직이는 중
+                            ViewPager2.SCROLL_STATE_DRAGGING -> autoScrollStop()
+                        }
                     }
-                }
 
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
-                    binding.txtPageNow.text = "${(position % BannerList.size) + 1}"
-                    currentPage = position
-                    autoScrollStart()
-                }
-            })
+                    override fun onPageSelected(position: Int) {
+                        super.onPageSelected(position)
+                        binding.txtPageNow.text = "${(position % BannerList.size) + 1}"
+                        currentPage = position
+                        autoScrollStart()
+                    }
+                })
+            }
         }
-    }
 
     override fun onStop() {
         super.onStop()
@@ -165,5 +169,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     override fun onPostSignUpFailure(message: String) {
         TODO("Not yet implemented")
     }
+
 
 }

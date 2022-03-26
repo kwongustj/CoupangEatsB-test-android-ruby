@@ -2504,6 +2504,7 @@ drawable gogi
 drawable good_restaurant
 drawable heart_example
 drawable heart_icon
+drawable home
 drawable home_icon
 drawable ic_baseline_arrow_back_24
 drawable ic_baseline_close_24
@@ -2526,6 +2527,7 @@ drawable img_1_big
 drawable img_2_side1
 drawable img_2_side2
 drawable japan
+drawable job
 drawable korea
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -2588,6 +2590,7 @@ drawable ripple_background
 drawable salad
 drawable sandwitch
 drawable search_icon
+drawable search_location
 drawable snack
 drawable soup
 drawable star
@@ -2863,10 +2866,14 @@ id img_check
 id img_check2
 id img_check3
 id img_down
+id img_find
 id img_heart
 id img_heart_example
+id img_home
+id img_job
 id img_logo
 id img_password
+id img_search_lcation
 id img_star
 id img_type
 id immediateStop
@@ -2887,11 +2894,13 @@ id layot_middle
 id layout
 id layout_home_top
 id layout_id
+id layout_location
 id layout_name
 id layout_nested
 id layout_no_heart
 id layout_phone
 id layout_pw
+id layout_top
 id left
 id leftToRight
 id legacy
@@ -3146,12 +3155,15 @@ id txt_filter
 id txt_find_id
 id txt_find_pw
 id txt_good_restaurant
+id txt_home
 id txt_i_agree
+id txt_job
 id txt_line1
 id txt_line2_1
 id txt_line2_2
 id txt_min
 id txt_modify
+id txt_my_location
 id txt_name
 id txt_name_restaurant
 id txt_out
@@ -3284,6 +3296,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bottom
 layout activity_heart
+layout activity_location
 layout activity_login
 layout activity_main
 layout activity_no_heart
