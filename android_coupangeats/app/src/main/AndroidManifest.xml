@@ -3,7 +3,9 @@
 xmlns:tools="http://schemas.android.com/tools"
     package="com.example.android_coupangeats">
 
-<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
 <application
     android:name=".config.ApplicationClass"
@@ -15,6 +17,9 @@ xmlns:tools="http://schemas.android.com/tools"
     android:theme="@style/Theme.Android_coupangeats"
     tools:replace="android:allowBackup"
     tools:ignore="AllowBackup">
+    <meta-data
+        android:name="com.naver.maps.map.CLIENT_ID"
+        android:value="1zwatx0xvw" />
     <activity
         android:name=".src.splash.SplashActivity"
         android:screenOrientation="portrait"
@@ -61,6 +66,11 @@ xmlns:tools="http://schemas.android.com/tools"
         android:exported="true"/>
     <activity
         android:name=".src.main.map.LocationActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:exported="true"/>
+    <activity
+        android:name=".src.main.map.MyLocationActivity"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme.NoActionBar"
         android:exported="true"/>

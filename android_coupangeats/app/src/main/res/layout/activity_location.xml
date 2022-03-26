@@ -74,6 +74,7 @@
         android:paddingTop="15dp">
 
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btn_find_my_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
