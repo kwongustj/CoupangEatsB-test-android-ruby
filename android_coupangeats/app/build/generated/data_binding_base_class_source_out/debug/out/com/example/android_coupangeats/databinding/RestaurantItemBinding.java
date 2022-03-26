@@ -48,6 +48,9 @@ public final class RestaurantItemBinding implements ViewBinding {
   public final TextView txtNameRestaurant;
 
   @NonNull
+  public final TextView txtOut;
+
+  @NonNull
   public final TextView txtPoint1;
 
   @NonNull
@@ -64,8 +67,8 @@ public final class RestaurantItemBinding implements ViewBinding {
       @NonNull AppCompatImageView img2Side1, @NonNull AppCompatImageView img2Side2,
       @NonNull AppCompatImageView imgStar, @NonNull TextView txtDelivertyPrice,
       @NonNull TextView txtDistance, @NonNull TextView txtMin, @NonNull TextView txtNameRestaurant,
-      @NonNull TextView txtPoint1, @NonNull TextView txtPoint2, @NonNull TextView txtReviewNum,
-      @NonNull TextView txtStar) {
+      @NonNull TextView txtOut, @NonNull TextView txtPoint1, @NonNull TextView txtPoint2,
+      @NonNull TextView txtReviewNum, @NonNull TextView txtStar) {
     this.rootView = rootView;
     this.chita = chita;
     this.img1Big = img1Big;
@@ -76,6 +79,7 @@ public final class RestaurantItemBinding implements ViewBinding {
     this.txtDistance = txtDistance;
     this.txtMin = txtMin;
     this.txtNameRestaurant = txtNameRestaurant;
+    this.txtOut = txtOut;
     this.txtPoint1 = txtPoint1;
     this.txtPoint2 = txtPoint2;
     this.txtReviewNum = txtReviewNum;
@@ -163,6 +167,12 @@ public final class RestaurantItemBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txt_out;
+      TextView txtOut = ViewBindings.findChildViewById(rootView, id);
+      if (txtOut == null) {
+        break missingId;
+      }
+
       id = R.id.txt_point_1;
       TextView txtPoint1 = ViewBindings.findChildViewById(rootView, id);
       if (txtPoint1 == null) {
@@ -188,8 +198,8 @@ public final class RestaurantItemBinding implements ViewBinding {
       }
 
       return new RestaurantItemBinding((ConstraintLayout) rootView, chita, img1Big, img2Side1,
-          img2Side2, imgStar, txtDelivertyPrice, txtDistance, txtMin, txtNameRestaurant, txtPoint1,
-          txtPoint2, txtReviewNum, txtStar);
+          img2Side2, imgStar, txtDelivertyPrice, txtDistance, txtMin, txtNameRestaurant, txtOut,
+          txtPoint1, txtPoint2, txtReviewNum, txtStar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

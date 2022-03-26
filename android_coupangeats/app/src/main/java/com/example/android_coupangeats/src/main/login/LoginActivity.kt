@@ -8,6 +8,8 @@ import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.ApplicationClass
+import com.example.android_coupangeats.config.ApplicationClass.Companion.X_ACCESS_TOKEN
+import com.example.android_coupangeats.config.ApplicationClass.Companion.sSharedPreferences
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.databinding.ActivityLoginBinding
 import com.example.android_coupangeats.src.main.login.models.LoginResponse
@@ -81,11 +83,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
     override fun onGetUserSuccess(response: LoginResponse) {
        Log.e("로그인 성공","${response.result.jwt}")
 
-        val sharedPreference = getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
-        val editor: SharedPreferences.Editor = sharedPreference.edit()
+        val editor = sSharedPreferences.edit()
 
-        editor.putString("COUPANG", response.result.jwt)
+        editor.putString(X_ACCESS_TOKEN, response.result.jwt)
         editor.commit()
+
         finish()
 
     }

@@ -7,7 +7,8 @@ import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.databinding.ActivityMainBinding
 import com.example.android_coupangeats.src.main.login.BottomActivity
-import com.example.android_coupangeats.src.main.heart.HeartFragment
+import com.example.android_coupangeats.src.main.heart.HeartActivity
+import com.example.android_coupangeats.src.main.heart.NoHeartActivity
 import com.example.android_coupangeats.src.main.home.HomeFragment
 import com.example.android_coupangeats.src.main.myPage.MyPageFragment
 import com.example.android_coupangeats.src.main.order.OrderFragment
@@ -20,6 +21,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         super.onCreate(savedInstanceState)
 
         val sharedPreference = getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
+        val isEmpty = false
         supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment()).commitAllowingStateLoss()
 
         binding.mainBtmNav.setOnNavigationItemSelectedListener(
@@ -38,10 +40,20 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.menu_main_btm_nav_heart -> {
-                        supportFragmentManager.beginTransaction()
-                            .replace(R.id.main_frm, HeartFragment())
-                            .commitAllowingStateLoss()
-                        return@OnNavigationItemSelectedListener true
+                        if(sharedPreference.getString("COUPANG"," ") == " " ) {
+                            val intent = Intent(this, NoHeartActivity::class.java)
+                            startActivity(intent)
+
+                        }else {
+                            if(isEmpty == true){
+                                val intent = Intent(this, NoHeartActivity::class.java)
+                                startActivity(intent)
+                            }else{
+                                val intent = Intent(this, HeartActivity::class.java)
+                                startActivity(intent)
+                            }
+                            return@OnNavigationItemSelectedListener true
+                        }
                     }
                     R.id.menu_main_btm_nav_order -> {
                         if(sharedPreference.getString("COUPANG"," ") == " " ) {

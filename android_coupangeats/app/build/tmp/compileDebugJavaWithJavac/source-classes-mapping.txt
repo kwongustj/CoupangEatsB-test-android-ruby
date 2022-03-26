@@ -2,8 +2,6 @@ com/example/android_coupangeats/BuildConfig.java
  com.example.android_coupangeats.BuildConfig
 com/example/android_coupangeats/databinding/ActivitySplashBinding.java
  com.example.android_coupangeats.databinding.ActivitySplashBinding
-com/example/android_coupangeats/databinding/FragmentHeartBinding.java
- com.example.android_coupangeats.databinding.FragmentHeartBinding
 com/example/android_coupangeats/databinding/FragmentHomeBinding.java
  com.example.android_coupangeats.databinding.FragmentHomeBinding
 com/example/android_coupangeats/databinding/FragmentSearchBinding.java
@@ -18,10 +16,16 @@ com/example/android_coupangeats/databinding/FragmentOrderBinding.java
  com.example.android_coupangeats.databinding.FragmentOrderBinding
 com/example/android_coupangeats/databinding/ActivityLoginBinding.java
  com.example.android_coupangeats.databinding.ActivityLoginBinding
+com/example/android_coupangeats/databinding/ActivityHeartBinding.java
+ com.example.android_coupangeats.databinding.ActivityHeartBinding
 com/example/android_coupangeats/databinding/DialogLoadingBinding.java
  com.example.android_coupangeats.databinding.DialogLoadingBinding
 com/example/android_coupangeats/databinding/ActivitySignUpBinding.java
  com.example.android_coupangeats.databinding.ActivitySignUpBinding
+com/example/android_coupangeats/databinding/ActivityNoHeartBinding.java
+ com.example.android_coupangeats.databinding.ActivityNoHeartBinding
+com/example/android_coupangeats/databinding/FavoriteRestaurantItemBinding.java
+ com.example.android_coupangeats.databinding.FavoriteRestaurantItemBinding
 com/example/android_coupangeats/databinding/BottomSheetLayoutBinding.java
  com.example.android_coupangeats.databinding.BottomSheetLayoutBinding
 com/example/android_coupangeats/databinding/RestaurantItemBinding.java

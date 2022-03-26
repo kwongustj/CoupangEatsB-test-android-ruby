@@ -1288,6 +1288,7 @@ color error_color_material_light
 color etxt_stroke
 color foreground_material_dark
 color foreground_material_light
+color heartBackground
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -2501,9 +2502,12 @@ drawable foot
 drawable franchise
 drawable gogi
 drawable good_restaurant
+drawable heart_example
 drawable heart_icon
 drawable home_icon
+drawable ic_baseline_arrow_back_24
 drawable ic_baseline_close_24
+drawable ic_baseline_favorite_24
 drawable ic_baseline_keyboard_arrow_down_24
 drawable ic_baseline_near_me_24
 drawable ic_clock_black_24dp
@@ -2574,6 +2578,7 @@ drawable notify_panel_notification_icon_bg
 drawable oneye
 drawable order_icon
 drawable out
+drawable out_text_background
 drawable password
 drawable pasta
 drawable person_1
@@ -2713,6 +2718,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btn_arrow_down
+id btn_back
 id btn_find
 id btn_location_icon
 id btn_login
@@ -2856,6 +2862,9 @@ id img_2_side_2
 id img_check
 id img_check2
 id img_check3
+id img_down
+id img_heart
+id img_heart_example
 id img_logo
 id img_password
 id img_star
@@ -2880,6 +2889,7 @@ id layout_home_top
 id layout_id
 id layout_name
 id layout_nested
+id layout_no_heart
 id layout_phone
 id layout_pw
 id left
@@ -3003,6 +3013,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerview_favorite_restaurant
 id recyclerview_restaurant
 id recyclerview_type
 id reverseSawtooth
@@ -3127,15 +3138,23 @@ id triangle
 id txt_agree
 id txt_agree_content
 id txt_content1
+id txt_count
 id txt_deliverty_price
 id txt_distance
+id txt_favorite
+id txt_filter
 id txt_find_id
 id txt_find_pw
 id txt_good_restaurant
 id txt_i_agree
+id txt_line1
+id txt_line2_1
+id txt_line2_2
 id txt_min
+id txt_modify
 id txt_name
 id txt_name_restaurant
+id txt_out
 id txt_page_all
 id txt_page_now
 id txt_password
@@ -3264,8 +3283,10 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bottom
+layout activity_heart
 layout activity_login
 layout activity_main
+layout activity_no_heart
 layout activity_sign_up
 layout activity_splash
 layout bottom_sheet_layout
@@ -3286,7 +3307,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_loading
-layout fragment_heart
+layout favorite_restaurant_item
 layout fragment_home
 layout fragment_my_page
 layout fragment_order
@@ -3421,6 +3442,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string heart_text
 string hide_bottom_view_on_scroll_behavior
 string home_btn_try_get_http_method
 string home_btn_try_post_http_method
@@ -3522,6 +3544,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string txt_modify
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

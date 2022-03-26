@@ -49,6 +49,16 @@ xmlns:tools="http://schemas.android.com/tools"
         android:theme="@style/AppTheme.NoActionBar"
         android:windowSoftInputMode="adjustResize"
         android:exported="true"/>
+    <activity
+        android:name=".src.main.heart.HeartActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:exported="true"/>
+    <activity
+        android:name=".src.main.heart.NoHeartActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:exported="true"/>
 </application>
 
 </manifest>

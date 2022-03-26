@@ -19,5 +19,6 @@
     <color name="ButtonText">#525551</color>
     <color name="SignUpBackgroundColor">#f9f7f9</color>
     <color name="etxt_stroke">#dddddd</color>
+    <color name="heartBackground">#eff5f4</color>
 
 </resources>

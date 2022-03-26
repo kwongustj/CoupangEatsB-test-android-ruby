@@ -34,11 +34,16 @@ class RestaurantViewPagerAdapter(val dataSet : ArrayList<Restaurant>): RecyclerV
         holder.price.setText(dataSet[position].price)
 
         if(dataSet[position].chita == true ) {
-            holder.chita.isVisible = true
+            holder.chita.visibility = View.VISIBLE
         } else{
-            holder.chita.isVisible = false
+            holder.chita.visibility = View.GONE
         }
 
+        if(dataSet[position].come == true ) {
+            holder.come.visibility = View.VISIBLE
+        } else{
+            holder.come.visibility = View.GONE
+        }
 
     }
 
@@ -57,7 +62,7 @@ class RestaurantViewPagerAdapter(val dataSet : ArrayList<Restaurant>): RecyclerV
         var distance : TextView = itemView.findViewById(R.id.txt_distance)
         var price : TextView = itemView.findViewById(R.id.txt_deliverty_price)
         var chita : AppCompatImageView = itemView.findViewById(R.id.chita)
-        //var come : AppCompatImageView = itemView.findViewById(R.id.)
+        var come : TextView = itemView.findViewById(R.id.txt_out)
 
 
     }
