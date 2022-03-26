@@ -28,20 +28,21 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
 
     val RestaurantList = arrayListOf<Restaurant>(
         Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true),
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true,true),
         Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자연을 담은 돈가스 본점","17-20 분","4.4","(400)","1.2km","무료배달",false),
+            "자연을 담은 돈가스 본점","17-20 분","4.4","(400)","1.2km","무료배달",false,true),
         Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true),
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true,false),
         Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",false),        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "마담순살떡볶이 가경복대점","17-20 분","4.4","(400)","1.2km","무료배달",true),
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",false,true),
         Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자연을 담은 돈가스 본점","17~20분","4.4","(400)","1.2km","무료배달",false),
+            "마담순살떡볶이 가경복대점","17-20 분","4.4","(400)","1.2km","무료배달",true,true),
         Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",false),
+            "자연을 담은 돈가스 본점","17~20분","4.4","(400)","1.2km","무료배달",false,true),
         Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true),
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",false,true),
+        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
+            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true,true)
     )
 
     val TypeList = arrayListOf<Type>(

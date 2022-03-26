@@ -20,4 +20,8 @@
     <string name="home_et_pw">비밀번호를 입력하세요.</string>
     <string name="my_location">주소를 입력하세요.</string>
 
+    <!-- Heart -->
+    <string name="heart_text">즐겨찾기</string>
+    <string name="txt_modify">수정</string>
+
 </resources>

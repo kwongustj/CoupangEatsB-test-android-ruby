@@ -1,5 +1,13 @@
 [
     {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/layout_favorite_restaurant_item.xml.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/favorite_restaurant_item.xml"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_ic_baseline_arrow_back_24.xml.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml"
+    },
+    {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_coffee.png.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/coffee.png"
     },
@@ -28,24 +36,28 @@
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/layout_activity_splash.xml.flat",
-        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/activity_splash.xml"
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_heart_example.png.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/heart_example.png"
     },
     {
-        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable-v24_main_btm_nav_item_color.xml.flat",
-        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable-v24/main_btm_nav_item_color.xml"
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/layout_activity_splash.xml.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/activity_splash.xml"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_etxt_signup_nofocused.xml.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/etxt_signup_nofocused.xml"
     },
     {
-        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable-v24_boon.png.flat",
-        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable-v24/boon.png"
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable-v24_main_btm_nav_item_color.xml.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable-v24/main_btm_nav_item_color.xml"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_salad.png.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/salad.png"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable-v24_boon.png.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable-v24/boon.png"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_new_restaurant.png.flat",
@@ -54,10 +66,6 @@
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/layout_dialog_loading.xml.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/dialog_loading.xml"
-    },
-    {
-        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/layout_fragment_heart.xml.flat",
-        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/fragment_heart.xml"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable-v24_foot.png.flat",
@@ -106,6 +114,10 @@
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable-v24_my_page_icon.png.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable-v24/my_page_icon.png"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_out_text_background.xml.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/out_text_background.xml"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_password.png.flat",
@@ -172,12 +184,12 @@
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/sandwitch.png"
     },
     {
-        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_phone.png.flat",
-        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/phone.png"
-    },
-    {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_phone.png.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/phone.png"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable-v24_china.png.flat",
@@ -192,12 +204,16 @@
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/check.png"
     },
     {
-        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_banner3.jpeg.flat",
-        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/banner3.jpeg"
-    },
-    {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_img_2_side2.jpg.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/img_2_side2.jpg"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_ic_baseline_favorite_24.xml.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/ic_baseline_favorite_24.xml"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_banner3.jpeg.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/banner3.jpeg"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
@@ -254,6 +270,10 @@
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_good_restaurant.png.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/good_restaurant.png"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/layout_activity_heart.xml.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/activity_heart.xml"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable-v24_out.png.flat",
@@ -336,12 +356,12 @@
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_eye_on.png.flat",
-        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/eye_on.png"
-    },
-    {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_ic_baseline_near_me_24.xml.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/ic_baseline_near_me_24.xml"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_eye_on.png.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/drawable/eye_on.png"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_ic_baseline_keyboard_arrow_down_24.xml.flat",
@@ -370,6 +390,10 @@
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/layout_restaurant_item.xml.flat",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/restaurant_item.xml"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/layout_activity_no_heart.xml.flat",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/activity_no_heart.xml"
     },
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/merged_res/debug/drawable_banner2.jpeg.flat",

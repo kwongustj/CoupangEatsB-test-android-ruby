@@ -11,5 +11,5 @@ data class Restaurant(
     val distance : String,
     val price : String,
     val chita: Boolean,
- //   val come : Boolean
+    val come : Boolean
 )
