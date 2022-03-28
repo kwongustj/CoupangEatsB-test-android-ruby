@@ -39,7 +39,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.menu_main_btm_nav_heart -> {
-                        if(ApplicationClass.sSharedPreferences.getString("X_ACCESS_TOKEN"," ") == " " ) {
+                        if(ApplicationClass.sSharedPreferences.getString(ApplicationClass.X_ACCESS_TOKEN," ") == " " ) {
                             val intent = Intent(this, NoHeartActivity::class.java)
                             startActivity(intent)
 
@@ -55,11 +55,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         }
                     }
                     R.id.menu_main_btm_nav_order -> {
-                        if(ApplicationClass.sSharedPreferences.getString("X_ACCESS_TOKEN"," ") == " " ) {
+                        if(ApplicationClass.sSharedPreferences.getString(ApplicationClass.X_ACCESS_TOKEN," ") == " " ) {
                             val intent = Intent(this, BottomActivity::class.java)
                             startActivity(intent)
 
                         }else {
+                            Log.e("토큰",ApplicationClass.sSharedPreferences.getString(
+                                ApplicationClass.X_ACCESS_TOKEN," ").toString())
                             supportFragmentManager.beginTransaction()
                                 .replace(R.id.main_frm, OrderFragment())
                                 .commitAllowingStateLoss()
@@ -67,12 +69,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         }
                     }
                     R.id.menu_main_btm_nav_my_page -> {
-                        if(ApplicationClass.sSharedPreferences.getString("X_ACCESS_TOKEN"," ") == " " ) {
+                        if(ApplicationClass.sSharedPreferences.getString(ApplicationClass.X_ACCESS_TOKEN," ") == " " ) {
                             val intent = Intent(this, BottomActivity::class.java)
                             startActivity(intent)
 
                         }else {
-                            val t = ApplicationClass.sSharedPreferences.getString("X_ACCESS_TOKEN","데이터 없음 ")
+                            val t = ApplicationClass.sSharedPreferences.getString(ApplicationClass.X_ACCESS_TOKEN,"데이터 없음 ")
                             Log.e("값",t.toString())
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.main_frm, MyPageFragment())

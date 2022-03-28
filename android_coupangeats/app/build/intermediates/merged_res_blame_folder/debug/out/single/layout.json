@@ -60,6 +60,10 @@
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/favorite_restaurant_item.xml"
     },
     {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_my_location.xml",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/activity_my_location.xml"
+    },
+    {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/activity_login.xml"
     },

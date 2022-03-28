@@ -33,13 +33,12 @@ class BottomActivity : BaseActivity<ActivityBottomBinding>(ActivityBottomBinding
 
     override fun onRestart() {
         super.onRestart()
-        val sharedPreference = getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
-
-        if(sharedPreference.getString("COUPANG"," ") != " "){
+        if(ApplicationClass.sSharedPreferences.getString(ApplicationClass.X_ACCESS_TOKEN," ") !=" "){
             finish()
             }
         else {
-
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -23,6 +23,9 @@ public final class ActivityLocationBinding implements ViewBinding {
   private final LinearLayoutCompat rootView;
 
   @NonNull
+  public final LinearLayoutCompat btnFindMyLocation;
+
+  @NonNull
   public final AppCompatImageButton btnX;
 
   @NonNull
@@ -53,12 +56,14 @@ public final class ActivityLocationBinding implements ViewBinding {
   public final AppCompatTextView txtMyLocation;
 
   private ActivityLocationBinding(@NonNull LinearLayoutCompat rootView,
-      @NonNull AppCompatImageButton btnX, @NonNull AppCompatImageView imgFind,
-      @NonNull AppCompatImageView imgHome, @NonNull AppCompatImageView imgJob,
-      @NonNull AppCompatImageView imgSearchLcation, @NonNull ConstraintLayout layoutTop,
-      @NonNull AppCompatTextView txtFavorite, @NonNull AppCompatTextView txtHome,
-      @NonNull AppCompatTextView txtJob, @NonNull AppCompatTextView txtMyLocation) {
+      @NonNull LinearLayoutCompat btnFindMyLocation, @NonNull AppCompatImageButton btnX,
+      @NonNull AppCompatImageView imgFind, @NonNull AppCompatImageView imgHome,
+      @NonNull AppCompatImageView imgJob, @NonNull AppCompatImageView imgSearchLcation,
+      @NonNull ConstraintLayout layoutTop, @NonNull AppCompatTextView txtFavorite,
+      @NonNull AppCompatTextView txtHome, @NonNull AppCompatTextView txtJob,
+      @NonNull AppCompatTextView txtMyLocation) {
     this.rootView = rootView;
+    this.btnFindMyLocation = btnFindMyLocation;
     this.btnX = btnX;
     this.imgFind = imgFind;
     this.imgHome = imgHome;
@@ -98,6 +103,12 @@ public final class ActivityLocationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_find_my_location;
+      LinearLayoutCompat btnFindMyLocation = ViewBindings.findChildViewById(rootView, id);
+      if (btnFindMyLocation == null) {
+        break missingId;
+      }
+
       id = R.id.btn_x;
       AppCompatImageButton btnX = ViewBindings.findChildViewById(rootView, id);
       if (btnX == null) {
@@ -158,8 +169,9 @@ public final class ActivityLocationBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLocationBinding((LinearLayoutCompat) rootView, btnX, imgFind, imgHome,
-          imgJob, imgSearchLcation, layoutTop, txtFavorite, txtHome, txtJob, txtMyLocation);
+      return new ActivityLocationBinding((LinearLayoutCompat) rootView, btnFindMyLocation, btnX,
+          imgFind, imgHome, imgJob, imgSearchLcation, layoutTop, txtFavorite, txtHome, txtJob,
+          txtMyLocation);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

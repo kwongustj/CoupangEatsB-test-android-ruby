@@ -1,7 +1,6 @@
 package com.example.android_coupangeats.src.main.signup
 
 import com.example.android_coupangeats.config.ApplicationClass
-import com.example.android_coupangeats.src.main.home.models.PostSignInRequest
 import com.example.android_coupangeats.src.main.signup.models.PostSignUpRequest
 import com.example.android_coupangeats.src.main.signup.models.SignUpResponse
 import retrofit2.Call

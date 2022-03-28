@@ -189,7 +189,7 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding>(ActivitySignUpBinding
     override fun onPostSignUpSuccess(response: SignUpResponse) {
         Log.e("회원가입 성공","${response.result.name}")
 
-        val sharedPreference = getSharedPreferences("COUPANGEATS APP", MODE_PRIVATE)
+        val sharedPreference = getSharedPreferences("X_ACCESS_TOKEN", MODE_PRIVATE)
 //        val editor: SharedPreferences.Editor = sharedPreference.edit()
 //
 //        editor.putString("COUPANG", response.result.jwt)
