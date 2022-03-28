@@ -63,6 +63,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array navermap_info_menu
 attr SharedValue
 attr SharedValueId
 attr SpinKitViewStyle
@@ -193,6 +194,7 @@ attr buttonCompat
 attr buttonGravity
 attr buttonIconDimen
 attr buttonPanelSideLayout
+attr buttonSize
 attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
@@ -249,6 +251,7 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr circleCrop
 attr circleRadius
 attr circularProgressIndicatorStyle
 attr circularflow_angles
@@ -312,6 +315,7 @@ attr colorPrimaryDark
 attr colorPrimaryInverse
 attr colorPrimarySurface
 attr colorPrimaryVariant
+attr colorScheme
 attr colorSecondary
 attr colorSecondaryContainer
 attr colorSecondaryVariant
@@ -556,6 +560,8 @@ attr iconTintMode
 attr iconifiedByDefault
 attr ifTagNotSet
 attr ifTagSet
+attr imageAspectRatio
+attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr imagePanX
 attr imagePanY
@@ -798,6 +804,64 @@ attr motion_postLayoutCollision
 attr motion_triggerOnCollision
 attr moveWhenScrollAtTop
 attr multiChoiceItemLayout
+attr navermap_background
+attr navermap_backgroundColor
+attr navermap_backgroundImage
+attr navermap_bearing
+attr navermap_buildingHeight
+attr navermap_cjkLocalGlyphRasterizationEnabled
+attr navermap_compassEnabled
+attr navermap_contentPadding
+attr navermap_contentPaddingBottom
+attr navermap_contentPaddingLeft
+attr navermap_contentPaddingRight
+attr navermap_contentPaddingTop
+attr navermap_defaultCameraAnimationDuration
+attr navermap_enabledLayerGroups
+attr navermap_extent
+attr navermap_fpsLimit
+attr navermap_indoorEnabled
+attr navermap_indoorFocusRadius
+attr navermap_indoorLevelPickerEnabled
+attr navermap_latitude
+attr navermap_lightness
+attr navermap_liteModeEnabled
+attr navermap_localTypefaceFactoryClass
+attr navermap_locationButtonEnabled
+attr navermap_logoClickEnabled
+attr navermap_logoGravity
+attr navermap_logoMargin
+attr navermap_logoMarginBottom
+attr navermap_logoMarginLeft
+attr navermap_logoMarginRight
+attr navermap_logoMarginTop
+attr navermap_longitude
+attr navermap_mapType
+attr navermap_maxTilt
+attr navermap_maxZoom
+attr navermap_minZoom
+attr navermap_nightModeEnabled
+attr navermap_pickTolerance
+attr navermap_preserveEGLContextOnPause
+attr navermap_rotateGesturesEnabled
+attr navermap_rotateGesturesFriction
+attr navermap_rtlEnabled
+attr navermap_scaleBarEnabled
+attr navermap_scrollGesturesEnabled
+attr navermap_scrollGesturesFriction
+attr navermap_stopGesturesEnabled
+attr navermap_symbolPerspectiveRatio
+attr navermap_symbolScale
+attr navermap_tilt
+attr navermap_tiltGesturesEnabled
+attr navermap_translucentTextureSurface
+attr navermap_useTextureView
+attr navermap_useVulkanView
+attr navermap_zOrderMediaOverlay
+attr navermap_zoom
+attr navermap_zoomControlEnabled
+attr navermap_zoomGesturesEnabled
+attr navermap_zoomGesturesFriction
 attr navigationContentDescription
 attr navigationIcon
 attr navigationIconTint
@@ -885,6 +949,7 @@ attr round
 attr roundPercent
 attr saturation
 attr scaleFromTextSize
+attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -1241,6 +1306,17 @@ color checkbox_themeable_attribute_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color common_google_signin_btn_text_dark
+color common_google_signin_btn_text_dark_default
+color common_google_signin_btn_text_dark_disabled
+color common_google_signin_btn_text_dark_focused
+color common_google_signin_btn_text_dark_pressed
+color common_google_signin_btn_text_light
+color common_google_signin_btn_text_light_default
+color common_google_signin_btn_text_light_disabled
+color common_google_signin_btn_text_light_focused
+color common_google_signin_btn_text_light_pressed
+color common_google_signin_btn_tint
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1757,6 +1833,13 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color navermap_indoor_level_picker_item_background_normal
+color navermap_indoor_level_picker_item_background_pressed
+color navermap_indoor_level_picker_item_background_selected
+color navermap_location_button_progress
+color navermap_primary
+color navermap_scale_bar_text_dark
+color navermap_scale_bar_text_light
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -2338,6 +2421,9 @@ dimen mtrl_tooltip_minHeight
 dimen mtrl_tooltip_minWidth
 dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
+dimen navermap_default_logo_margin_bottom
+dimen navermap_default_logo_margin_left
+dimen navermap_scale_bar_min_width
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -2480,6 +2566,25 @@ drawable chicken
 drawable china
 drawable chita
 drawable coffee
+drawable common_full_open_on_phone
+drawable common_google_signin_btn_icon_dark
+drawable common_google_signin_btn_icon_dark_focused
+drawable common_google_signin_btn_icon_dark_normal
+drawable common_google_signin_btn_icon_dark_normal_background
+drawable common_google_signin_btn_icon_disabled
+drawable common_google_signin_btn_icon_light
+drawable common_google_signin_btn_icon_light_focused
+drawable common_google_signin_btn_icon_light_normal
+drawable common_google_signin_btn_icon_light_normal_background
+drawable common_google_signin_btn_text_dark
+drawable common_google_signin_btn_text_dark_focused
+drawable common_google_signin_btn_text_dark_normal
+drawable common_google_signin_btn_text_dark_normal_background
+drawable common_google_signin_btn_text_disabled
+drawable common_google_signin_btn_text_light
+drawable common_google_signin_btn_text_light_focused
+drawable common_google_signin_btn_text_light_normal
+drawable common_google_signin_btn_text_light_normal_background
 drawable coupang_eats_logo
 drawable coupang_logo
 drawable design_fab_background
@@ -2502,8 +2607,11 @@ drawable foot
 drawable franchise
 drawable gogi
 drawable good_restaurant
+drawable googleg_disabled_color_18
+drawable googleg_standard_color_18
 drawable heart_example
 drawable heart_icon
+drawable home
 drawable home_icon
 drawable ic_baseline_arrow_back_24
 drawable ic_baseline_close_24
@@ -2526,6 +2634,7 @@ drawable img_1_big
 drawable img_2_side1
 drawable img_2_side2
 drawable japan
+drawable job
 drawable korea
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -2558,8 +2667,57 @@ drawable mtrl_navigation_bar_item_background
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_overlay
 drawable mtrl_tabs_default_indicator
+drawable my_location
 drawable my_page_icon
 drawable name
+drawable navermap_compass
+drawable navermap_default_background_dark
+drawable navermap_default_background_light
+drawable navermap_default_cluster_icon_high_density
+drawable navermap_default_cluster_icon_low_density
+drawable navermap_default_cluster_icon_medium_density
+drawable navermap_default_ground_overlay_image
+drawable navermap_default_info_window_background
+drawable navermap_default_info_window_icon
+drawable navermap_default_location_overlay_sub_icon_arrow
+drawable navermap_default_location_overlay_sub_icon_cone
+drawable navermap_default_marker_icon_black
+drawable navermap_default_marker_icon_blue
+drawable navermap_default_marker_icon_gray
+drawable navermap_default_marker_icon_green
+drawable navermap_default_marker_icon_lightblue
+drawable navermap_default_marker_icon_pink
+drawable navermap_default_marker_icon_red
+drawable navermap_default_marker_icon_yellow
+drawable navermap_indoor_control_item_background
+drawable navermap_indoor_level_picker_background
+drawable navermap_location_disabled
+drawable navermap_location_face
+drawable navermap_location_face_normal
+drawable navermap_location_face_pressed
+drawable navermap_location_follow
+drawable navermap_location_follow_normal
+drawable navermap_location_follow_pressed
+drawable navermap_location_no_follow
+drawable navermap_location_no_follow_normal
+drawable navermap_location_no_follow_pressed
+drawable navermap_location_none
+drawable navermap_location_none_normal
+drawable navermap_location_none_pressed
+drawable navermap_location_overlay_icon
+drawable navermap_naver_logo_dark
+drawable navermap_naver_logo_light
+drawable navermap_scale_bar_dark
+drawable navermap_scale_bar_light
+drawable navermap_zoom_div
+drawable navermap_zoom_in
+drawable navermap_zoom_in_disabled
+drawable navermap_zoom_in_normal
+drawable navermap_zoom_in_pressed
+drawable navermap_zoom_out
+drawable navermap_zoom_out_disabled
+drawable navermap_zoom_out_normal
+drawable navermap_zoom_out_pressed
 drawable navigation_empty_icon
 drawable new_restaurant
 drawable noeye
@@ -2588,6 +2746,7 @@ drawable ripple_background
 drawable salad
 drawable sandwitch
 drawable search_icon
+drawable search_location
 drawable snack
 drawable soup
 drawable star
@@ -2685,6 +2844,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id adjust_height
+id adjust_width
 id alertTitle
 id aligned
 id all
@@ -2720,6 +2881,7 @@ id bounceStart
 id btn_arrow_down
 id btn_back
 id btn_find
+id btn_find_my_location
 id btn_location_icon
 id btn_login
 id btn_login_coupang
@@ -2727,6 +2889,7 @@ id btn_login_email
 id btn_my_location
 id btn_pw_eye
 id btn_see_all
+id btn_set
 id btn_sign_up
 id btn_sign_up_now
 id btn_x
@@ -2776,6 +2939,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id dark
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2837,6 +3001,7 @@ id fragment_container_view_tag
 id frost
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -2852,6 +3017,7 @@ id honorRequest
 id horizontal_only
 id icon
 id icon_group
+id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
@@ -2863,10 +3029,15 @@ id img_check
 id img_check2
 id img_check3
 id img_down
+id img_find
 id img_heart
 id img_heart_example
+id img_home
+id img_job
 id img_logo
+id img_my_location
 id img_password
+id img_search_lcation
 id img_star
 id img_type
 id immediateStop
@@ -2887,14 +3058,17 @@ id layot_middle
 id layout
 id layout_home_top
 id layout_id
+id layout_location
 id layout_name
 id layout_nested
 id layout_no_heart
 id layout_phone
 id layout_pw
+id layout_top
 id left
 id leftToRight
 id legacy
+id light
 id line
 id line1
 id line3
@@ -2907,6 +3081,7 @@ id listMode
 id list_item
 id main_btm_nav
 id main_frm
+id map_view
 id masked
 id match_constraint
 id match_parent
@@ -2969,6 +3144,33 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id navermap_bar
+id navermap_compass
+id navermap_compass_icon
+id navermap_connection
+id navermap_container
+id navermap_copyright
+id navermap_indoor_level_picker
+id navermap_level
+id navermap_location_button
+id navermap_location_icon
+id navermap_location_icon_progress_overlay
+id navermap_logo
+id navermap_map_controls
+id navermap_map_view
+id navermap_menu_title
+id navermap_open_source_license
+id navermap_progress
+id navermap_recycler_view
+id navermap_scale_bar
+id navermap_scale_container
+id navermap_unit
+id navermap_value
+id navermap_version
+id navermap_zero
+id navermap_zoom_control
+id navermap_zoom_in
+id navermap_zoom_out
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3146,12 +3348,17 @@ id txt_filter
 id txt_find_id
 id txt_find_pw
 id txt_good_restaurant
+id txt_home
 id txt_i_agree
+id txt_job
 id txt_line1
 id txt_line2_1
 id txt_line2_2
+id txt_location_content
+id txt_location_name
 id txt_min
 id txt_modify
+id txt_my_location
 id txt_name
 id txt_name_restaurant
 id txt_out
@@ -3189,6 +3396,7 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id west
+id wide
 id withText
 id withinBounds
 id wrap
@@ -3205,6 +3413,7 @@ integer cancel_button_image_alpha
 integer config_tooltipAnimTime
 integer design_snackbar_text_max_lines
 integer design_tab_indicator_anim_duration_ms
+integer google_play_services_version
 integer hide_password_duration
 integer m3_btn_anim_delay_ms
 integer m3_btn_anim_duration_ms
@@ -3284,8 +3493,10 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bottom
 layout activity_heart
+layout activity_location
 layout activity_login
 layout activity_main
+layout activity_my_location
 layout activity_no_heart
 layout activity_sign_up
 layout activity_splash
@@ -3359,6 +3570,17 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout navermap_compass_view
+layout navermap_indoor_level_item
+layout navermap_indoor_level_picker
+layout navermap_info_menu_item
+layout navermap_info_view
+layout navermap_location_button_view
+layout navermap_map_controls_view
+layout navermap_map_view
+layout navermap_open_source_license_activity
+layout navermap_scale_bar_view
+layout navermap_zoom_control_view
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -3438,6 +3660,24 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string common_google_play_services_enable_button
+string common_google_play_services_enable_text
+string common_google_play_services_enable_title
+string common_google_play_services_install_button
+string common_google_play_services_install_text
+string common_google_play_services_install_title
+string common_google_play_services_notification_channel_name
+string common_google_play_services_notification_ticker
+string common_google_play_services_unknown_issue
+string common_google_play_services_unsupported_text
+string common_google_play_services_update_button
+string common_google_play_services_update_text
+string common_google_play_services_update_title
+string common_google_play_services_updating_text
+string common_google_play_services_wear_update_text
+string common_open_on_phone
+string common_signin_button_text
+string common_signin_button_text_long
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -3537,6 +3777,22 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
 string my_location
+string navermap_compass
+string navermap_copyright
+string navermap_current_location
+string navermap_info_title
+string navermap_legal_notice
+string navermap_legend
+string navermap_map
+string navermap_naver_logo
+string navermap_open_source_license
+string navermap_pathway
+string navermap_scale_km
+string navermap_scale_m
+string navermap_version
+string navermap_zero
+string navermap_zoom_in
+string navermap_zoom_out
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -4622,6 +4878,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style navermap_app
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -4698,6 +4955,7 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
+styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogButtonSpacerVisibility materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialAutoCompleteTextView android_inputType
@@ -4725,6 +4983,8 @@ styleable MotionLabel android_textSize android_typeface android_textStyle androi
 styleable MotionLayout applyMotionScene currentState layoutDescription motionDebug motionProgress showPaths
 styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
+styleable NaverMap navermap_background navermap_backgroundColor navermap_backgroundImage navermap_bearing navermap_buildingHeight navermap_cjkLocalGlyphRasterizationEnabled navermap_compassEnabled navermap_contentPadding navermap_contentPaddingBottom navermap_contentPaddingLeft navermap_contentPaddingRight navermap_contentPaddingTop navermap_defaultCameraAnimationDuration navermap_enabledLayerGroups navermap_extent navermap_fpsLimit navermap_indoorEnabled navermap_indoorFocusRadius navermap_indoorLevelPickerEnabled navermap_latitude navermap_lightness navermap_liteModeEnabled navermap_localTypefaceFactoryClass navermap_locationButtonEnabled navermap_logoClickEnabled navermap_logoGravity navermap_logoMargin navermap_logoMarginBottom navermap_logoMarginLeft navermap_logoMarginRight navermap_logoMarginTop navermap_longitude navermap_mapType navermap_maxTilt navermap_maxZoom navermap_minZoom navermap_nightModeEnabled navermap_pickTolerance navermap_preserveEGLContextOnPause navermap_rotateGesturesEnabled navermap_rotateGesturesFriction navermap_scaleBarEnabled navermap_scrollGesturesEnabled navermap_scrollGesturesFriction navermap_stopGesturesEnabled navermap_symbolPerspectiveRatio navermap_symbolScale navermap_tilt navermap_tiltGesturesEnabled navermap_translucentTextureSurface navermap_useTextureView navermap_useVulkanView navermap_zOrderMediaOverlay navermap_zoom navermap_zoomControlEnabled navermap_zoomGesturesEnabled navermap_zoomGesturesFriction
+styleable NaverMapScaleBarView navermap_rtlEnabled
 styleable NavigationBarActiveIndicator android_height android_width android_color marginHorizontal shapeAppearance
 styleable NavigationBarView backgroundTint elevation itemActiveIndicatorStyle itemBackground itemIconSize itemIconTint itemPaddingBottom itemPaddingTop itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable NavigationRailView headerLayout itemMinHeight menuGravity
@@ -4743,6 +5003,7 @@ styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
+styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth

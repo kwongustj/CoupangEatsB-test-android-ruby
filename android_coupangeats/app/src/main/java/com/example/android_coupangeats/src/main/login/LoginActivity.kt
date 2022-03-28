@@ -81,7 +81,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
     }
 
     override fun onGetUserSuccess(response: LoginResponse) {
-       Log.e("로그인 성공","${response.result.jwt}")
 
         val editor = sSharedPreferences.edit()
 

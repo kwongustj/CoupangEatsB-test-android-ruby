@@ -27,9 +27,6 @@ public final class ActivityNoHeartBinding implements ViewBinding {
   public final AppCompatButton btnBack;
 
   @NonNull
-  public final AppCompatTextView btnMyLocation;
-
-  @NonNull
   public final AppCompatImageView imgHeart;
 
   @NonNull
@@ -37,6 +34,9 @@ public final class ActivityNoHeartBinding implements ViewBinding {
 
   @NonNull
   public final ConstraintLayout layoutNoHeart;
+
+  @NonNull
+  public final AppCompatTextView txtFavorite;
 
   @NonNull
   public final TextView txtLine1;
@@ -48,16 +48,16 @@ public final class ActivityNoHeartBinding implements ViewBinding {
   public final TextView txtLine22;
 
   private ActivityNoHeartBinding(@NonNull LinearLayoutCompat rootView,
-      @NonNull AppCompatButton btnBack, @NonNull AppCompatTextView btnMyLocation,
-      @NonNull AppCompatImageView imgHeart, @NonNull AppCompatImageView imgHeartExample,
-      @NonNull ConstraintLayout layoutNoHeart, @NonNull TextView txtLine1,
+      @NonNull AppCompatButton btnBack, @NonNull AppCompatImageView imgHeart,
+      @NonNull AppCompatImageView imgHeartExample, @NonNull ConstraintLayout layoutNoHeart,
+      @NonNull AppCompatTextView txtFavorite, @NonNull TextView txtLine1,
       @NonNull TextView txtLine21, @NonNull TextView txtLine22) {
     this.rootView = rootView;
     this.btnBack = btnBack;
-    this.btnMyLocation = btnMyLocation;
     this.imgHeart = imgHeart;
     this.imgHeartExample = imgHeartExample;
     this.layoutNoHeart = layoutNoHeart;
+    this.txtFavorite = txtFavorite;
     this.txtLine1 = txtLine1;
     this.txtLine21 = txtLine21;
     this.txtLine22 = txtLine22;
@@ -96,12 +96,6 @@ public final class ActivityNoHeartBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btn_my_location;
-      AppCompatTextView btnMyLocation = ViewBindings.findChildViewById(rootView, id);
-      if (btnMyLocation == null) {
-        break missingId;
-      }
-
       id = R.id.img_heart;
       AppCompatImageView imgHeart = ViewBindings.findChildViewById(rootView, id);
       if (imgHeart == null) {
@@ -117,6 +111,12 @@ public final class ActivityNoHeartBinding implements ViewBinding {
       id = R.id.layout_no_heart;
       ConstraintLayout layoutNoHeart = ViewBindings.findChildViewById(rootView, id);
       if (layoutNoHeart == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_favorite;
+      AppCompatTextView txtFavorite = ViewBindings.findChildViewById(rootView, id);
+      if (txtFavorite == null) {
         break missingId;
       }
 
@@ -138,8 +138,8 @@ public final class ActivityNoHeartBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityNoHeartBinding((LinearLayoutCompat) rootView, btnBack, btnMyLocation,
-          imgHeart, imgHeartExample, layoutNoHeart, txtLine1, txtLine21, txtLine22);
+      return new ActivityNoHeartBinding((LinearLayoutCompat) rootView, btnBack, imgHeart,
+          imgHeartExample, layoutNoHeart, txtFavorite, txtLine1, txtLine21, txtLine22);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

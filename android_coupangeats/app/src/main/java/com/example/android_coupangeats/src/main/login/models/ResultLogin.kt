@@ -6,3 +6,4 @@ data class ResultLogin(
         @SerializedName("userId") val userId: Int,
         @SerializedName("jwt") val jwt: String
 )
+

@@ -54,6 +54,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final ConstraintLayout layoutHomeTop;
 
   @NonNull
+  public final LinearLayoutCompat layoutLocation;
+
+  @NonNull
   public final LinearLayoutCompat layoutNested;
 
   @NonNull
@@ -79,10 +82,10 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull AppCompatButton btnLocationIcon, @NonNull AppCompatTextView btnMyLocation,
       @NonNull TextView btnSeeAll, @NonNull HorizontalScrollView chooseLayout,
       @NonNull ConstraintLayout layotMiddle, @NonNull ConstraintLayout layoutHomeTop,
-      @NonNull LinearLayoutCompat layoutNested, @NonNull View line,
-      @NonNull RecyclerView recyclerviewRestaurant, @NonNull RecyclerView recyclerviewType,
-      @NonNull TextView txtGoodRestaurant, @NonNull TextView txtPageAll,
-      @NonNull TextView txtPageNow) {
+      @NonNull LinearLayoutCompat layoutLocation, @NonNull LinearLayoutCompat layoutNested,
+      @NonNull View line, @NonNull RecyclerView recyclerviewRestaurant,
+      @NonNull RecyclerView recyclerviewType, @NonNull TextView txtGoodRestaurant,
+      @NonNull TextView txtPageAll, @NonNull TextView txtPageNow) {
     this.rootView = rootView;
     this.bannerAd = bannerAd;
     this.btnArrowDown = btnArrowDown;
@@ -93,6 +96,7 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.chooseLayout = chooseLayout;
     this.layotMiddle = layotMiddle;
     this.layoutHomeTop = layoutHomeTop;
+    this.layoutLocation = layoutLocation;
     this.layoutNested = layoutNested;
     this.line = line;
     this.recyclerviewRestaurant = recyclerviewRestaurant;
@@ -183,6 +187,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.layout_location;
+      LinearLayoutCompat layoutLocation = ViewBindings.findChildViewById(rootView, id);
+      if (layoutLocation == null) {
+        break missingId;
+      }
+
       id = R.id.layout_nested;
       LinearLayoutCompat layoutNested = ViewBindings.findChildViewById(rootView, id);
       if (layoutNested == null) {
@@ -227,8 +237,8 @@ public final class FragmentHomeBinding implements ViewBinding {
 
       return new FragmentHomeBinding((LinearLayout) rootView, bannerAd, btnArrowDown, btnFind,
           btnLocationIcon, btnMyLocation, btnSeeAll, chooseLayout, layotMiddle, layoutHomeTop,
-          layoutNested, line, recyclerviewRestaurant, recyclerviewType, txtGoodRestaurant,
-          txtPageAll, txtPageNow);
+          layoutLocation, layoutNested, line, recyclerviewRestaurant, recyclerviewType,
+          txtGoodRestaurant, txtPageAll, txtPageNow);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

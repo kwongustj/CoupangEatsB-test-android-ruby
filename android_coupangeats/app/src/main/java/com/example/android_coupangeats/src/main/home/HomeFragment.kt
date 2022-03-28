@@ -10,11 +10,13 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.android_coupangeats.R
+import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseFragment
 import com.example.android_coupangeats.databinding.FragmentHomeBinding
+import com.example.android_coupangeats.src.main.home.models.RestaurantResponse
 import com.example.android_coupangeats.src.main.home.models.SignInResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
-import com.example.android_coupangeats.src.main.login.BottomActivity
+import com.example.android_coupangeats.src.main.map.LocationActivity
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind, R.layout.fragment_home),
 
@@ -24,26 +26,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     private var adapterRestaurant: RecyclerView.Adapter<RestaurantViewPagerAdapter.ViewHolder>? = null
     private var bannerViewPagerAdapter: RecyclerView.Adapter<BannerViewPagerAdapter.ViewHolder>? = null
     var currentPage : Int = 1
-    var issigned = false
 
-    val RestaurantList = arrayListOf<Restaurant>(
-        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true,true),
-        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자연을 담은 돈가스 본점","17-20 분","4.4","(400)","1.2km","무료배달",false,true),
-        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true,false),
-        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",false,true),
-        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "마담순살떡볶이 가경복대점","17-20 분","4.4","(400)","1.2km","무료배달",true,true),
-        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자연을 담은 돈가스 본점","17~20분","4.4","(400)","1.2km","무료배달",false,true),
-        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",false,true),
-        Restaurant(R.drawable.img_1_big,R.drawable.img_2_side1,R.drawable.img_2_side2,
-            "자담돈","17-20 분","4.4","(400)","1.2km","무료배달",true,true)
-    )
+    val RestaurantList = arrayListOf<Restaurant>()
 
     val TypeList = arrayListOf<Type>(
         Type(R.drawable.out,"포장"), Type(R.drawable.korea,"한식"),
@@ -72,54 +56,55 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnLocationIcon.setOnClickListener {
+            //맛집 가져오기
 
-            if(issigned == false) {
-                val intent = Intent(activity, BottomActivity::class.java)
-                startActivity(intent)
-                Log.e("logined", " false ")
+            HomeService(this).tryGetRestaurant()
+
+
+            //HomeFragment 주소 설정하기
+            binding.layoutLocation.setOnClickListener {
+
+                if (ApplicationClass.sSharedPreferences.getString("X_ACCESS_TOKEN", " ") == " ") {
+                    val intent = Intent(activity, LocationActivity::class.java)
+                    startActivity(intent)
+                    Log.e("logined", " false ")
+                }
             }
 
-        }
 
-        // HomeFragment 음식 type 고르기_ RecyclerView
-        adapterType = TypeRecyclerViewAdapter(TypeList)
-        binding.recyclerviewType.adapter = adapterType
+            // HomeFragment 음식 type 고르기_ RecyclerView
+            adapterType = TypeRecyclerViewAdapter(TypeList)
+            binding.recyclerviewType.adapter = adapterType
 
-        // HomeFragment Banner _ viewPager
-        binding.bannerAd.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-        bannerViewPagerAdapter = BannerViewPagerAdapter(BannerList)
-        binding.txtPageNow.setText("1")
-        binding.bannerAd.adapter = bannerViewPagerAdapter
-        binding.txtPageAll.text = (" / ${BannerList.size}")
+            // HomeFragment Banner _ viewPager
+            binding.bannerAd.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+            bannerViewPagerAdapter = BannerViewPagerAdapter(BannerList)
+            binding.txtPageNow.setText("1")
+            binding.bannerAd.adapter = bannerViewPagerAdapter
+            binding.txtPageAll.text = (" / ${BannerList.size}")
 
-        // HomeFragment 가게들 보여주기 _ RecyclerView
+            binding.bannerAd.apply {
+                registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
 
-        adapterRestaurant = RestaurantViewPagerAdapter(RestaurantList)
-        binding.recyclerviewRestaurant.adapter = adapterRestaurant
-
-        binding.bannerAd.apply {
-            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-
-                override fun onPageScrollStateChanged(state: Int) {
-                    super.onPageScrollStateChanged(state)
-                    when (state) {
-                        // 뷰페이저에서 손 떼었을때 / 뷰페이저 멈춰있을 때
-                        ViewPager2.SCROLL_STATE_IDLE -> autoScrollStart()
-                        // 뷰페이저 움직이는 중
-                        ViewPager2.SCROLL_STATE_DRAGGING -> autoScrollStop()
+                    override fun onPageScrollStateChanged(state: Int) {
+                        super.onPageScrollStateChanged(state)
+                        when (state) {
+                            // 뷰페이저에서 손 떼었을때 / 뷰페이저 멈춰있을 때
+                            ViewPager2.SCROLL_STATE_IDLE -> autoScrollStart()
+                            // 뷰페이저 움직이는 중
+                            ViewPager2.SCROLL_STATE_DRAGGING -> autoScrollStop()
+                        }
                     }
-                }
 
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
-                    binding.txtPageNow.text = "${(position % BannerList.size) + 1}"
-                    currentPage = position
-                    autoScrollStart()
-                }
-            })
+                    override fun onPageSelected(position: Int) {
+                        super.onPageSelected(position)
+                        binding.txtPageNow.text = "${(position % BannerList.size) + 1}"
+                        currentPage = position
+                        autoScrollStart()
+                    }
+                })
+            }
         }
-    }
 
     override fun onStop() {
         super.onStop()
@@ -165,5 +150,35 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     override fun onPostSignUpFailure(message: String) {
         TODO("Not yet implemented")
     }
+
+    override fun onGetRestaurantSuccess(response: RestaurantResponse) {
+        Log.e("onGetRestaurantSuccess", "$response")
+
+
+        // RestaurantList에 데이터 추가하
+        for(i in response.result) {
+            Log.e("size",i.storeImgUrl.size.toString())
+            if (i.storeImgUrl.size == 3) {
+                RestaurantList.add(
+                    Restaurant(
+                        i.storeImgUrl[0], i.storeImgUrl[1], i.storeImgUrl[2],
+                        i.storeName, "${i.storeMinDeliveryTime}-${i.storeMaxDeliveryTime}분", "4.5",
+                        "(619)", i.storeUserDistance.toString(), "${i.storeDeliveryFee.toString()}원",
+                        true, true)
+                    )
+
+            }
+        }
+
+        // HomeFragment 가게들 보여주기 _ RecyclerView
+        adapterRestaurant = RestaurantViewPagerAdapter(RestaurantList)
+        binding.recyclerviewRestaurant.adapter = adapterRestaurant
+
+    }
+
+    override fun onGetRestaurantFailure(message: String) {
+        Log.e("onGetRestaurantFailure", "onGetRestaurantFailure")
+    }
+
 
 }
