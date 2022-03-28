@@ -2667,6 +2667,7 @@ drawable mtrl_navigation_bar_item_background
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_overlay
 drawable mtrl_tabs_default_indicator
+drawable my_location
 drawable my_page_icon
 drawable name
 drawable navermap_compass
@@ -3034,6 +3035,7 @@ id img_heart_example
 id img_home
 id img_job
 id img_logo
+id img_my_location
 id img_password
 id img_search_lcation
 id img_star

@@ -8,12 +8,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.android_coupangeats.R;
 import com.naver.maps.map.MapView;
-import com.naver.maps.map.widget.LocationButtonView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ActivityMyLocationBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final LocationButtonView btnMyLocation;
+  public final AppCompatButton btnSet;
 
   @NonNull
-  public final AppCompatButton btnSet;
+  public final AppCompatImageView imgMyLocation;
 
   @NonNull
   public final MapView mapView;
@@ -38,12 +38,12 @@ public final class ActivityMyLocationBinding implements ViewBinding {
   public final TextView txtLocationName;
 
   private ActivityMyLocationBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LocationButtonView btnMyLocation, @NonNull AppCompatButton btnSet,
+      @NonNull AppCompatButton btnSet, @NonNull AppCompatImageView imgMyLocation,
       @NonNull MapView mapView, @NonNull TextView txtLocationContent,
       @NonNull TextView txtLocationName) {
     this.rootView = rootView;
-    this.btnMyLocation = btnMyLocation;
     this.btnSet = btnSet;
+    this.imgMyLocation = imgMyLocation;
     this.mapView = mapView;
     this.txtLocationContent = txtLocationContent;
     this.txtLocationName = txtLocationName;
@@ -76,15 +76,15 @@ public final class ActivityMyLocationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_my_location;
-      LocationButtonView btnMyLocation = ViewBindings.findChildViewById(rootView, id);
-      if (btnMyLocation == null) {
-        break missingId;
-      }
-
       id = R.id.btn_set;
       AppCompatButton btnSet = ViewBindings.findChildViewById(rootView, id);
       if (btnSet == null) {
+        break missingId;
+      }
+
+      id = R.id.img_my_location;
+      AppCompatImageView imgMyLocation = ViewBindings.findChildViewById(rootView, id);
+      if (imgMyLocation == null) {
         break missingId;
       }
 
@@ -106,7 +106,7 @@ public final class ActivityMyLocationBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMyLocationBinding((ConstraintLayout) rootView, btnMyLocation, btnSet,
+      return new ActivityMyLocationBinding((ConstraintLayout) rootView, btnSet, imgMyLocation,
           mapView, txtLocationContent, txtLocationName);
     }
     String missingId = rootView.getResources().getResourceName(id);

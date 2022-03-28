@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_favorite"
+        app:layout_constraintBottom_toBottomOf="@id/txt_favorite"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        android:layout_marginStart="20dp"
+        android:text="@string/heart_text"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="@null" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_no_heart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/heartBackground">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="110dp"
+            android:padding="15dp"
+            android:clipToPadding="false"
+            >
+
+
+            <TextView
+                android:id="@+id/txt_line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="즐겨찾는 맛집이 없습니다."
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/txt_line2_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txt_line2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋아하는 맛집에 "
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/img_heart"
+                android:layout_marginTop="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_chainStyle="packed"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_heart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_favorite_24"
+                app:layout_constraintStart_toEndOf="@id/txt_line2_1"
+                app:layout_constraintEnd_toStartOf="@id/txt_line2_2"
+                app:layout_constraintTop_toTopOf="@id/txt_line2_1"
+                app:layout_constraintBottom_toBottomOf="@id/txt_line2_1"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txt_line2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 를 눌러주세요."
+                app:layout_constraintTop_toTopOf="@id/txt_line2_1"
+                app:layout_constraintStart_toEndOf="@id/img_heart"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_heart_example"
+                android:layout_width="350dp"
+                android:layout_height="230dp"
+                android:src="@drawable/heart_example"
+                app:layout_constraintTop_toBottomOf="@id/txt_line2_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="쿠팡이츠 맛집 구경가기"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/white_round_radius"
+                android:elevation="2dp"/>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
