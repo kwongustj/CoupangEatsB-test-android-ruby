@@ -1,5 +1,6 @@
 package com.example.android_coupangeats.src.main.heart
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_coupangeats.R
@@ -45,6 +46,11 @@ class HeartActivity :BaseActivity<ActivityHeartBinding>(ActivityHeartBinding::in
         binding.recyclerviewFavoriteRestaurant.adapter = adapterType
         val count = FavoriteRestaurantAdapter(FavoriteRestaurantList).itemCount
         binding.txtCount.setText("총 ${count}개")
+
+        binding.txtModify.setOnClickListener {
+            val intent = Intent(this, NoHeartActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

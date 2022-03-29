@@ -77,7 +77,7 @@ class MyLocationActivity : BaseActivity<ActivityMyLocationBinding>(ActivityMyLoc
             .addOnSuccessListener { location : Location? ->
                  val address = geocoder.getFromLocation(location!!.latitude, location.longitude,1)
                 Log.e("address","$address")
-                binding.txtLocationContent.setText(address[0].adminArea)
+            //    binding.txtLocationContent.setText(address[0].adminArea)
             }
 
         val uiSettings = naverMap.uiSettings

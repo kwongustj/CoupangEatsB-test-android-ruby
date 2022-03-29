@@ -37,8 +37,8 @@ class BottomActivity : BaseActivity<ActivityBottomBinding>(ActivityBottomBinding
             finish()
             }
         else {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+        //    val intent = Intent(this, LoginActivity::class.java)
+        //    startActivity(intent)
         }
     }
 

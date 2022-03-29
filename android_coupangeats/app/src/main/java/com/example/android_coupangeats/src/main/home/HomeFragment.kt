@@ -16,7 +16,9 @@ import com.example.android_coupangeats.databinding.FragmentHomeBinding
 import com.example.android_coupangeats.src.main.home.models.RestaurantResponse
 import com.example.android_coupangeats.src.main.home.models.SignInResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
+import com.example.android_coupangeats.src.main.login.BottomActivity
 import com.example.android_coupangeats.src.main.map.LocationActivity
+import com.example.android_coupangeats.src.main.restaurant.InformationRestaurantActivity
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind, R.layout.fragment_home),
 
@@ -27,7 +29,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     private var bannerViewPagerAdapter: RecyclerView.Adapter<BannerViewPagerAdapter.ViewHolder>? = null
     var currentPage : Int = 1
 
-    val RestaurantList = arrayListOf<Restaurant>()
+    val RestaurantList = arrayListOf<Restaurant>(
+        Restaurant("https://ifh.cc/g/xS6qMn.jpg","https://ifh.cc/g/k3FHpB.png","https://ifh.cc/g/S4AObs.png",
+            "자담돈","17-20 분","4.4","(400)","0.6666","무료배달",true,true),
+        Restaurant("https://ifh.cc/g/xS6qMn.jpg","https://ifh.cc/g/k3FHpB.png","https://ifh.cc/g/S4AObs.png",
+            "자연을 담은 돈가스 본점","17-20 분","4.4","(400)","0.6666","무료배달",false,true),
+        Restaurant("https://ifh.cc/g/xS6qMn.jpg","https://ifh.cc/g/k3FHpB.png","https://ifh.cc/g/S4AObs.png",
+            "자담돈","17-20 분","4.4","(400)","1.22222","무료배달",true,false)
+    )
 
     val TypeList = arrayListOf<Type>(
         Type(R.drawable.out,"포장"), Type(R.drawable.korea,"한식"),
@@ -56,9 +65,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-            //맛집 가져오기
+            //음식점 가져오기
+         //  HomeService(this).tryGetRestaurant()
 
-            HomeService(this).tryGetRestaurant()
+        adapterRestaurant = RestaurantViewPagerAdapter(RestaurantList)
+        binding.recyclerviewRestaurant.adapter = adapterRestaurant
 
 
             //HomeFragment 주소 설정하기
@@ -156,23 +167,23 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
 
 
         // RestaurantList에 데이터 추가하
-        for(i in response.result) {
-            Log.e("size",i.storeImgUrl.size.toString())
-            if (i.storeImgUrl.size == 3) {
-                RestaurantList.add(
-                    Restaurant(
-                        i.storeImgUrl[0], i.storeImgUrl[1], i.storeImgUrl[2],
-                        i.storeName, "${i.storeMinDeliveryTime}-${i.storeMaxDeliveryTime}분", "4.5",
-                        "(619)", i.storeUserDistance.toString(), "${i.storeDeliveryFee.toString()}원",
-                        true, true)
-                    )
-
-            }
-        }
-
+//        for(i in response.result) {
+//            Log.e("size",i.storeImgUrl.size.toString())
+//            if (i.storeImgUrl.size == 3) {
+//                RestaurantList.add(
+//                    Restaurant(
+//                        i.storeImgUrl[0], i.storeImgUrl[1], i.storeImgUrl[2],
+//                        i.storeName, "${i.storeMinDeliveryTime}-${i.storeMaxDeliveryTime}분", "4.5",
+//                        "(619)", i.storeUserDistance.toString(), "${i.storeDeliveryFee.toString()}원",
+//                        true, true)
+//                    )
+//
+//            }
+//        }
+//
         // HomeFragment 가게들 보여주기 _ RecyclerView
-        adapterRestaurant = RestaurantViewPagerAdapter(RestaurantList)
-        binding.recyclerviewRestaurant.adapter = adapterRestaurant
+//        adapterRestaurant = RestaurantViewPagerAdapter(RestaurantList)
+//        binding.recyclerviewRestaurant.adapter = adapterRestaurant
 
     }
 

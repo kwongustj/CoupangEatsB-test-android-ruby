@@ -1956,6 +1956,7 @@ dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen app_bar_height
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -2020,6 +2021,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -2456,6 +2458,7 @@ dimen test_navigation_bar_item_min_width
 dimen test_navigation_bar_label_padding
 dimen test_navigation_bar_shadow_height
 dimen test_navigation_bar_text_size
+dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -2549,7 +2552,11 @@ drawable avd_show_password
 drawable banner1
 drawable banner2
 drawable banner3
+drawable big_img_1
+drawable big_img_2
+drawable big_img_3
 drawable black_round_radius
+drawable blue_radius_white_background
 drawable blue_round_radius
 drawable boon
 drawable btn_checkbox_checked_mtrl
@@ -2587,6 +2594,7 @@ drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable coupang_eats_logo
 drawable coupang_logo
+drawable custom_heart
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2609,15 +2617,22 @@ drawable gogi
 drawable good_restaurant
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable gray_round_radius
 drawable heart_example
 drawable heart_icon
 drawable home
 drawable home_icon
+drawable ic_baseline_access_time_24
 drawable ic_baseline_arrow_back_24
+drawable ic_baseline_arrow_back_24_white
 drawable ic_baseline_close_24
 drawable ic_baseline_favorite_24
+drawable ic_baseline_favorite_border_24
 drawable ic_baseline_keyboard_arrow_down_24
+drawable ic_baseline_keyboard_arrow_right_24
+drawable ic_baseline_my_favorite_24
 drawable ic_baseline_near_me_24
+drawable ic_baseline_share_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2645,6 +2660,7 @@ drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
 drawable main_btm_nav_item_color
+drawable map_icon
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2840,6 +2856,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -2855,6 +2872,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id app_bar
 id arc
 id asConfigured
 id async
@@ -2864,6 +2882,7 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id banner_ad
 id banner_image
+id banner_img
 id bar_1
 id bar_2
 id barrier
@@ -2901,6 +2920,7 @@ id cancel_action
 id cancel_button
 id carryVelocity
 id cbox_agree
+id cbox_heart
 id center
 id center_horizontal
 id center_vertical
@@ -2987,6 +3007,7 @@ id etxt_pw
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab
 id fade
 id fill
 id fill_horizontal
@@ -2996,6 +3017,7 @@ id fitToContents
 id fixed
 id flip
 id floating
+id food_tab_layout
 id forever
 id fragment_container_view_tag
 id frost
@@ -3025,6 +3047,7 @@ id image
 id img_1_big
 id img_2_side_1
 id img_2_side_2
+id img_arrow
 id img_check
 id img_check2
 id img_check3
@@ -3035,10 +3058,18 @@ id img_heart_example
 id img_home
 id img_job
 id img_logo
+id img_more
 id img_my_location
 id img_password
+id img_plate
 id img_search_lcation
 id img_star
+id img_star1
+id img_star2
+id img_star3
+id img_star4
+id img_star5
+id img_time
 id img_type
 id immediateStop
 id included
@@ -3064,6 +3095,7 @@ id layout_nested
 id layout_no_heart
 id layout_phone
 id layout_pw
+id layout_title
 id layout_top
 id left
 id leftToRight
@@ -3196,6 +3228,8 @@ id outline
 id outward
 id overshoot
 id packed
+id pager
+id pager_food
 id parallax
 id parent
 id parentPanel
@@ -3215,9 +3249,12 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recycelerview_menu
+id recycelerview_review
 id recyclerview_favorite_restaurant
 id recyclerview_restaurant
 id recyclerview_type
+id restarant_name
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3288,6 +3325,7 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
+id tab_layout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3326,6 +3364,8 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
+id toolbar_layout
 id top
 id topPanel
 id touch_outside
@@ -3342,32 +3382,46 @@ id txt_agree_content
 id txt_content1
 id txt_count
 id txt_deliverty_price
+id txt_delivery
+id txt_delivery_price
 id txt_distance
 id txt_favorite
 id txt_filter
 id txt_find_id
 id txt_find_pw
+id txt_good
 id txt_good_restaurant
 id txt_home
 id txt_i_agree
+id txt_information
 id txt_job
 id txt_line1
 id txt_line2_1
 id txt_line2_2
 id txt_location_content
 id txt_location_name
+id txt_many
+id txt_menu_detail
+id txt_menu_name
+id txt_menu_price
 id txt_min
 id txt_modify
+id txt_money
+id txt_money_price
+id txt_more
 id txt_my_location
 id txt_name
 id txt_name_restaurant
 id txt_out
+id txt_packing
+id txt_packing_address
 id txt_page_all
 id txt_page_now
 id txt_password
 id txt_phone
 id txt_point_1
 id txt_point_2
+id txt_review
 id txt_review_num
 id txt_sign_in
 id txt_star
@@ -3376,6 +3430,8 @@ id txt_text1
 id txt_text2
 id txt_text3
 id txt_text4
+id txt_time
+id txt_title
 id txt_title_sign_in
 id txt_type
 id txt_wrong_id
@@ -3493,14 +3549,17 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bottom
 layout activity_heart
+layout activity_information_restaurant
 layout activity_location
 layout activity_login
 layout activity_main
 layout activity_my_location
 layout activity_no_heart
+layout activity_restaurant
 layout activity_sign_up
 layout activity_splash
 layout bottom_sheet_layout
+layout content_scrolling
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3519,9 +3578,12 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_loading
 layout favorite_restaurant_item
+layout fragment_delivery
 layout fragment_home
+layout fragment_menu
 layout fragment_my_page
 layout fragment_order
+layout fragment_packing
 layout fragment_search
 layout item_layout_banner
 layout m3_alert_dialog
@@ -3541,6 +3603,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout menu_item
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -3597,6 +3660,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout restaurant_item
+layout review_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3620,6 +3684,7 @@ layout type_item
 menu example_menu
 menu example_menu2
 menu menu_main_bottom_nav
+menu menu_restaurant
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -3650,6 +3715,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_settings
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3683,6 +3749,7 @@ string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string heart_text
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string home_btn_try_get_http_method
 string home_btn_try_post_http_method
@@ -3690,6 +3757,7 @@ string home_et_id
 string home_et_pw
 string icon_content_description
 string item_view_role_description
+string large_text
 string m3_ref_typeface_brand_display_regular
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -3800,6 +3868,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_restaurant
 string txt_modify
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -4331,6 +4400,9 @@ style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
 style Theme_Android_coupangeats
+style Theme_Android_coupangeats_AppBarOverlay
+style Theme_Android_coupangeats_NoActionBar
+style Theme_Android_coupangeats_PopupOverlay
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
 style Theme_AppCompat_DayNight
@@ -4879,6 +4951,7 @@ style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
 style navermap_app
+style tab_text
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

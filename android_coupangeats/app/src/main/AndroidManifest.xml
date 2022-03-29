@@ -1,79 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.android_coupangeats">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-<application
-    android:name=".config.ApplicationClass"
-    android:allowBackup="false"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:networkSecurityConfig="@xml/network_security_config"
-    android:supportsRtl="true"
-    android:theme="@style/Theme.Android_coupangeats"
-    tools:replace="android:allowBackup"
-    tools:ignore="AllowBackup">
-    <meta-data
-        android:name="com.naver.maps.map.CLIENT_ID"
-        android:value="1zwatx0xvw" />
-    <activity
-        android:name=".src.splash.SplashActivity"
-        android:screenOrientation="portrait"
-        android:exported="true"
-        android:theme="@style/AppTheme.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+    <application
+        android:name=".config.ApplicationClass"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Android_coupangeats"
+        tools:ignore="AllowBackup"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".RestaurantActivity"
+            android:exported="true"
+            android:label="@string/title_activity_restaurant"
+            android:theme="@style/Theme.Android_coupangeats.NoActionBar" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="1zwatx0xvw" />
 
-    <activity
-        android:name=".src.main.MainActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar"
-        android:exported="true"/>
-    <activity
-        android:name=".src.main.login.LoginActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar"
-        android:windowSoftInputMode="adjustResize"
-        android:exported="true"/>
-    <activity
-        android:name=".src.main.login.BottomActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/Theme.AppCompat.Transparent.NoActionBar"
-        android:exported="true"/>
-    <activity
-        android:name=".src.main.signup.SignUpActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar"
-        android:windowSoftInputMode="adjustResize"
-        android:exported="true"/>
-    <activity
-        android:name=".src.main.heart.HeartActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar"
-        android:exported="true"/>
-    <activity
-        android:name=".src.main.heart.NoHeartActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar"
-        android:exported="true"/>
-    <activity
-        android:name=".src.main.map.LocationActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar"
-        android:exported="true"/>
-    <activity
-        android:name=".src.main.map.MyLocationActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar"
-        android:exported="true"/>
-</application>
+        <activity
+            android:name=".src.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".src.main.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".src.main.login.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".src.main.login.BottomActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".src.main.signup.SignUpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".src.main.heart.HeartActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".src.main.heart.NoHeartActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".src.main.map.LocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".src.main.map.MyLocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".src.main.restaurant.InformationRestaurantActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
 
 </manifest>

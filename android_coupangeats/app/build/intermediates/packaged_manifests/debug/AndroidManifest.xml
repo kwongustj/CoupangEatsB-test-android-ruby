@@ -34,6 +34,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Android_coupangeats" >
+        <activity
+            android:name="com.example.android_coupangeats.RestaurantActivity"
+            android:exported="true"
+            android:label="@string/title_activity_restaurant"
+            android:theme="@style/Theme.Android_coupangeats.NoActionBar" />
+
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="1zwatx0xvw" />
@@ -88,6 +94,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.android_coupangeats.src.main.map.MyLocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.android_coupangeats.src.main.restaurant.InformationRestaurantActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />

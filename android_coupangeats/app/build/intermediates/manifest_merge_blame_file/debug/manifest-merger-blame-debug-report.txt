@@ -41,205 +41,226 @@
 23-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:18:22-73
 24
 25    <application
-25-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:10:1-77:15
+25-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:10:5-88:19
 26        android:name="com.example.android_coupangeats.config.ApplicationClass"
-26-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:11:5-44
+26-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:11:9-48
 27        android:allowBackup="false"
-27-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:12:5-32
+27-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:12:9-36
 28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 28-->[androidx.core:core:1.7.0] /Users/kwonapple/.gradle/caches/transforms-3/3287ed4cf8c32398866b0c1d2a55edb7/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 29        android:debuggable="true"
 30        android:extractNativeLibs="false"
 31        android:icon="@mipmap/ic_launcher"
-31-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:13:5-39
+31-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:13:9-43
 32        android:label="@string/app_name"
-32-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:14:5-37
+32-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:14:9-41
 33        android:networkSecurityConfig="@xml/network_security_config"
-33-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:15:5-65
+33-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:15:9-69
 34        android:supportsRtl="true"
-34-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:16:5-31
+34-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:16:9-35
 35        android:testOnly="true"
 36        android:theme="@style/Theme.Android_coupangeats" >
-36-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:17:5-53
-37        <meta-data
-37-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:20:5-22:38
-38            android:name="com.naver.maps.map.CLIENT_ID"
-38-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:21:9-52
-39            android:value="1zwatx0xvw" />
-39-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:22:9-35
-40
-41        <activity
-41-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:23:5-33:16
-42            android:name="com.example.android_coupangeats.src.splash.SplashActivity"
-42-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:24:9-50
-43            android:exported="true"
-43-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:26:9-32
-44            android:screenOrientation="portrait"
-44-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:25:9-45
-45            android:theme="@style/AppTheme.NoActionBar" >
-45-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:27:9-52
-46            <intent-filter>
-46-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:28:9-32:25
-47                <action android:name="android.intent.action.MAIN" />
-47-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:29:13-65
-47-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:29:21-62
-48
-49                <category android:name="android.intent.category.LAUNCHER" />
-49-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:31:13-73
-49-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:31:23-70
-50            </intent-filter>
-51        </activity>
-52        <activity
-52-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:35:5-39:34
-53            android:name="com.example.android_coupangeats.src.main.MainActivity"
-53-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:36:9-46
-54            android:exported="true"
-54-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:39:9-32
-55            android:screenOrientation="portrait"
-55-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:37:9-45
-56            android:theme="@style/AppTheme.NoActionBar" />
-56-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:38:9-52
-57        <activity
-57-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:40:5-45:34
-58            android:name="com.example.android_coupangeats.src.main.login.LoginActivity"
-58-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:41:9-53
-59            android:exported="true"
-59-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:45:9-32
-60            android:screenOrientation="portrait"
-60-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:42:9-45
-61            android:theme="@style/AppTheme.NoActionBar"
-61-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:43:9-52
-62            android:windowSoftInputMode="adjustResize" />
-62-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:44:9-51
+36-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:17:9-57
+37        <activity
+37-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:20:9-24:76
+38            android:name="com.example.android_coupangeats.RestaurantActivity"
+38-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:21:13-47
+39            android:exported="true"
+39-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:22:13-36
+40            android:label="@string/title_activity_restaurant"
+40-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:23:13-62
+41            android:theme="@style/Theme.Android_coupangeats.NoActionBar" />
+41-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:24:13-73
+42
+43        <meta-data
+43-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:26:9-28:42
+44            android:name="com.naver.maps.map.CLIENT_ID"
+44-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:27:13-56
+45            android:value="1zwatx0xvw" />
+45-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:28:13-39
+46
+47        <activity
+47-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:30:9-40:20
+48            android:name="com.example.android_coupangeats.src.splash.SplashActivity"
+48-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:31:13-54
+49            android:exported="true"
+49-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:32:13-36
+50            android:screenOrientation="portrait"
+50-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:33:13-49
+51            android:theme="@style/AppTheme.NoActionBar" >
+51-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:34:13-56
+52            <intent-filter>
+52-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:35:13-39:29
+53                <action android:name="android.intent.action.MAIN" />
+53-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:36:17-69
+53-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:36:25-66
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:38:17-77
+55-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:38:27-74
+56            </intent-filter>
+57        </activity>
+58        <activity
+58-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:41:9-45:59
+59            android:name="com.example.android_coupangeats.src.main.MainActivity"
+59-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:42:13-50
+60            android:exported="true"
+60-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:43:13-36
+61            android:screenOrientation="portrait"
+61-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:44:13-49
+62            android:theme="@style/AppTheme.NoActionBar" />
+62-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:45:13-56
 63        <activity
-63-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:46:5-50:34
-64            android:name="com.example.android_coupangeats.src.main.login.BottomActivity"
-64-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:47:9-54
+63-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:46:9-51:58
+64            android:name="com.example.android_coupangeats.src.main.login.LoginActivity"
+64-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:47:13-57
 65            android:exported="true"
-65-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:50:9-32
+65-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:48:13-36
 66            android:screenOrientation="portrait"
-66-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:48:9-45
-67            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
-67-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:49:9-71
-68        <activity
-68-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:51:5-56:34
-69            android:name="com.example.android_coupangeats.src.main.signup.SignUpActivity"
-69-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:52:9-55
-70            android:exported="true"
-70-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:56:9-32
-71            android:screenOrientation="portrait"
-71-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:53:9-45
-72            android:theme="@style/AppTheme.NoActionBar"
-72-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:54:9-52
-73            android:windowSoftInputMode="adjustResize" />
-73-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:55:9-51
+66-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:49:13-49
+67            android:theme="@style/AppTheme.NoActionBar"
+67-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:50:13-56
+68            android:windowSoftInputMode="adjustResize" />
+68-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:51:13-55
+69        <activity
+69-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:52:9-56:78
+70            android:name="com.example.android_coupangeats.src.main.login.BottomActivity"
+70-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:53:13-58
+71            android:exported="true"
+71-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:54:13-36
+72            android:screenOrientation="portrait"
+72-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:55:13-49
+73            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+73-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:56:13-75
 74        <activity
-74-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:57:5-61:34
-75            android:name="com.example.android_coupangeats.src.main.heart.HeartActivity"
-75-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:58:9-53
+74-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:57:9-62:58
+75            android:name="com.example.android_coupangeats.src.main.signup.SignUpActivity"
+75-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:58:13-59
 76            android:exported="true"
-76-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:61:9-32
+76-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:59:13-36
 77            android:screenOrientation="portrait"
-77-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:59:9-45
-78            android:theme="@style/AppTheme.NoActionBar" />
-78-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:60:9-52
-79        <activity
-79-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:62:5-66:34
-80            android:name="com.example.android_coupangeats.src.main.heart.NoHeartActivity"
-80-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:63:9-55
-81            android:exported="true"
-81-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:66:9-32
-82            android:screenOrientation="portrait"
-82-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:64:9-45
-83            android:theme="@style/AppTheme.NoActionBar" />
-83-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:65:9-52
-84        <activity
-84-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:67:5-71:34
-85            android:name="com.example.android_coupangeats.src.main.map.LocationActivity"
-85-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:68:9-54
-86            android:exported="true"
-86-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:71:9-32
-87            android:screenOrientation="portrait"
-87-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:69:9-45
-88            android:theme="@style/AppTheme.NoActionBar" />
-88-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:70:9-52
-89        <activity
-89-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:72:5-76:34
-90            android:name="com.example.android_coupangeats.src.main.map.MyLocationActivity"
-90-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:73:9-56
-91            android:exported="true"
-91-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:76:9-32
-92            android:screenOrientation="portrait"
-92-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:74:9-45
-93            android:theme="@style/AppTheme.NoActionBar" />
-93-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:75:9-52
-94        <activity
-94-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:21:9-25:51
-95            android:name="com.naver.maps.map.app.LegendActivity"
-95-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:22:13-65
-96            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-96-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:23:13-91
-97            android:label="@string/navermap_legend"
-97-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:24:13-52
-98            android:theme="@style/navermap_app" />
-98-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:25:13-48
-99        <activity
-99-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:26:9-30:51
-100            android:name="com.naver.maps.map.app.LegalNoticeActivity"
-100-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:27:13-70
-101            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-101-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:28:13-91
-102            android:label="@string/navermap_legal_notice"
-102-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:29:13-58
-103            android:theme="@style/navermap_app" />
-103-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:30:13-48
-104        <activity
-104-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:31:9-35:51
-105            android:name="com.naver.maps.map.app.OpenSourceLicenseActivity"
-105-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:32:13-76
-106            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-106-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:33:13-91
-107            android:label="@string/navermap_open_source_license"
-107-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:34:13-65
-108            android:theme="@style/navermap_app" />
-108-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:35:13-48
-109        <activity
-109-->[com.google.android.gms:play-services-base:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/60199fd825fbf2131f73e2a51d76e174/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
-110            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-110-->[com.google.android.gms:play-services-base:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/60199fd825fbf2131f73e2a51d76e174/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
-111            android:exported="false"
-111-->[com.google.android.gms:play-services-base:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/60199fd825fbf2131f73e2a51d76e174/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
-112            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-112-->[com.google.android.gms:play-services-base:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/60199fd825fbf2131f73e2a51d76e174/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
-113
-114        <meta-data
-114-->[com.google.android.gms:play-services-basement:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/1e3323b3530d068f621ce1bbc2f16dab/transformed/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
-115            android:name="com.google.android.gms.version"
-115-->[com.google.android.gms:play-services-basement:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/1e3323b3530d068f621ce1bbc2f16dab/transformed/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
-116            android:value="@integer/google_play_services_version" />
-116-->[com.google.android.gms:play-services-basement:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/1e3323b3530d068f621ce1bbc2f16dab/transformed/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
-117
-118        <provider
-118-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-119            android:name="androidx.startup.InitializationProvider"
-119-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-120            android:authorities="com.example.android_coupangeats.androidx-startup"
-120-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-121            android:exported="false" >
-121-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-122            <meta-data
-122-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-123                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-123-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-124                android:value="androidx.startup" />
-124-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-125            <meta-data
-125-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-126                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-126-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-127                android:value="androidx.startup" />
-127-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-128        </provider>
-129    </application>
-130
-131</manifest>
+77-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:60:13-49
+78            android:theme="@style/AppTheme.NoActionBar"
+78-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:61:13-56
+79            android:windowSoftInputMode="adjustResize" />
+79-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:62:13-55
+80        <activity
+80-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:63:9-67:59
+81            android:name="com.example.android_coupangeats.src.main.heart.HeartActivity"
+81-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:64:13-57
+82            android:exported="true"
+82-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:65:13-36
+83            android:screenOrientation="portrait"
+83-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:66:13-49
+84            android:theme="@style/AppTheme.NoActionBar" />
+84-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:67:13-56
+85        <activity
+85-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:68:9-72:59
+86            android:name="com.example.android_coupangeats.src.main.heart.NoHeartActivity"
+86-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:69:13-59
+87            android:exported="true"
+87-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:70:13-36
+88            android:screenOrientation="portrait"
+88-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:71:13-49
+89            android:theme="@style/AppTheme.NoActionBar" />
+89-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:72:13-56
+90        <activity
+90-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:73:9-77:59
+91            android:name="com.example.android_coupangeats.src.main.map.LocationActivity"
+91-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:74:13-58
+92            android:exported="true"
+92-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:75:13-36
+93            android:screenOrientation="portrait"
+93-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:76:13-49
+94            android:theme="@style/AppTheme.NoActionBar" />
+94-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:77:13-56
+95        <activity
+95-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:78:9-82:59
+96            android:name="com.example.android_coupangeats.src.main.map.MyLocationActivity"
+96-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:79:13-60
+97            android:exported="true"
+97-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:80:13-36
+98            android:screenOrientation="portrait"
+98-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:81:13-49
+99            android:theme="@style/AppTheme.NoActionBar" />
+99-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:82:13-56
+100        <activity
+100-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:83:9-87:59
+101            android:name="com.example.android_coupangeats.src.main.restaurant.InformationRestaurantActivity"
+101-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:84:13-78
+102            android:exported="true"
+102-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:85:13-36
+103            android:screenOrientation="portrait"
+103-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:86:13-49
+104            android:theme="@style/AppTheme.NoActionBar" />
+104-->/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/AndroidManifest.xml:87:13-56
+105        <activity
+105-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:21:9-25:51
+106            android:name="com.naver.maps.map.app.LegendActivity"
+106-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:22:13-65
+107            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+107-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:23:13-91
+108            android:label="@string/navermap_legend"
+108-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:24:13-52
+109            android:theme="@style/navermap_app" />
+109-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:25:13-48
+110        <activity
+110-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:26:9-30:51
+111            android:name="com.naver.maps.map.app.LegalNoticeActivity"
+111-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:27:13-70
+112            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+112-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:28:13-91
+113            android:label="@string/navermap_legal_notice"
+113-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:29:13-58
+114            android:theme="@style/navermap_app" />
+114-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:30:13-48
+115        <activity
+115-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:31:9-35:51
+116            android:name="com.naver.maps.map.app.OpenSourceLicenseActivity"
+116-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:32:13-76
+117            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+117-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:33:13-91
+118            android:label="@string/navermap_open_source_license"
+118-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:34:13-65
+119            android:theme="@style/navermap_app" />
+119-->[com.naver.maps:map-sdk:3.14.0] /Users/kwonapple/.gradle/caches/transforms-3/db7006a907c981312df7eb932efd7670/transformed/jetified-map-sdk-3.14.0/AndroidManifest.xml:35:13-48
+120        <activity
+120-->[com.google.android.gms:play-services-base:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/60199fd825fbf2131f73e2a51d76e174/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+121            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+121-->[com.google.android.gms:play-services-base:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/60199fd825fbf2131f73e2a51d76e174/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+122            android:exported="false"
+122-->[com.google.android.gms:play-services-base:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/60199fd825fbf2131f73e2a51d76e174/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+123            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+123-->[com.google.android.gms:play-services-base:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/60199fd825fbf2131f73e2a51d76e174/transformed/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+124
+125        <meta-data
+125-->[com.google.android.gms:play-services-basement:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/1e3323b3530d068f621ce1bbc2f16dab/transformed/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+126            android:name="com.google.android.gms.version"
+126-->[com.google.android.gms:play-services-basement:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/1e3323b3530d068f621ce1bbc2f16dab/transformed/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+127            android:value="@integer/google_play_services_version" />
+127-->[com.google.android.gms:play-services-basement:16.0.1] /Users/kwonapple/.gradle/caches/transforms-3/1e3323b3530d068f621ce1bbc2f16dab/transformed/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+128
+129        <provider
+129-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+130            android:name="androidx.startup.InitializationProvider"
+130-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+131            android:authorities="com.example.android_coupangeats.androidx-startup"
+131-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+132            android:exported="false" >
+132-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+133            <meta-data
+133-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+134                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+134-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+135                android:value="androidx.startup" />
+135-->[androidx.emoji2:emoji2:1.0.0] /Users/kwonapple/.gradle/caches/transforms-3/8856134bcd7b8b49a046b976ebc002ff/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+136            <meta-data
+136-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+137                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+137-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+138                android:value="androidx.startup" />
+138-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/kwonapple/.gradle/caches/transforms-3/c3dc026c86fcb2cf2e53d156d603f6f7/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+139        </provider>
+140    </application>
+141
+142</manifest>

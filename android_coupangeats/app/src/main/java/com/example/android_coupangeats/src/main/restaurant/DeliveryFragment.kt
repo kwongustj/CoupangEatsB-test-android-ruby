@@ -1,0 +1,26 @@
+package com.example.android_coupangeats.src.main.restaurant
+
+import android.os.Bundle
+import android.view.View
+import androidx.recyclerview.widget.RecyclerView
+import com.example.android_coupangeats.R
+import com.example.android_coupangeats.config.BaseFragment
+import com.example.android_coupangeats.databinding.FragmentDeliveryBinding
+
+class DeliveryFragment : BaseFragment<FragmentDeliveryBinding>(FragmentDeliveryBinding::bind, R.layout.fragment_delivery),
+
+    DeliveryFragmentView {
+
+    val ReviewList = arrayListOf<Review>(
+       Review("https://ifh.cc/g/3kwRPG.png","정말 맛있어요!!!!!!!!!!!다음에 또 오겠습니다..\n 서비스 많이 주세용",3),
+        Review("https://ifh.cc/g/3kwRPG.png","정말 맛있어요!!!!!!!!!!!다음에 또 오겠습니다..\n 서비스 많이 주세용",3)
+    )
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val adapterReview = ReviewPagerAdapter(ReviewList)
+        binding.recycelerviewReview.adapter = adapterReview
+    }
+
+}

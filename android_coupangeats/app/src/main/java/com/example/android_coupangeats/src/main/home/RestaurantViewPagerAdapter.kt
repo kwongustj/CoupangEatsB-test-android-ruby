@@ -1,14 +1,20 @@
 package com.example.android_coupangeats.src.main.home
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android_coupangeats.R
+import com.example.android_coupangeats.src.main.map.LocationActivity
+import com.example.android_coupangeats.src.main.restaurant.InformationRestaurantActivity
 import java.lang.Math.floor
 import java.lang.Math.round
 
@@ -21,7 +27,6 @@ class RestaurantViewPagerAdapter(val dataSet : ArrayList<Restaurant>): RecyclerV
     ): RestaurantViewPagerAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.restaurant_item ,parent,false)
         return ViewHolder(v)
-
 
     }
 
@@ -69,6 +74,14 @@ class RestaurantViewPagerAdapter(val dataSet : ArrayList<Restaurant>): RecyclerV
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+        init {
+
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, InformationRestaurantActivity::class.java)
+                itemView.context.startActivity(intent)
+            }
+        }
         var imgBig : AppCompatImageView = itemView.findViewById(R.id.img_1_big)
         var imgSide1 : AppCompatImageView = itemView.findViewById(R.id.img_2_side_1)
         var imgSide2 : AppCompatImageView = itemView.findViewById(R.id.img_2_side_2)
@@ -80,6 +93,7 @@ class RestaurantViewPagerAdapter(val dataSet : ArrayList<Restaurant>): RecyclerV
         var price : TextView = itemView.findViewById(R.id.txt_deliverty_price)
         var chita : AppCompatImageView = itemView.findViewById(R.id.chita)
         var come : TextView = itemView.findViewById(R.id.txt_out)
+
 
 
     }
