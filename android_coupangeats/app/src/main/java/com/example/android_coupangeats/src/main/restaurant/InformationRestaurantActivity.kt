@@ -7,7 +7,6 @@ import android.os.Message
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.databinding.ActivityInformationRestaurantBinding

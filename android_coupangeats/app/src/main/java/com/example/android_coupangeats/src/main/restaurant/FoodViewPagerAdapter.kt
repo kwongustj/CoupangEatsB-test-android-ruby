@@ -10,6 +10,9 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android_coupangeats.R
+import com.example.android_coupangeats.config.ApplicationClass
+import com.example.android_coupangeats.src.main.cart.MenuDetailActivity
+import com.example.android_coupangeats.src.main.cart.models.MenuDetailResponse
 import java.lang.Math.floor
 import java.text.DecimalFormat
 
@@ -26,6 +29,12 @@ class FoodViewPagerAdapter(val dataSet : ArrayList<Food>): RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: FoodViewPagerAdapter.ViewHolder, position: Int) {
+
+        holder.view.setOnClickListener {
+            val intent = Intent(holder.view.context, MenuDetailActivity::class.java)
+            ApplicationClass.sSharedPreferences.edit().putString("food_num", dataSet[position].food_num.toString()).apply()
+            holder.view.context.startActivity(intent)
+        }
 
         val decimal = DecimalFormat("#,###")
 
@@ -52,6 +61,7 @@ class FoodViewPagerAdapter(val dataSet : ArrayList<Food>): RecyclerView.Adapter<
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
+        var view = itemView
         var imgSide1 : ImageView = itemView.findViewById(R.id.img_plate)
         var name : TextView = itemView.findViewById(R.id.txt_menu_name)
         var detail : TextView = itemView.findViewById(R.id.txt_menu_detail)

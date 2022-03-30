@@ -55,5 +55,7 @@ data class Result(
     @SerializedName("store_review_num")
     val storeReviewNum: Int,
     @SerializedName("store_user_distance")
-    val storeUserDistance: Double
+    val storeUserDistance: Double,
+    @SerializedName("user_liked_status")
+    val userLikedStatus: Int
 )

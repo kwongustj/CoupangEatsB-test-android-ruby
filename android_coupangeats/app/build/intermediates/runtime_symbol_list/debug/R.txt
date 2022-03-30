@@ -2624,6 +2624,7 @@ int drawable home_icon 0x7f0800a1
 int drawable ic_baseline_access_time_24 0x7f0800a2
 int drawable ic_baseline_arrow_back_24 0x7f0800a3
 int drawable ic_baseline_arrow_back_24_white 0x7f0800a4
+int drawable ic_baseline_arrow_drop_down_24 0x7f08013b
 int drawable ic_baseline_close_24 0x7f0800a5
 int drawable ic_baseline_favorite_24 0x7f0800a6
 int drawable ic_baseline_favorite_border_24 0x7f0800a7
@@ -2921,6 +2922,7 @@ int id callMeasure 0x7f09008e
 int id cancel_action 0x7f09008f
 int id cancel_button 0x7f090090
 int id carryVelocity 0x7f090091
+int id cart_recyclerview 0x7f0902ba
 int id cbox_agree 0x7f090092
 int id cbox_heart 0x7f090093
 int id center 0x7f090094
@@ -2956,6 +2958,7 @@ int id contiguous 0x7f0900b1
 int id continuousVelocity 0x7f0900b2
 int id coordinator 0x7f0900b3
 int id cos 0x7f0900b4
+int id count 0x7f0902bb
 int id counterclockwise 0x7f0900b5
 int id currentState 0x7f0900b6
 int id custom 0x7f0900b7
@@ -3098,6 +3101,7 @@ int id layout_location 0x7f09013c
 int id layout_name 0x7f09013d
 int id layout_nested 0x7f09013e
 int id layout_no_heart 0x7f09013f
+int id layout_pager 0x7f0902b6
 int id layout_phone 0x7f090140
 int id layout_pw 0x7f090141
 int id layout_title 0x7f090142
@@ -3108,6 +3112,7 @@ int id legacy 0x7f090146
 int id light 0x7f090147
 int id line 0x7f090148
 int id line1 0x7f090149
+int id line2 0x7f0902b8
 int id line3 0x7f09014a
 int id line_email 0x7f09014b
 int id line_name 0x7f09014c
@@ -3147,6 +3152,7 @@ int id menu_main_btm_nav_home 0x7f09016d
 int id menu_main_btm_nav_my_page 0x7f09016e
 int id menu_main_btm_nav_order 0x7f09016f
 int id menu_main_btm_nav_search 0x7f090170
+int id menu_name 0x7f0902bc
 int id message 0x7f090171
 int id middle 0x7f090172
 int id mini 0x7f090173
@@ -3384,6 +3390,8 @@ int id transition_transform 0x7f09025a
 int id triangle 0x7f09025b
 int id txt_agree 0x7f09025c
 int id txt_agree_content 0x7f09025d
+int id txt_cart 0x7f0902b9
+int id txt_cart_price 0x7f0902bd
 int id txt_content1 0x7f09025e
 int id txt_count 0x7f09025f
 int id txt_counttext 0x7f0902b2
@@ -3555,7 +3563,6 @@ int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_bottom 0x7f0c001c
-int layout activity_cart 0x7f0c00a4
 int layout activity_heart 0x7f0c001d
 int layout activity_information_restaurant 0x7f0c001e
 int layout activity_location 0x7f0c001f
@@ -3563,6 +3570,7 @@ int layout activity_login 0x7f0c0020
 int layout activity_main 0x7f0c0021
 int layout activity_menu 0x7f0c0022
 int layout activity_menu_detail 0x7f0c00a3
+int layout activity_my_cart 0x7f0c00a5
 int layout activity_my_location 0x7f0c0023
 int layout activity_no_heart 0x7f0c0024
 int layout activity_restaurant 0x7f0c0025
@@ -3643,6 +3651,7 @@ int layout mtrl_picker_header_title_text 0x7f0c006f
 int layout mtrl_picker_header_toggle 0x7f0c0070
 int layout mtrl_picker_text_input_date 0x7f0c0071
 int layout mtrl_picker_text_input_date_range 0x7f0c0072
+int layout my_cart_item 0x7f0c00a6
 int layout navermap_compass_view 0x7f0c0073
 int layout navermap_indoor_level_item 0x7f0c0074
 int layout navermap_indoor_level_picker 0x7f0c0075
@@ -3731,6 +3740,7 @@ int string app_name 0x7f10001d
 int string appbar_scrolling_view_behavior 0x7f10001e
 int string bottom_sheet_behavior 0x7f10001f
 int string bottomsheet_action_expand_halfway 0x7f100020
+int string cart_text 0x7f1000b7
 int string character_counter_content_description 0x7f100021
 int string character_counter_overflowed_content_description 0x7f100022
 int string character_counter_pattern 0x7f100023

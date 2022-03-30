@@ -1,5 +1,3 @@
-com/example/android_coupangeats/BuildConfig.java
- com.example.android_coupangeats.BuildConfig
 com/example/android_coupangeats/databinding/FragmentPackingBinding.java
  com.example.android_coupangeats.databinding.FragmentPackingBinding
 com/example/android_coupangeats/databinding/FragmentHomeBinding.java
@@ -18,6 +16,8 @@ com/example/android_coupangeats/databinding/FragmentDeliveryBinding.java
  com.example.android_coupangeats.databinding.FragmentDeliveryBinding
 com/example/android_coupangeats/databinding/DialogLoadingBinding.java
  com.example.android_coupangeats.databinding.DialogLoadingBinding
+com/example/android_coupangeats/BuildConfig.java
+ com.example.android_coupangeats.BuildConfig
 com/example/android_coupangeats/databinding/ActivitySignUpBinding.java
  com.example.android_coupangeats.databinding.ActivitySignUpBinding
 com/example/android_coupangeats/databinding/ContentScrollingBinding.java
@@ -36,8 +36,6 @@ com/example/android_coupangeats/databinding/FragmentSearchBinding.java
  com.example.android_coupangeats.databinding.FragmentSearchBinding
 com/example/android_coupangeats/databinding/ReviewItemBinding.java
  com.example.android_coupangeats.databinding.ReviewItemBinding
-com/example/android_coupangeats/databinding/ActivityCartBinding.java
- com.example.android_coupangeats.databinding.ActivityCartBinding
 com/example/android_coupangeats/databinding/FragmentMyPageBinding.java
  com.example.android_coupangeats.databinding.FragmentMyPageBinding
 com/example/android_coupangeats/databinding/ActivityMyLocationBinding.java
@@ -46,6 +44,8 @@ com/example/android_coupangeats/databinding/ActivityLoginBinding.java
  com.example.android_coupangeats.databinding.ActivityLoginBinding
 com/example/android_coupangeats/databinding/ActivityHeartBinding.java
  com.example.android_coupangeats.databinding.ActivityHeartBinding
+com/example/android_coupangeats/databinding/ActivityMyCartBinding.java
+ com.example.android_coupangeats.databinding.ActivityMyCartBinding
 com/example/android_coupangeats/databinding/ActivityMenuDetailBinding.java
  com.example.android_coupangeats.databinding.ActivityMenuDetailBinding
 com/example/android_coupangeats/databinding/FragmentMenuBinding.java
@@ -54,6 +54,8 @@ com/example/android_coupangeats/databinding/ActivityNoHeartBinding.java
  com.example.android_coupangeats.databinding.ActivityNoHeartBinding
 com/example/android_coupangeats/databinding/FavoriteRestaurantItemBinding.java
  com.example.android_coupangeats.databinding.FavoriteRestaurantItemBinding
+com/example/android_coupangeats/databinding/MyCartItemBinding.java
+ com.example.android_coupangeats.databinding.MyCartItemBinding
 com/example/android_coupangeats/databinding/ActivityMenuBinding.java
  com.example.android_coupangeats.databinding.ActivityMenuBinding
 com/example/android_coupangeats/databinding/TypeItemBinding.java

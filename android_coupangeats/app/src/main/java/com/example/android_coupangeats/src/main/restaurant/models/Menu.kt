@@ -8,6 +8,8 @@ data class Menu(
     val menuDetail: String,
     @SerializedName("menu_idx")
     val menuIdx: Int,
+    @SerializedName("menu_img_url")
+    val menuImgUrl: String,
     @SerializedName("menu_name")
     val menuName: String,
     @SerializedName("menu_price")

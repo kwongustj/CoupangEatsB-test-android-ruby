@@ -36,6 +36,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.11778115501519756" />
         <entry key="app/src/main/res/layout/activity_menu_detail.xml" value="0.2584901262953485" />
+        <entry key="app/src/main/res/layout/activity_my_cart.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_my_location.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_no_heart.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.375" />
@@ -54,6 +55,7 @@
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_layout_banner.xml" value="0.1" />
         <entry key="app/src/main/res/layout/menu_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/my_cart_item.xml" value="0.335" />
         <entry key="app/src/main/res/layout/restaurant_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/review_item.xml" value="0.335" />
         <entry key="app/src/main/res/layout/type_item.xml" value="0.8973004274364973" />

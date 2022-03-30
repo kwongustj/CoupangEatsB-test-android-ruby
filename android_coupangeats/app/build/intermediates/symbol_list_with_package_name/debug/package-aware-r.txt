@@ -2625,6 +2625,7 @@ drawable home_icon
 drawable ic_baseline_access_time_24
 drawable ic_baseline_arrow_back_24
 drawable ic_baseline_arrow_back_24_white
+drawable ic_baseline_arrow_drop_down_24
 drawable ic_baseline_close_24
 drawable ic_baseline_favorite_24
 drawable ic_baseline_favorite_border_24
@@ -2922,6 +2923,7 @@ id callMeasure
 id cancel_action
 id cancel_button
 id carryVelocity
+id cart_recyclerview
 id cbox_agree
 id cbox_heart
 id center
@@ -2957,6 +2959,7 @@ id contiguous
 id continuousVelocity
 id coordinator
 id cos
+id count
 id counterclockwise
 id currentState
 id custom
@@ -3099,6 +3102,7 @@ id layout_location
 id layout_name
 id layout_nested
 id layout_no_heart
+id layout_pager
 id layout_phone
 id layout_pw
 id layout_title
@@ -3109,6 +3113,7 @@ id legacy
 id light
 id line
 id line1
+id line2
 id line3
 id line_email
 id line_name
@@ -3148,6 +3153,7 @@ id menu_main_btm_nav_home
 id menu_main_btm_nav_my_page
 id menu_main_btm_nav_order
 id menu_main_btm_nav_search
+id menu_name
 id message
 id middle
 id mini
@@ -3385,6 +3391,8 @@ id transition_transform
 id triangle
 id txt_agree
 id txt_agree_content
+id txt_cart
+id txt_cart_price
 id txt_content1
 id txt_count
 id txt_counttext
@@ -3556,7 +3564,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bottom
-layout activity_cart
 layout activity_heart
 layout activity_information_restaurant
 layout activity_location
@@ -3564,6 +3571,7 @@ layout activity_login
 layout activity_main
 layout activity_menu
 layout activity_menu_detail
+layout activity_my_cart
 layout activity_my_location
 layout activity_no_heart
 layout activity_restaurant
@@ -3644,6 +3652,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout my_cart_item
 layout navermap_compass_view
 layout navermap_indoor_level_item
 layout navermap_indoor_level_picker
@@ -3732,6 +3741,7 @@ string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
+string cart_text
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
