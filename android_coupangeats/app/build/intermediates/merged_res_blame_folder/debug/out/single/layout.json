@@ -106,5 +106,9 @@
     {
         "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_page.xml",
         "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/fragment_my_page.xml"
+    },
+    {
+        "merged": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_menu.xml",
+        "source": "/Users/kwonapple/CoupangEatsB-test-android-ruby/android_coupangeats/app/src/main/res/layout/activity_menu.xml"
     }
 ]

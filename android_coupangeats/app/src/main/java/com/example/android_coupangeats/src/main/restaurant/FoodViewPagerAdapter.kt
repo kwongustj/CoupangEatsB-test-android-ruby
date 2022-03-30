@@ -40,18 +40,6 @@ class FoodViewPagerAdapter(val dataSet : ArrayList<Food>): RecyclerView.Adapter<
             holder.price.setText(dataSet[position].price)
         }
 
-        if(dataSet[position].many == true ) {
-            holder.many.visibility = View.VISIBLE
-        } else{
-            holder.many.visibility = View.INVISIBLE
-        }
-
-        if(dataSet[position].good == true ) {
-            holder.good.visibility = View.VISIBLE
-        } else{
-            holder.good.visibility = View.INVISIBLE
-        }
-
     }
 
     override fun getItemCount(): Int {
@@ -64,8 +52,6 @@ class FoodViewPagerAdapter(val dataSet : ArrayList<Food>): RecyclerView.Adapter<
         var name : TextView = itemView.findViewById(R.id.txt_menu_name)
         var detail : TextView = itemView.findViewById(R.id.txt_menu_detail)
         var price : TextView = itemView.findViewById(R.id.txt_menu_price)
-        var many : TextView = itemView.findViewById(R.id.txt_many)
-        var good : TextView = itemView.findViewById(R.id.txt_good)
 
 
 

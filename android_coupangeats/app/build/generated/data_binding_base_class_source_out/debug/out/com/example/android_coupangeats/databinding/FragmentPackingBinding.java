@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.android_coupangeats.R;
@@ -31,9 +30,6 @@ public final class FragmentPackingBinding implements ViewBinding {
   public final ConstraintLayout layoutTop;
 
   @NonNull
-  public final RecyclerView recycelerviewReview;
-
-  @NonNull
   public final TextView txtInformation;
 
   @NonNull
@@ -47,14 +43,13 @@ public final class FragmentPackingBinding implements ViewBinding {
 
   private FragmentPackingBinding(@NonNull ConstraintLayout rootView,
       @NonNull AppCompatImageView imgArrow, @NonNull AppCompatImageView imgTime,
-      @NonNull ConstraintLayout layoutTop, @NonNull RecyclerView recycelerviewReview,
-      @NonNull TextView txtInformation, @NonNull TextView txtPacking,
-      @NonNull TextView txtPackingAddress, @NonNull TextView txtTime) {
+      @NonNull ConstraintLayout layoutTop, @NonNull TextView txtInformation,
+      @NonNull TextView txtPacking, @NonNull TextView txtPackingAddress,
+      @NonNull TextView txtTime) {
     this.rootView = rootView;
     this.imgArrow = imgArrow;
     this.imgTime = imgTime;
     this.layoutTop = layoutTop;
-    this.recycelerviewReview = recycelerviewReview;
     this.txtInformation = txtInformation;
     this.txtPacking = txtPacking;
     this.txtPackingAddress = txtPackingAddress;
@@ -106,12 +101,6 @@ public final class FragmentPackingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recycelerview_review;
-      RecyclerView recycelerviewReview = ViewBindings.findChildViewById(rootView, id);
-      if (recycelerviewReview == null) {
-        break missingId;
-      }
-
       id = R.id.txt_information;
       TextView txtInformation = ViewBindings.findChildViewById(rootView, id);
       if (txtInformation == null) {
@@ -137,7 +126,7 @@ public final class FragmentPackingBinding implements ViewBinding {
       }
 
       return new FragmentPackingBinding((ConstraintLayout) rootView, imgArrow, imgTime, layoutTop,
-          recycelerviewReview, txtInformation, txtPacking, txtPackingAddress, txtTime);
+          txtInformation, txtPacking, txtPackingAddress, txtTime);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

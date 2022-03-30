@@ -5,12 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.android_coupangeats.R
 
 
 class BannerViewPagerAdapter(val dataSet : ArrayList<Banner>): RecyclerView.Adapter<BannerViewPagerAdapter.ViewHolder>() {
 
-    var currentPage : Int = 0
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -22,7 +22,9 @@ class BannerViewPagerAdapter(val dataSet : ArrayList<Banner>): RecyclerView.Adap
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.imgBanner.setImageResource(dataSet[position % dataSet.size].img)
+        Glide.with(holder.imgBanner)
+            .load(dataSet[position % dataSet.size].img) // 불러올 이미지 url
+            .into(holder.imgBanner)
     }
 
     override fun getItemCount(): Int {

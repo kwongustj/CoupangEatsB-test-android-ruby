@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="600dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="#FF6B60"
+            app:contentScrim="@color/white"
             app:expandedTitleGravity="center"
             android:fitsSystemWindows="true">
 
@@ -209,10 +209,30 @@
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/pager"
                     android:layout_width="match_parent"
-                    android:layout_height="230dp"
+                    android:layout_height="130dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tab_layout"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/pager">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycelerview_review"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:clipToPadding="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:nestedScrollingEnabled="false"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.Toolbar

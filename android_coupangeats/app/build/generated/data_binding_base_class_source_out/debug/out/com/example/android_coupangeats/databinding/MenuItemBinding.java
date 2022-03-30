@@ -24,12 +24,6 @@ public final class MenuItemBinding implements ViewBinding {
   public final ImageView imgPlate;
 
   @NonNull
-  public final TextView txtGood;
-
-  @NonNull
-  public final TextView txtMany;
-
-  @NonNull
   public final TextView txtMenuDetail;
 
   @NonNull
@@ -39,12 +33,10 @@ public final class MenuItemBinding implements ViewBinding {
   public final TextView txtMenuPrice;
 
   private MenuItemBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView imgPlate,
-      @NonNull TextView txtGood, @NonNull TextView txtMany, @NonNull TextView txtMenuDetail,
-      @NonNull TextView txtMenuName, @NonNull TextView txtMenuPrice) {
+      @NonNull TextView txtMenuDetail, @NonNull TextView txtMenuName,
+      @NonNull TextView txtMenuPrice) {
     this.rootView = rootView;
     this.imgPlate = imgPlate;
-    this.txtGood = txtGood;
-    this.txtMany = txtMany;
     this.txtMenuDetail = txtMenuDetail;
     this.txtMenuName = txtMenuName;
     this.txtMenuPrice = txtMenuPrice;
@@ -83,18 +75,6 @@ public final class MenuItemBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txt_good;
-      TextView txtGood = ViewBindings.findChildViewById(rootView, id);
-      if (txtGood == null) {
-        break missingId;
-      }
-
-      id = R.id.txt_many;
-      TextView txtMany = ViewBindings.findChildViewById(rootView, id);
-      if (txtMany == null) {
-        break missingId;
-      }
-
       id = R.id.txt_menu_detail;
       TextView txtMenuDetail = ViewBindings.findChildViewById(rootView, id);
       if (txtMenuDetail == null) {
@@ -113,8 +93,8 @@ public final class MenuItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new MenuItemBinding((ConstraintLayout) rootView, imgPlate, txtGood, txtMany,
-          txtMenuDetail, txtMenuName, txtMenuPrice);
+      return new MenuItemBinding((ConstraintLayout) rootView, imgPlate, txtMenuDetail, txtMenuName,
+          txtMenuPrice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

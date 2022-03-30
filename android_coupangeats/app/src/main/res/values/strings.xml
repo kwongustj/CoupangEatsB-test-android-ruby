@@ -23,6 +23,10 @@
     <!-- Heart -->
     <string name="heart_text">즐겨찾기</string>
     <string name="txt_modify">수정</string>
+
+    <!-- store -->
+    <string name="price_format">%,2d</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_restaurant">RestaurantActivity</string>

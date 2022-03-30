@@ -1,5 +1,6 @@
 package com.example.android_coupangeats.src.main.home
 
+import android.util.Log
 import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.src.main.home.models.RestaurantResponse
 import com.example.android_coupangeats.src.main.home.models.SignInResponse
@@ -46,6 +47,8 @@ class HomeService(val view: HomeFragmentView) {
                 call: Call<RestaurantResponse>,
                 response: Response<RestaurantResponse>
             ) {
+                Log.e("tryGetRestaurant","onResponse까지 성공")
+                Log.e("body",response.body().toString())
                 view.onGetRestaurantSuccess(response.body() as RestaurantResponse)
             }
 

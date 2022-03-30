@@ -3389,7 +3389,6 @@ id txt_favorite
 id txt_filter
 id txt_find_id
 id txt_find_pw
-id txt_good
 id txt_good_restaurant
 id txt_home
 id txt_i_agree
@@ -3400,7 +3399,6 @@ id txt_line2_1
 id txt_line2_2
 id txt_location_content
 id txt_location_name
-id txt_many
 id txt_menu_detail
 id txt_menu_name
 id txt_menu_price
@@ -3553,6 +3551,7 @@ layout activity_information_restaurant
 layout activity_location
 layout activity_login
 layout activity_main
+layout activity_menu
 layout activity_my_location
 layout activity_no_heart
 layout activity_restaurant
@@ -3866,6 +3865,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string price_format
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_restaurant

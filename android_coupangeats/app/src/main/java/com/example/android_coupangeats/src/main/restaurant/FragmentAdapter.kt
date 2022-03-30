@@ -1,6 +1,7 @@
 package com.example.android_coupangeats.src.main.restaurant
 
 import MenuFragment
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 
 import androidx.viewpager2.adapter.FragmentStateAdapter

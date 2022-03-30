@@ -4,56 +4,45 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.Message
+import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.android_coupangeats.R
+import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.databinding.ActivityInformationRestaurantBinding
-import com.example.android_coupangeats.src.main.home.Banner
-import com.example.android_coupangeats.src.main.home.BannerViewPagerAdapter
+import com.example.android_coupangeats.src.main.restaurant.models.InformationRestaurantResponse
+import com.example.android_coupangeats.src.main.restaurant.models.ReviewResponse
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class InformationRestaurantActivity : BaseActivity<ActivityInformationRestaurantBinding>(ActivityInformationRestaurantBinding::inflate){
+class InformationRestaurantActivity : BaseActivity<ActivityInformationRestaurantBinding>(ActivityInformationRestaurantBinding::inflate),
+InformationRestaurantActivityView{
 
     private var bannerViewPagerAdapter: RecyclerView.Adapter<BannerViewPagerAdapter.ViewHolder>? = null
     var currentPage : Int = 1
 
     val handler = RestaurantBannerHandler()
+    var BannerList = arrayListOf<Banner>()
+    var tabName = arrayListOf<String>()
+    var ReviewList = arrayListOf<Review>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val BannerList = arrayListOf<Banner>(
-            Banner(R.drawable.big_img_1),
-            Banner(R.drawable.big_img_2),
-            Banner(R.drawable.big_img_3)
-        )
+        val idxNum = ApplicationClass.sSharedPreferences.getString("store_num"," ")!!.toInt()
 
+        //식당 정보 가져오기
+        InformationRestaurantService(this,idxNum).tryGetRestaurantInformation()
 
+        //리뷰 정보 가져오기
+        InformationRestaurantService(this, idxNum).tryGetReview()
+
+        //tablayout 연결
         val adapter = FragmentAdapter(this)
         binding.pager.adapter = adapter
 
-        val tabName = arrayOf<String>("배달 19-29분", "포장 10-20분")
-        //슬라이드로 이동했을 때, 탭이 같이 변경되도록
-        TabLayoutMediator(binding.tabLayout, binding.pager)
-        {
-                tab, position -> tab.text = tabName[position].toString()
-        }.attach()
-        //탭이 선택되었을 때, 뷰페이저가 같이 변경되도록
-        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                binding.pager.currentItem = tab!!.position
-            }
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-
-            }
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-
-            }
-        })
-
-        //메뉴 tab
+        //메뉴 tablayout 연결
         val foodAdapter = MenuFragmentAdapter(this)
         binding.pagerFood.adapter = foodAdapter
 
@@ -75,6 +64,45 @@ class InformationRestaurantActivity : BaseActivity<ActivityInformationRestaurant
 
             }
         })
+
+    }
+
+    //BannerAd Handler
+    inner class RestaurantBannerHandler: Handler(Looper.getMainLooper()) {
+
+        override fun handleMessage(msg: Message) {
+            super.handleMessage(msg)
+            if(msg.what == 0){
+                currentPage += 1
+                binding.bannerImg.setCurrentItem(currentPage, true)
+                autoScrollStart()
+            }
+        }
+    }
+
+    private fun autoScrollStart() {
+        handler.removeMessages(0)
+        handler.sendEmptyMessageDelayed(0, 3000)
+    }
+
+    private fun autoScrollStop(){
+        handler.removeMessages(0)
+    }
+
+
+    override fun onGetRestaurantSuccess(response: InformationRestaurantResponse) {
+
+        binding.restarantName.setText(response.result.storeName)
+        binding.txtStar.setText(response.result.storeRatingAvg.toString())
+        if(response.result.storeCheetahDelivery != 1) {
+            binding.chita.visibility = View.INVISIBLE
+        }
+        binding.txtReviewNum.setText("(${response.result.storeReviewNum.toString()})")
+
+        for( i in 0..2) {
+            BannerList.add(Banner(response.result.storeImgUrl[i]))
+        }
+
 
 
         // HomeFragment Banner _ viewPager
@@ -105,6 +133,28 @@ class InformationRestaurantActivity : BaseActivity<ActivityInformationRestaurant
                 }
             })
         }
+
+        // tab1 ( 배달 / 포장 )
+        tabName.add("배달 ${response.result.storeMinDeliveryTime}-${response.result.storeMaxDeliveryTime}분")
+        tabName.add("포장 ${response.result.storeMinPrepTime}-${response.result.storeMaxPrepTime}분")
+        //슬라이드로 이동했을 때, 탭이 같이 변경되도록
+        TabLayoutMediator(binding.tabLayout, binding.pager)
+        {
+                tab, position -> tab.text = tabName[position].toString()
+        }.attach()
+        //탭이 선택되었을 때, 뷰페이저가 같이 변경되도록
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                binding.pager.currentItem = tab!!.position
+            }
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+
+            }
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+
+            }
+        })
+
         // Animation 기능 없앰
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -119,30 +169,35 @@ class InformationRestaurantActivity : BaseActivity<ActivityInformationRestaurant
 
             }
         })
+
     }
 
+    override fun onGetRestaurantFailure(message: String) {
+        TODO("Not yet implemented")
+    }
 
-    //BannerAd Handler
-    inner class RestaurantBannerHandler: Handler(Looper.getMainLooper()) {
-
-        override fun handleMessage(msg: Message) {
-            super.handleMessage(msg)
-            if(msg.what == 0){
-                currentPage += 1
-                binding.bannerImg.setCurrentItem(currentPage, true)
-                autoScrollStart()
+    override fun onReviewgetSuccess(response: ReviewResponse) {
+        //ReviewList에 데이터 추가하기
+        for (i in response.result) {
+            if (i.review.reviewImgExists == 1) {
+                ReviewList.add(
+                    Review(i.review.reviewImgList[0], i.review.reviewComment,i.review.ratings)
+                )
+            } else {
+                if (i.review.reviewImgExists == 0) {
+                    ReviewList.add(
+                        Review("null", i.review.reviewComment, i.review.ratings)
+                    )
+                }
             }
         }
+
+        val adapterReview = ReviewPagerAdapter(ReviewList)
+        binding.recycelerviewReview.adapter = adapterReview
     }
 
-    private fun autoScrollStart() {
-        handler.removeMessages(0)
-        handler.sendEmptyMessageDelayed(0, 3000)
+    override fun onReviewgetFailure(message: String) {
+        TODO("Not yet implemented")
     }
-
-    private fun autoScrollStop(){
-        handler.removeMessages(0)
-    }
-
 
 }

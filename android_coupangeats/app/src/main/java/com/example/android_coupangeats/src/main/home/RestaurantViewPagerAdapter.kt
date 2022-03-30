@@ -13,6 +13,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android_coupangeats.R
+import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.src.main.map.LocationActivity
 import com.example.android_coupangeats.src.main.restaurant.InformationRestaurantActivity
 import java.lang.Math.floor
@@ -31,6 +32,12 @@ class RestaurantViewPagerAdapter(val dataSet : ArrayList<Restaurant>): RecyclerV
     }
 
     override fun onBindViewHolder(holder: RestaurantViewPagerAdapter.ViewHolder, position: Int) {
+
+        holder.view.setOnClickListener {
+            val intent = Intent(holder.view.context, InformationRestaurantActivity::class.java)
+            ApplicationClass.sSharedPreferences.edit().putString("store_num", dataSet[position].store_num.toString()).apply()
+            holder.view.context.startActivity(intent)
+        }
         Glide.with(holder.imgBig)
             .load(dataSet[position].img_big) // 불러올 이미지 url
             .into(holder.imgBig)
@@ -76,12 +83,13 @@ class RestaurantViewPagerAdapter(val dataSet : ArrayList<Restaurant>): RecyclerV
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         init {
-
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, InformationRestaurantActivity::class.java)
                 itemView.context.startActivity(intent)
             }
         }
+
+        var view = itemView
         var imgBig : AppCompatImageView = itemView.findViewById(R.id.img_1_big)
         var imgSide1 : AppCompatImageView = itemView.findViewById(R.id.img_2_side_1)
         var imgSide2 : AppCompatImageView = itemView.findViewById(R.id.img_2_side_2)

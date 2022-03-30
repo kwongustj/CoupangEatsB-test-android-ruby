@@ -26,9 +26,12 @@ class ReviewPagerAdapter(val dataSet : ArrayList<Review>): RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: ReviewPagerAdapter.ViewHolder, position: Int) {
-        Glide.with(holder.imgBig)
-            .load(dataSet[position].img_big) // 불러올 이미지 url
-            .into(holder.imgBig)
+
+        if(dataSet[position].img_big != "null") {
+            Glide.with(holder.imgBig)
+                .load(dataSet[position].img_big) // 불러올 이미지 url
+                .into(holder.imgBig)
+        }
 
         holder.review.setText(dataSet[position].review)
 

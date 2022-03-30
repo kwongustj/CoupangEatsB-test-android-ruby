@@ -12,6 +12,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import androidx.viewpager2.widget.ViewPager2;
@@ -53,6 +54,9 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
   public final ViewPager2 pagerFood;
 
   @NonNull
+  public final RecyclerView recycelerviewReview;
+
+  @NonNull
   public final TextView restarantName;
 
   @NonNull
@@ -78,9 +82,10 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
       @NonNull AppCompatImageView chita, @NonNull TabLayout foodTabLayout,
       @NonNull AppCompatImageView imgMore, @NonNull AppCompatImageView imgStar,
       @NonNull ConstraintLayout layoutTitle, @NonNull ViewPager2 pager,
-      @NonNull ViewPager2 pagerFood, @NonNull TextView restarantName, @NonNull TabLayout tabLayout,
-      @NonNull Toolbar toolbar, @NonNull TextView txtPageAll, @NonNull TextView txtPageNow,
-      @NonNull TextView txtReviewNum, @NonNull TextView txtStar) {
+      @NonNull ViewPager2 pagerFood, @NonNull RecyclerView recycelerviewReview,
+      @NonNull TextView restarantName, @NonNull TabLayout tabLayout, @NonNull Toolbar toolbar,
+      @NonNull TextView txtPageAll, @NonNull TextView txtPageNow, @NonNull TextView txtReviewNum,
+      @NonNull TextView txtStar) {
     this.rootView = rootView;
     this.bannerImg = bannerImg;
     this.cboxHeart = cboxHeart;
@@ -91,6 +96,7 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
     this.layoutTitle = layoutTitle;
     this.pager = pager;
     this.pagerFood = pagerFood;
+    this.recycelerviewReview = recycelerviewReview;
     this.restarantName = restarantName;
     this.tabLayout = tabLayout;
     this.toolbar = toolbar;
@@ -181,6 +187,12 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recycelerview_review;
+      RecyclerView recycelerviewReview = ViewBindings.findChildViewById(rootView, id);
+      if (recycelerviewReview == null) {
+        break missingId;
+      }
+
       id = R.id.restarant_name;
       TextView restarantName = ViewBindings.findChildViewById(rootView, id);
       if (restarantName == null) {
@@ -225,7 +237,8 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
 
       return new ActivityInformationRestaurantBinding((CoordinatorLayout) rootView, bannerImg,
           cboxHeart, chita, foodTabLayout, imgMore, imgStar, layoutTitle, pager, pagerFood,
-          restarantName, tabLayout, toolbar, txtPageAll, txtPageNow, txtReviewNum, txtStar);
+          recycelerviewReview, restarantName, tabLayout, toolbar, txtPageAll, txtPageNow,
+          txtReviewNum, txtStar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.android_coupangeats.R;
@@ -29,9 +28,6 @@ public final class FragmentDeliveryBinding implements ViewBinding {
 
   @NonNull
   public final ConstraintLayout layoutTop;
-
-  @NonNull
-  public final RecyclerView recycelerviewReview;
 
   @NonNull
   public final TextView txtDelivery;
@@ -56,15 +52,14 @@ public final class FragmentDeliveryBinding implements ViewBinding {
 
   private FragmentDeliveryBinding(@NonNull ConstraintLayout rootView,
       @NonNull AppCompatImageView imgArrow, @NonNull AppCompatImageView imgTime,
-      @NonNull ConstraintLayout layoutTop, @NonNull RecyclerView recycelerviewReview,
-      @NonNull TextView txtDelivery, @NonNull TextView txtDeliveryPrice,
-      @NonNull TextView txtInformation, @NonNull TextView txtMoney, @NonNull TextView txtMoneyPrice,
-      @NonNull TextView txtMore, @NonNull TextView txtTime) {
+      @NonNull ConstraintLayout layoutTop, @NonNull TextView txtDelivery,
+      @NonNull TextView txtDeliveryPrice, @NonNull TextView txtInformation,
+      @NonNull TextView txtMoney, @NonNull TextView txtMoneyPrice, @NonNull TextView txtMore,
+      @NonNull TextView txtTime) {
     this.rootView = rootView;
     this.imgArrow = imgArrow;
     this.imgTime = imgTime;
     this.layoutTop = layoutTop;
-    this.recycelerviewReview = recycelerviewReview;
     this.txtDelivery = txtDelivery;
     this.txtDeliveryPrice = txtDeliveryPrice;
     this.txtInformation = txtInformation;
@@ -119,12 +114,6 @@ public final class FragmentDeliveryBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recycelerview_review;
-      RecyclerView recycelerviewReview = ViewBindings.findChildViewById(rootView, id);
-      if (recycelerviewReview == null) {
-        break missingId;
-      }
-
       id = R.id.txt_delivery;
       TextView txtDelivery = ViewBindings.findChildViewById(rootView, id);
       if (txtDelivery == null) {
@@ -168,8 +157,7 @@ public final class FragmentDeliveryBinding implements ViewBinding {
       }
 
       return new FragmentDeliveryBinding((ConstraintLayout) rootView, imgArrow, imgTime, layoutTop,
-          recycelerviewReview, txtDelivery, txtDeliveryPrice, txtInformation, txtMoney,
-          txtMoneyPrice, txtMore, txtTime);
+          txtDelivery, txtDeliveryPrice, txtInformation, txtMoney, txtMoneyPrice, txtMore, txtTime);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
