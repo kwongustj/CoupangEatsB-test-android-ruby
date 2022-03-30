@@ -2673,6 +2673,7 @@ drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menu_etxt_background
 drawable mexican
+drawable minus
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -2758,6 +2759,7 @@ drawable pasta
 drawable person_1
 drawable phone
 drawable pizza
+drawable plus
 drawable ripple_background
 drawable salad
 drawable sandwitch
@@ -2899,6 +2901,7 @@ id bounceEnd
 id bounceStart
 id btn_arrow_down
 id btn_back
+id btn_cart
 id btn_find
 id btn_find_my_location
 id btn_location_icon
@@ -3044,6 +3047,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id img
 id img_1_big
 id img_2_side_1
 id img_2_side_2
@@ -3058,10 +3062,12 @@ id img_heart_example
 id img_home
 id img_job
 id img_logo
+id img_minus
 id img_more
 id img_my_location
 id img_password
 id img_plate
+id img_plus
 id img_search_lcation
 id img_star
 id img_star1
@@ -3381,9 +3387,11 @@ id txt_agree
 id txt_agree_content
 id txt_content1
 id txt_count
+id txt_counttext
 id txt_deliverty_price
 id txt_delivery
 id txt_delivery_price
+id txt_detail
 id txt_distance
 id txt_favorite
 id txt_filter
@@ -3419,6 +3427,8 @@ id txt_password
 id txt_phone
 id txt_point_1
 id txt_point_2
+id txt_price
+id txt_pricetext
 id txt_review
 id txt_review_num
 id txt_sign_in
@@ -3546,12 +3556,14 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bottom
+layout activity_cart
 layout activity_heart
 layout activity_information_restaurant
 layout activity_location
 layout activity_login
 layout activity_main
 layout activity_menu
+layout activity_menu_detail
 layout activity_my_location
 layout activity_no_heart
 layout activity_restaurant

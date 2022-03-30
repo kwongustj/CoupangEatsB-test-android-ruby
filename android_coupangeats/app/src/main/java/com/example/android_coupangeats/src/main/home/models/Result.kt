@@ -12,6 +12,8 @@ data class Result(
     val storeAddress: String,
     @SerializedName("store_buisness_hour")
     val storeBuisnessHour: String,
+    @SerializedName("store_cheetah_delivery")
+    val storeCheetahDelivery: Int,
     @SerializedName("store_delivery_fee")
     val storeDeliveryFee: Int,
     @SerializedName("store_idx")
@@ -44,8 +46,16 @@ data class Result(
     val storeOwnerNote: String,
     @SerializedName("store_phone")
     val storePhone: Int,
+    @SerializedName("store_pickup_status")
+    val storePickupStatus: Int,
+    @SerializedName("store_rating_avg")
+    val storeRatingAvg: Double,
     @SerializedName("store_reg_num")
     val storeRegNum: String,
+    @SerializedName("store_review_num")
+    val storeReviewNum: Int,
     @SerializedName("store_user_distance")
-    val storeUserDistance: Double
+    val storeUserDistance: Double,
+    @SerializedName("user_liked_status")
+    val userLikedStatus: Int
 )

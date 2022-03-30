@@ -16,9 +16,7 @@ import com.example.android_coupangeats.databinding.FragmentHomeBinding
 import com.example.android_coupangeats.src.main.home.models.RestaurantResponse
 import com.example.android_coupangeats.src.main.home.models.SignInResponse
 import com.example.android_coupangeats.src.main.home.models.UserResponse
-import com.example.android_coupangeats.src.main.login.BottomActivity
 import com.example.android_coupangeats.src.main.map.LocationActivity
-import com.example.android_coupangeats.src.main.restaurant.InformationRestaurantActivity
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind, R.layout.fragment_home),
 
@@ -167,6 +165,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
 
             }
         }
+
+        Log.e("restaurantlist",RestaurantList[0].toString())
 
          //HomeFragment 가게들 보여주기 _ RecyclerView
         adapterRestaurant = RestaurantViewPagerAdapter(RestaurantList)

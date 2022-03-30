@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/big_img_1"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@id/img">
+
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="아메리칸 치즈 피자"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            android:textSize = "25dp"/>
+
+        <TextView
+            android:id="@+id/txt_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="특제 토마토 소스를 고소한 치즈를 얇게 올려 바싹 구운 미국식 치즈 피자 "
+            app:layout_constraintTop_toBottomOf="@id/txt_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize = "15dp"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/BottomButtonClickBackground"
+            app:layout_constraintTop_toBottomOf="@id/txt_detail"/>
+
+        <TextView
+            android:id="@+id/txt_pricetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="가격"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize ="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="13,900원"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize ="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_counttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수량"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/img_plus"
+            app:layout_constraintBottom_toBottomOf="@id/img_plus"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize ="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_price"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/img_plus"
+            app:layout_constraintBottom_toBottomOf="@id/img_plus"
+            app:layout_constraintEnd_toStartOf="@id/img_plus"
+            android:layout_marginEnd="10dp"
+            android:textSize ="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/minus"
+            app:layout_constraintEnd_toStartOf="@id/txt_count"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toTopOf="@id/img_plus"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카트에 담기"
+        android:background="@drawable/blue_round_radius"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="17dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

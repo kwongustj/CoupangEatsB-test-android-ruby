@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android_coupangeats.R
 import java.lang.Math.floor
+import java.text.DecimalFormat
 
 
 class FoodViewPagerAdapter(val dataSet : ArrayList<Food>): RecyclerView.Adapter<FoodViewPagerAdapter.ViewHolder>() {
@@ -25,6 +26,9 @@ class FoodViewPagerAdapter(val dataSet : ArrayList<Food>): RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: FoodViewPagerAdapter.ViewHolder, position: Int) {
+
+        val decimal = DecimalFormat("#,###")
+
         Glide.with(holder.imgSide1)
             .load(dataSet[position].img_side_1) // 불러올 이미지 url
             .into(holder.imgSide1)
@@ -37,7 +41,7 @@ class FoodViewPagerAdapter(val dataSet : ArrayList<Food>): RecyclerView.Adapter<
         if(dataSet[position].price == "0") {
             holder.price.setText("무료배달")
         } else{
-            holder.price.setText(dataSet[position].price)
+            holder.price.setText("${decimal.format(dataSet[position].price.toInt())}원")
         }
 
     }

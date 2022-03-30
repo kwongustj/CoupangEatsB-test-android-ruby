@@ -5,6 +5,6 @@ data class Food(
     val name: String,
     val price: String,
     val detail: String,
-    val many: Boolean,
-    val good: Boolean
+//    val many: Boolean,
+//    val good: Boolean
 )

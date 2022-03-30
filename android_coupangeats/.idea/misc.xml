@@ -27,13 +27,15 @@
         <entry key="app/src/main/res/drawable/white_round_button.xml" value="0.1787037037037037" />
         <entry key="app/src/main/res/drawable/white_round_radius.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_bottom.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_cart.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_heart.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_heart_no.xml" value="0.12158054711246201" />
-        <entry key="app/src/main/res/layout/activity_information_restaurant.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_information_restaurant.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.11778115501519756" />
+        <entry key="app/src/main/res/layout/activity_menu_detail.xml" value="0.2584901262953485" />
         <entry key="app/src/main/res/layout/activity_my_location.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_no_heart.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.375" />

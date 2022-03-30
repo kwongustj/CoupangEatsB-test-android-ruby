@@ -26,6 +26,7 @@ InformationRestaurantActivityView{
     var BannerList = arrayListOf<Banner>()
     var tabName = arrayListOf<String>()
     var ReviewList = arrayListOf<Review>()
+    var tabMenuName = arrayListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,28 +43,6 @@ InformationRestaurantActivityView{
         val adapter = FragmentAdapter(this)
         binding.pager.adapter = adapter
 
-        //메뉴 tablayout 연결
-        val foodAdapter = MenuFragmentAdapter(this)
-        binding.pagerFood.adapter = foodAdapter
-
-        val tabMenuName = arrayOf<String>("추천메뉴", "메뉴소개","볼고기","사이드메뉴","묵사발")
-        TabLayoutMediator(binding.foodTabLayout, binding.pagerFood)
-        {
-                tab, position -> tab.text = tabMenuName[position].toString()
-        }.attach()
-
-        //탭이 선택되었을 때, 뷰페이저가 같이 변경되도록
-        binding.foodTabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                binding.pagerFood.setCurrentItem(tab!!.position, false)
-            }
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-
-            }
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-
-            }
-        })
 
     }
 
@@ -103,8 +82,6 @@ InformationRestaurantActivityView{
             BannerList.add(Banner(response.result.storeImgUrl[i]))
         }
 
-
-
         // HomeFragment Banner _ viewPager
         binding.bannerImg.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         bannerViewPagerAdapter = BannerViewPagerAdapter(BannerList)
@@ -133,6 +110,38 @@ InformationRestaurantActivityView{
                 }
             })
         }
+
+
+        var count = 0
+        //tab2 ( 메뉴 )
+        for( i in response.result.menuListStoredByCategory) {
+            tabMenuName.add(i.menuCategoryName)
+            count = count + 1
+
+        }
+
+        //메뉴 tablayout 연결
+        val foodAdapter = MenuFragmentAdapter(this,count)
+        binding.pagerFood.adapter = foodAdapter
+
+        //tabMenu 연결
+        TabLayoutMediator(binding.foodTabLayout, binding.pagerFood)
+        {
+                tab, position -> tab.text = tabMenuName[position].toString()
+        }.attach()
+
+        //탭이 선택되었을 때, 뷰페이저가 같이 변경되도록
+        binding.foodTabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                binding.pagerFood.setCurrentItem(tab!!.position, false)
+            }
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+
+            }
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+
+            }
+        })
 
         // tab1 ( 배달 / 포장 )
         tabName.add("배달 ${response.result.storeMinDeliveryTime}-${response.result.storeMaxDeliveryTime}분")
@@ -190,6 +199,10 @@ InformationRestaurantActivityView{
                     )
                 }
             }
+        }
+
+        if(ReviewList.size == 0) {
+            binding.recycelerviewReview.visibility = View.INVISIBLE
         }
 
         val adapterReview = ReviewPagerAdapter(ReviewList)

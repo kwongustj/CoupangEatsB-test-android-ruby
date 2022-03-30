@@ -47,7 +47,6 @@ class HomeService(val view: HomeFragmentView) {
                 call: Call<RestaurantResponse>,
                 response: Response<RestaurantResponse>
             ) {
-                Log.e("tryGetRestaurant","onResponse까지 성공")
                 Log.e("body",response.body().toString())
                 view.onGetRestaurantSuccess(response.body() as RestaurantResponse)
             }

@@ -2,16 +2,13 @@ package com.example.android_coupangeats.src.main.restaurant
 
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.annotation.RequiresApi
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseFragment
 import com.example.android_coupangeats.databinding.FragmentDeliveryBinding
-import com.example.android_coupangeats.src.main.home.Restaurant
 import com.example.android_coupangeats.src.main.restaurant.models.InformationRestaurantResponse
-import com.example.android_coupangeats.src.main.restaurant.models.ReviewResponse
 import java.text.DecimalFormat
 
 class DeliveryFragment() : BaseFragment<FragmentDeliveryBinding>(FragmentDeliveryBinding::bind, R.layout.fragment_delivery),
@@ -20,7 +17,6 @@ class DeliveryFragment() : BaseFragment<FragmentDeliveryBinding>(FragmentDeliver
 
     val idxNum = ApplicationClass.sSharedPreferences.getString("store_num"," ")!!.toInt()
 
-    var ReviewList = arrayListOf<Review>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
