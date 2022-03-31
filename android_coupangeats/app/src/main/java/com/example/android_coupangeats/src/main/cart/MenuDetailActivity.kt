@@ -14,6 +14,7 @@ import java.text.DecimalFormat
 class MenuDetailActivity : BaseActivity<ActivityMenuDetailBinding>(ActivityMenuDetailBinding::inflate),
 MenuDetailActivityView{
 
+    var menu_num = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,6 +30,7 @@ MenuDetailActivityView{
             intent.putExtra("name","${binding.txtTitle.text}")
             intent.putExtra("price","${binding.txtPrice.text}")
             intent.putExtra("count","${binding.txtCount.text}")
+            intent.putExtra("Idx","${menu_num}")
             startActivity(intent)
         }
 
@@ -44,6 +46,8 @@ MenuDetailActivityView{
                 .into(binding.img)
         }
 
+        //menu_idx
+        menu_num = response.result.menu.menuIdx
 
         binding.txtDetail.setText("${response.result.menu.menuDetail}")
         binding.txtTitle.setText("${response.result.menu.menuName}")

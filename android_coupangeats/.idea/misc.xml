@@ -58,6 +58,7 @@
         <entry key="app/src/main/res/layout/item_layout_banner.xml" value="0.1" />
         <entry key="app/src/main/res/layout/menu_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/my_cart_item.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/order_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/restaurant_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/review_item.xml" value="0.335" />
         <entry key="app/src/main/res/layout/type_item.xml" value="0.8973004274364973" />

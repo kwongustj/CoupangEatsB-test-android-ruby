@@ -15,6 +15,7 @@ import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.config.BaseResponse
 import com.example.android_coupangeats.databinding.ActivityInformationRestaurantBinding
+import com.example.android_coupangeats.src.main.mycart.models.OrderResponse
 import com.example.android_coupangeats.src.main.restaurant.models.InformationRestaurantResponse
 import com.example.android_coupangeats.src.main.restaurant.models.PostFavoriteRequest
 import com.example.android_coupangeats.src.main.restaurant.models.PostFavoriteResponse
@@ -247,6 +248,14 @@ InformationRestaurantActivityView{
     }
 
     override fun onPatchFavoriteRestaurantFailure(response: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPostOrderSuccess(response: OrderResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPostOrderFailure(message: String) {
         TODO("Not yet implemented")
     }
 

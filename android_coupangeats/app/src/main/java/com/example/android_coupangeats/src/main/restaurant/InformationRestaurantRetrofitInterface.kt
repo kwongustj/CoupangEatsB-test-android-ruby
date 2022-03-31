@@ -1,6 +1,8 @@
 package com.example.android_coupangeats.src.main.restaurant
 
 import com.example.android_coupangeats.config.BaseResponse
+import com.example.android_coupangeats.src.main.mycart.models.OrderResponse
+import com.example.android_coupangeats.src.main.mycart.models.PostOrderRequest
 import com.example.android_coupangeats.src.main.restaurant.models.InformationRestaurantResponse
 import com.example.android_coupangeats.src.main.restaurant.models.PostFavoriteRequest
 import com.example.android_coupangeats.src.main.restaurant.models.PostFavoriteResponse
@@ -35,5 +37,8 @@ interface InformationRestaurantRetrofitInterface {
         @Body params: PostFavoriteRequest,
         @Query("user-idx") param : String
     ): Call<PostFavoriteResponse>
+
+    @POST("/app/order")
+    fun postOrder(@Body params: PostOrderRequest): Call<OrderResponse>
 
 }

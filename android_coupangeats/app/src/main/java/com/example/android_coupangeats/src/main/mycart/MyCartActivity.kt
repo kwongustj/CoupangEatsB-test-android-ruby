@@ -1,17 +1,13 @@
 package com.example.android_coupangeats.src.main.mycart
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.recyclerview.widget.RecyclerView
-import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseActivity
 import com.example.android_coupangeats.databinding.ActivityMyCartBinding
-import com.example.android_coupangeats.src.main.home.RestaurantViewPagerAdapter
-import com.example.android_coupangeats.src.main.home.Type
-import com.example.android_coupangeats.src.main.home.TypeRecyclerViewAdapter
-import com.example.android_coupangeats.src.main.restaurant.BannerViewPagerAdapter
+import com.example.android_coupangeats.src.main.mycart.models.OrderDetail
+import com.example.android_coupangeats.src.main.mycart.models.OrderResponse
+import com.example.android_coupangeats.src.main.mycart.models.PostOrderRequest
 import com.example.android_coupangeats.src.main.restaurant.FragmentAdapterMyCart
 import com.example.android_coupangeats.src.main.restaurant.InformationRestaurantActivityView
 import com.example.android_coupangeats.src.main.restaurant.InformationRestaurantService
@@ -32,21 +28,37 @@ class MyCartActivity : BaseActivity<ActivityMyCartBinding>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //장바구니에 추가한 내용들 변수에 저장
+        val secondIntent = intent
+        secondIntent.getStringExtra("name")
+
+        val name = secondIntent.getStringExtra("name")
+        val price = secondIntent.getStringExtra("price")
+        val count = secondIntent.getStringExtra("count")
+        val menuIdx = secondIntent.getStringExtra("count")
+
+        val idxNum = ApplicationClass.sSharedPreferences.getString("store_num"," ")!!.toInt()
+        val userNum = ApplicationClass.sSharedPreferences.getString("user_idx"," ")!!.toInt()
+        val foodNum = ApplicationClass.sSharedPreferences.getString("food_num"," ")!!.toInt()
+
         binding.btnCart.setOnClickListener {
             finish()
+            val postRequest = PostOrderRequest(
+                userIdx= userNum, userAddressIdx= 1, storeIdx = idxNum, paymentIdx = 1, orderRequestStore= "맛있게해주세요",
+                orderRequestDelivery = "조심히 와주세요", discount = 0,
+                orderDetailList = listOf(OrderDetail(1,foodNum,listOf(1,1)))
+            )
+            InformationRestaurantService(this,idxNum,userNum).tryPostOrder(postRequest)
+
         }
 
         binding.btnX.setOnClickListener {
             onBackPressed()
         }
 
-        val secondIntent = intent
-        secondIntent.getStringExtra("name")
 
-        CartList.add(MyCart("${secondIntent.getStringExtra("name")}","${secondIntent.getStringExtra("price")}","${secondIntent.getStringExtra("count")}"))
+        CartList.add(MyCart("${name}","${price}","${count}"))
 
-        val idxNum = ApplicationClass.sSharedPreferences.getString("store_num"," ")!!.toInt()
-        val userNum = ApplicationClass.sSharedPreferences.getString("user_idx"," ")!!.toInt()
         //식당 정보 가져오기
         InformationRestaurantService(this,idxNum,userNum).tryGetRestaurantInformation()
 
@@ -111,6 +123,14 @@ class MyCartActivity : BaseActivity<ActivityMyCartBinding>(
     }
 
     override fun onPatchFavoriteRestaurantFailure(response: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPostOrderSuccess(response: OrderResponse) {
+        Log.e("주문 성공!!!!!!!!","주문 성공 !!!!!!!!!!!!!!")
+    }
+
+    override fun onPostOrderFailure(message: String) {
         TODO("Not yet implemented")
     }
 

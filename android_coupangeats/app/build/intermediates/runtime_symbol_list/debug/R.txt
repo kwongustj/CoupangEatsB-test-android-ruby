@@ -3684,6 +3684,7 @@ int layout notification_template_media 0x7f0c0089
 int layout notification_template_media_custom 0x7f0c008a
 int layout notification_template_part_chronometer 0x7f0c008b
 int layout notification_template_part_time 0x7f0c008c
+int layout order_item 0x7f0c00a9
 int layout restaurant_item 0x7f0c008d
 int layout review_item 0x7f0c008e
 int layout select_dialog_item_material 0x7f0c008f

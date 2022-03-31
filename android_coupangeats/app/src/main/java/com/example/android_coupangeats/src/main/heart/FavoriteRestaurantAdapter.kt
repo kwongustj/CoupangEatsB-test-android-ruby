@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.android_coupangeats.R
 
 
@@ -22,7 +23,10 @@ class FavoriteRestaurantAdapter(val dataSet : ArrayList<FavoriteRestaurant>): Re
     }
 
     override fun onBindViewHolder(holder: FavoriteRestaurantAdapter.ViewHolder, position: Int) {
-        holder.imgBig.setImageResource(dataSet[position].img_big)
+        Glide.with(holder.imgBig)
+            .load(dataSet[position].img_big) // 불러올 이미지 url
+            .into(holder.imgBig)
+
         holder.name.setText(dataSet[position].name)
         holder.min.setText(dataSet[position].min)
         holder.star.setText(dataSet[position].star)
@@ -30,13 +34,13 @@ class FavoriteRestaurantAdapter(val dataSet : ArrayList<FavoriteRestaurant>): Re
         holder.distance.setText(dataSet[position].distance)
         holder.price.setText(dataSet[position].price)
 
-        if(dataSet[position].chita == true ) {
+        if(dataSet[position].chita == "1" ) {
             holder.chita.visibility = View.VISIBLE
         } else{
             holder.chita.visibility = View.GONE
         }
 
-        if(dataSet[position].come == true ) {
+        if(dataSet[position].come == "1" ) {
             holder.come.visibility = View.VISIBLE
         } else{
             holder.come.visibility = View.GONE
