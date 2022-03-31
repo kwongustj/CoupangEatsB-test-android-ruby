@@ -3380,6 +3380,7 @@ int id title_template 0x7f09024d
 int id toggle 0x7f09024e
 int id toolbar 0x7f09024f
 int id toolbar_layout 0x7f090250
+int id toolbarlayout 0x7f0902c3
 int id top 0x7f090251
 int id topPanel 0x7f090252
 int id touch_outside 0x7f090253
@@ -4176,6 +4177,7 @@ int style BottomNavigationView_Active 0x7f110114
 int style CardView 0x7f110115
 int style CardView_Dark 0x7f110116
 int style CardView_Light 0x7f110117
+int style CollapsingToolbar_TitleText 0x7f11043a
 int style EmptyTheme 0x7f110118
 int style MaterialAlertDialog_Material3 0x7f110119
 int style MaterialAlertDialog_Material3_Body_Text 0x7f11011a
@@ -4629,6 +4631,7 @@ int style ThemeOverlay_MaterialComponents_Toolbar_Popup_Primary 0x7f1102d9
 int style ThemeOverlay_MaterialComponents_Toolbar_Primary 0x7f1102da
 int style ThemeOverlay_MaterialComponents_Toolbar_Surface 0x7f1102db
 int style ThemeOverlayColorAccentRed 0x7f1102dc
+int style Toolbar_TitleText 0x7f11043b
 int style Widget_AppCompat_ActionBar 0x7f1102dd
 int style Widget_AppCompat_ActionBar_Solid 0x7f1102de
 int style Widget_AppCompat_ActionBar_TabBar 0x7f1102df

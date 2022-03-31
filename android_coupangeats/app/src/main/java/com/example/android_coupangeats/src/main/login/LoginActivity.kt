@@ -83,7 +83,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
     override fun onGetUserSuccess(response: LoginResponse) {
 
         val editor = sSharedPreferences.edit()
-
+        editor.putString("user_idx","${response.result.userIdx}")
+        Log.e("userIdx",response.result.userIdx.toString())
         editor.putString(X_ACCESS_TOKEN, response.result.jwt)
         editor.commit()
 

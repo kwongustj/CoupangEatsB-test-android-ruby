@@ -18,6 +18,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import androidx.viewpager2.widget.ViewPager2;
 import com.example.android_coupangeats.R;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -70,6 +71,9 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
   public final Toolbar toolbar;
 
   @NonNull
+  public final CollapsingToolbarLayout toolbarlayout;
+
+  @NonNull
   public final TextView txtPageAll;
 
   @NonNull
@@ -88,7 +92,8 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
       @NonNull ConstraintLayout layoutTitle, @NonNull ViewPager2 pager,
       @NonNull ViewPager2 pagerFood, @NonNull RecyclerView recycelerviewReview,
       @NonNull TextView restarantName, @NonNull NestedScrollView scroll,
-      @NonNull TabLayout tabLayout, @NonNull Toolbar toolbar, @NonNull TextView txtPageAll,
+      @NonNull TabLayout tabLayout, @NonNull Toolbar toolbar,
+      @NonNull CollapsingToolbarLayout toolbarlayout, @NonNull TextView txtPageAll,
       @NonNull TextView txtPageNow, @NonNull TextView txtReviewNum, @NonNull TextView txtStar) {
     this.rootView = rootView;
     this.bannerImg = bannerImg;
@@ -105,6 +110,7 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
     this.scroll = scroll;
     this.tabLayout = tabLayout;
     this.toolbar = toolbar;
+    this.toolbarlayout = toolbarlayout;
     this.txtPageAll = txtPageAll;
     this.txtPageNow = txtPageNow;
     this.txtReviewNum = txtReviewNum;
@@ -222,6 +228,12 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.toolbarlayout;
+      CollapsingToolbarLayout toolbarlayout = ViewBindings.findChildViewById(rootView, id);
+      if (toolbarlayout == null) {
+        break missingId;
+      }
+
       id = R.id.txt_page_all;
       TextView txtPageAll = ViewBindings.findChildViewById(rootView, id);
       if (txtPageAll == null) {
@@ -248,8 +260,8 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
 
       return new ActivityInformationRestaurantBinding((CoordinatorLayout) rootView, bannerImg,
           cboxHeart, chita, foodTabLayout, imgMore, imgStar, layoutTitle, pager, pagerFood,
-          recycelerviewReview, restarantName, scroll, tabLayout, toolbar, txtPageAll, txtPageNow,
-          txtReviewNum, txtStar);
+          recycelerviewReview, restarantName, scroll, tabLayout, toolbar, toolbarlayout, txtPageAll,
+          txtPageNow, txtReviewNum, txtStar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

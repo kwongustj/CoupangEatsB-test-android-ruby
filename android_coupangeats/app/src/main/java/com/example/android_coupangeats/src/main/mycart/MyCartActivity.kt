@@ -1,5 +1,6 @@
 package com.example.android_coupangeats.src.main.mycart
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,7 @@ import com.example.android_coupangeats.src.main.restaurant.FragmentAdapterMyCart
 import com.example.android_coupangeats.src.main.restaurant.InformationRestaurantActivityView
 import com.example.android_coupangeats.src.main.restaurant.InformationRestaurantService
 import com.example.android_coupangeats.src.main.restaurant.models.InformationRestaurantResponse
+import com.example.android_coupangeats.src.main.restaurant.models.PostFavoriteResponse
 import com.example.android_coupangeats.src.main.restaurant.models.ReviewResponse
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -25,11 +27,7 @@ class MyCartActivity : BaseActivity<ActivityMyCartBinding>(
 
     var tabName = arrayListOf<String>()
 
-    val CartList = arrayListOf<MyCart>(
-        MyCart("돈가스","5,000원","4"),
-        MyCart("돈가스","5,000원","4"),
-        MyCart("돈가스","5,000원","4")
-    )
+    val CartList = arrayListOf<MyCart>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,10 +40,15 @@ class MyCartActivity : BaseActivity<ActivityMyCartBinding>(
             onBackPressed()
         }
 
-        val idxNum = ApplicationClass.sSharedPreferences.getString("store_num"," ")!!.toInt()
+        val secondIntent = intent
+        secondIntent.getStringExtra("name")
 
+        CartList.add(MyCart("${secondIntent.getStringExtra("name")}","${secondIntent.getStringExtra("price")}","${secondIntent.getStringExtra("count")}"))
+
+        val idxNum = ApplicationClass.sSharedPreferences.getString("store_num"," ")!!.toInt()
+        val userNum = ApplicationClass.sSharedPreferences.getString("user_idx"," ")!!.toInt()
         //식당 정보 가져오기
-        InformationRestaurantService(this,idxNum).tryGetRestaurantInformation()
+        InformationRestaurantService(this,idxNum,userNum).tryGetRestaurantInformation()
 
         //tablayout 연결
         val adapter = FragmentAdapterMyCart(this)
@@ -56,6 +59,7 @@ class MyCartActivity : BaseActivity<ActivityMyCartBinding>(
         val adapterCart = MyCartPagerAdapter(CartList)
         binding.cartRecyclerview.adapter = adapterCart
 
+        binding.btnCart.setText("배달주문 ${secondIntent.getStringExtra("price")} 결제하기")
 
     }
 
@@ -91,6 +95,22 @@ class MyCartActivity : BaseActivity<ActivityMyCartBinding>(
     }
 
     override fun onReviewgetFailure(message: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPostFavoriteRestaurantSuccess(response: PostFavoriteResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPostFavoriteRestaurantFailure(response: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPatchFavoriteRestaurantSuccess(response: PostFavoriteResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPatchFavoriteRestaurantFailure(response: String) {
         TODO("Not yet implemented")
     }
 

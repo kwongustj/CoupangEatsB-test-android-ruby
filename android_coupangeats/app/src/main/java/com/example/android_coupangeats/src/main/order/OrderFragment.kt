@@ -19,6 +19,7 @@ class OrderFragment : BaseFragment<FragmentOrderBinding>(FragmentOrderBinding::b
         val adapter = FragmentAdapterMyOrder(this)
         binding.orderPager.adapter = adapter
 
+
         // tab1 ( 과거 주문 내역 / 준비중 )
         //슬라이드로 이동했을 때, 탭이 같이 변경되도록
         TabLayoutMediator(binding.tabLayout, binding.orderPager)

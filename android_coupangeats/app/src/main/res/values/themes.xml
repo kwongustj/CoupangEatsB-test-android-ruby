@@ -53,4 +53,12 @@
 
     <style name="Theme.Android_coupangeats.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="CollapsingToolbar.TitleText" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
 </resources>

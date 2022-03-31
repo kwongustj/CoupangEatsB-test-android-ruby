@@ -57,7 +57,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
         super.onViewCreated(view, savedInstanceState)
 
             //음식점 가져오기
-        HomeService(this).tryGetRestaurant()
+             HomeService(this).tryGetRestaurant()
 
 
             //HomeFragment 주소 설정하기
@@ -152,6 +152,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
 
     override fun onGetRestaurantSuccess(response: RestaurantResponse) {
 
+        Log.e("response","{$response}")
          //RestaurantList에 데이터 추가하기
         for(i in response.result) {
             if (i.storeImgUrl.size == 3) {

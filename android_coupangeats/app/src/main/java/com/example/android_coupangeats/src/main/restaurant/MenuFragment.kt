@@ -48,7 +48,7 @@ class MenuFragment(pageNum: Int) : BaseFragment<FragmentMenuBinding>(FragmentMen
                 FoodList.add(
                     Food(
                         j.menuIdx,
-                        "https://ifh.cc/g/rBrQ4y.png",
+                        j.menuImgUrl,
                         j.menuName,
                         j.menuPrice.toString(),
                         j.menuDetail
@@ -58,7 +58,7 @@ class MenuFragment(pageNum: Int) : BaseFragment<FragmentMenuBinding>(FragmentMen
             Log.e("왜 url가 안나오는 지 실험 중_FoodList","${FoodList}")
 
         }
-//        //MenuFragment Menu 보여주기 _ RecyclerView
+//        //MenuFragment com.example.android_coupangeats.src.main.home.models.Menu 보여주기 _ RecyclerView
         val adapterFood = FoodViewPagerAdapter(FoodList)
         binding.recycelerviewMenu.adapter = adapterFood
     }

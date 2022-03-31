@@ -4,15 +4,23 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.Message
+import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 import android.widget.ScrollView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.ApplicationClass
 import com.example.android_coupangeats.config.BaseActivity
+import com.example.android_coupangeats.config.BaseResponse
 import com.example.android_coupangeats.databinding.ActivityInformationRestaurantBinding
 import com.example.android_coupangeats.src.main.restaurant.models.InformationRestaurantResponse
+import com.example.android_coupangeats.src.main.restaurant.models.PostFavoriteRequest
+import com.example.android_coupangeats.src.main.restaurant.models.PostFavoriteResponse
 import com.example.android_coupangeats.src.main.restaurant.models.ReviewResponse
+import com.example.android_coupangeats.src.main.signup.SignUpService
+import com.example.android_coupangeats.src.main.signup.models.PostSignUpRequest
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -32,17 +40,30 @@ InformationRestaurantActivityView{
         super.onCreate(savedInstanceState)
 
         val idxNum = ApplicationClass.sSharedPreferences.getString("store_num"," ")!!.toInt()
+        val userNum = ApplicationClass.sSharedPreferences.getString("user_idx"," ")!!.toInt()
 
+        Log.e("idxNum, userNum", "${idxNum},${userNum}")
+        val postRequest = PostFavoriteRequest(user_idx = "${userNum}",store_idx = "${idxNum}")
+        Log.e("postfaborie","${postRequest}")
         //식당 정보 가져오기
-        InformationRestaurantService(this,idxNum).tryGetRestaurantInformation()
+        InformationRestaurantService(this,idxNum,userNum).tryGetRestaurantInformation()
 
         //리뷰 정보 가져오기
-        InformationRestaurantService(this, idxNum).tryGetReview()
+        InformationRestaurantService(this, idxNum,userNum).tryGetReview()
 
         //tablayout 연결
         val adapter = FragmentAdapter(this)
         binding.pager.adapter = adapter
 
+        //checkbox클릭
+
+        binding.cboxHeart.setOnClickListener {
+            if(binding.cboxHeart.isChecked == true) {
+                InformationRestaurantService(this,idxNum,userNum).tryPostFavorite(postRequest)
+            } else {
+
+            }
+        }
 
     }
 
@@ -210,6 +231,22 @@ InformationRestaurantActivityView{
     }
 
     override fun onReviewgetFailure(message: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPostFavoriteRestaurantSuccess(response: PostFavoriteResponse) {
+        Log.e("response","성공")
+    }
+
+    override fun onPostFavoriteRestaurantFailure(response: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPatchFavoriteRestaurantSuccess(response: PostFavoriteResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPatchFavoriteRestaurantFailure(response: String) {
         TODO("Not yet implemented")
     }
 

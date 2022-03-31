@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_coupangeats.R
+import java.text.DecimalFormat
 
 
 class MyCartPagerAdapter(val dataSet : ArrayList<MyCart>): RecyclerView.Adapter<MyCartPagerAdapter.ViewHolder>() {
@@ -21,6 +22,8 @@ class MyCartPagerAdapter(val dataSet : ArrayList<MyCart>): RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: MyCartPagerAdapter.ViewHolder, position: Int) {
 
+        val decimal = DecimalFormat("#,###")
+        holder.price.setText(dataSet[position].price)
         holder.name.setText(dataSet[position].name)
         holder.price.setText(dataSet[position].price)
         holder.count.setText(dataSet[position].count)

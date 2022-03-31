@@ -37,7 +37,6 @@ class FoodViewPagerAdapter(val dataSet : ArrayList<Food>): RecyclerView.Adapter<
         }
 
         val decimal = DecimalFormat("#,###")
-
         Glide.with(holder.imgSide1)
             .load(dataSet[position].img_side_1) // 불러올 이미지 url
             .into(holder.imgSide1)
