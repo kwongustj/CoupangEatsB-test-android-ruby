@@ -12,6 +12,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -60,6 +61,9 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
   public final TextView restarantName;
 
   @NonNull
+  public final NestedScrollView scroll;
+
+  @NonNull
   public final TabLayout tabLayout;
 
   @NonNull
@@ -83,9 +87,9 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
       @NonNull AppCompatImageView imgMore, @NonNull AppCompatImageView imgStar,
       @NonNull ConstraintLayout layoutTitle, @NonNull ViewPager2 pager,
       @NonNull ViewPager2 pagerFood, @NonNull RecyclerView recycelerviewReview,
-      @NonNull TextView restarantName, @NonNull TabLayout tabLayout, @NonNull Toolbar toolbar,
-      @NonNull TextView txtPageAll, @NonNull TextView txtPageNow, @NonNull TextView txtReviewNum,
-      @NonNull TextView txtStar) {
+      @NonNull TextView restarantName, @NonNull NestedScrollView scroll,
+      @NonNull TabLayout tabLayout, @NonNull Toolbar toolbar, @NonNull TextView txtPageAll,
+      @NonNull TextView txtPageNow, @NonNull TextView txtReviewNum, @NonNull TextView txtStar) {
     this.rootView = rootView;
     this.bannerImg = bannerImg;
     this.cboxHeart = cboxHeart;
@@ -98,6 +102,7 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
     this.pagerFood = pagerFood;
     this.recycelerviewReview = recycelerviewReview;
     this.restarantName = restarantName;
+    this.scroll = scroll;
     this.tabLayout = tabLayout;
     this.toolbar = toolbar;
     this.txtPageAll = txtPageAll;
@@ -199,6 +204,12 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.scroll;
+      NestedScrollView scroll = ViewBindings.findChildViewById(rootView, id);
+      if (scroll == null) {
+        break missingId;
+      }
+
       id = R.id.tab_layout;
       TabLayout tabLayout = ViewBindings.findChildViewById(rootView, id);
       if (tabLayout == null) {
@@ -237,7 +248,7 @@ public final class ActivityInformationRestaurantBinding implements ViewBinding {
 
       return new ActivityInformationRestaurantBinding((CoordinatorLayout) rootView, bannerImg,
           cboxHeart, chita, foodTabLayout, imgMore, imgStar, layoutTitle, pager, pagerFood,
-          recycelerviewReview, restarantName, tabLayout, toolbar, txtPageAll, txtPageNow,
+          recycelerviewReview, restarantName, scroll, tabLayout, toolbar, txtPageAll, txtPageNow,
           txtReviewNum, txtStar);
     }
     String missingId = rootView.getResources().getResourceName(id);

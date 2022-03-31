@@ -24,6 +24,8 @@ com/example/android_coupangeats/databinding/ContentScrollingBinding.java
  com.example.android_coupangeats.databinding.ContentScrollingBinding
 com/example/android_coupangeats/databinding/MenuItemBinding.java
  com.example.android_coupangeats.databinding.MenuItemBinding
+com/example/android_coupangeats/databinding/FragmentReadyBinding.java
+ com.example.android_coupangeats.databinding.FragmentReadyBinding
 com/example/android_coupangeats/databinding/BottomSheetLayoutBinding.java
  com.example.android_coupangeats.databinding.BottomSheetLayoutBinding
 com/example/android_coupangeats/databinding/RestaurantItemBinding.java
@@ -40,6 +42,8 @@ com/example/android_coupangeats/databinding/FragmentMyPageBinding.java
  com.example.android_coupangeats.databinding.FragmentMyPageBinding
 com/example/android_coupangeats/databinding/ActivityMyLocationBinding.java
  com.example.android_coupangeats.databinding.ActivityMyLocationBinding
+com/example/android_coupangeats/databinding/FragmentBeforeOrderListBinding.java
+ com.example.android_coupangeats.databinding.FragmentBeforeOrderListBinding
 com/example/android_coupangeats/databinding/ActivityLoginBinding.java
  com.example.android_coupangeats.databinding.ActivityLoginBinding
 com/example/android_coupangeats/databinding/ActivityHeartBinding.java

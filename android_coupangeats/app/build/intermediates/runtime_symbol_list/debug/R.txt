@@ -2751,6 +2751,7 @@ int drawable notification_template_icon_low_bg 0x7f08011e
 int drawable notification_tile_bg 0x7f08011f
 int drawable notify_panel_notification_icon_bg 0x7f080120
 int drawable oneye 0x7f080121
+int drawable order_before 0x7f08013c
 int drawable order_icon 0x7f080122
 int drawable out 0x7f080123
 int drawable out_text_background 0x7f080124
@@ -3063,6 +3064,7 @@ int id img_heart 0x7f090118
 int id img_heart_example 0x7f090119
 int id img_home 0x7f09011a
 int id img_job 0x7f09011b
+int id img_list 0x7f0902be
 int id img_logo 0x7f09011c
 int id img_minus 0x7f0902b0
 int id img_more 0x7f09011d
@@ -3235,6 +3237,7 @@ int id notification_main_column_container 0x7f0901bf
 int id off 0x7f0901c0
 int id on 0x7f0901c1
 int id onInterceptTouchReturnSwipe 0x7f0901c2
+int id order_pager 0x7f0902bf
 int id outline 0x7f0901c3
 int id outward 0x7f0901c4
 int id overshoot 0x7f0901c5
@@ -3596,12 +3599,14 @@ int layout design_text_input_end_icon 0x7f0c0038
 int layout design_text_input_start_icon 0x7f0c0039
 int layout dialog_loading 0x7f0c003a
 int layout favorite_restaurant_item 0x7f0c003b
+int layout fragment_before_order_list 0x7f0c00a7
 int layout fragment_delivery 0x7f0c003c
 int layout fragment_home 0x7f0c003d
 int layout fragment_menu 0x7f0c003e
 int layout fragment_my_page 0x7f0c003f
 int layout fragment_order 0x7f0c0040
 int layout fragment_packing 0x7f0c0041
+int layout fragment_ready 0x7f0c00a8
 int layout fragment_search 0x7f0c0042
 int layout item_layout_banner 0x7f0c0043
 int layout m3_alert_dialog 0x7f0c0044

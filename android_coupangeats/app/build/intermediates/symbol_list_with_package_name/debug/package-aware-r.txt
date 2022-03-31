@@ -2752,6 +2752,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable oneye
+drawable order_before
 drawable order_icon
 drawable out
 drawable out_text_background
@@ -3064,6 +3065,7 @@ id img_heart
 id img_heart_example
 id img_home
 id img_job
+id img_list
 id img_logo
 id img_minus
 id img_more
@@ -3236,6 +3238,7 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
+id order_pager
 id outline
 id outward
 id overshoot
@@ -3597,12 +3600,14 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_loading
 layout favorite_restaurant_item
+layout fragment_before_order_list
 layout fragment_delivery
 layout fragment_home
 layout fragment_menu
 layout fragment_my_page
 layout fragment_order
 layout fragment_packing
+layout fragment_ready
 layout fragment_search
 layout item_layout_banner
 layout m3_alert_dialog

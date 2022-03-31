@@ -4,13 +4,14 @@ package com.example.android_coupangeats.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import androidx.viewpager2.widget.ViewPager2;
 import com.example.android_coupangeats.R;
+import com.google.android.material.tabs.TabLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,11 +21,16 @@ public final class FragmentOrderBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button button;
+  public final ViewPager2 orderPager;
 
-  private FragmentOrderBinding(@NonNull ConstraintLayout rootView, @NonNull Button button) {
+  @NonNull
+  public final TabLayout tabLayout;
+
+  private FragmentOrderBinding(@NonNull ConstraintLayout rootView, @NonNull ViewPager2 orderPager,
+      @NonNull TabLayout tabLayout) {
     this.rootView = rootView;
-    this.button = button;
+    this.orderPager = orderPager;
+    this.tabLayout = tabLayout;
   }
 
   @Override
@@ -54,13 +60,19 @@ public final class FragmentOrderBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button;
-      Button button = ViewBindings.findChildViewById(rootView, id);
-      if (button == null) {
+      id = R.id.order_pager;
+      ViewPager2 orderPager = ViewBindings.findChildViewById(rootView, id);
+      if (orderPager == null) {
         break missingId;
       }
 
-      return new FragmentOrderBinding((ConstraintLayout) rootView, button);
+      id = R.id.tab_layout;
+      TabLayout tabLayout = ViewBindings.findChildViewById(rootView, id);
+      if (tabLayout == null) {
+        break missingId;
+      }
+
+      return new FragmentOrderBinding((ConstraintLayout) rootView, orderPager, tabLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

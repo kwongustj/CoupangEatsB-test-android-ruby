@@ -1,6 +1,7 @@
 package com.example.android_coupangeats.src.main.mycart
 
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_coupangeats.R
 import com.example.android_coupangeats.config.ApplicationClass
@@ -33,6 +34,14 @@ class MyCartActivity : BaseActivity<ActivityMyCartBinding>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        binding.btnCart.setOnClickListener {
+            finish()
+        }
+
+        binding.btnX.setOnClickListener {
+            onBackPressed()
+        }
+
         val idxNum = ApplicationClass.sSharedPreferences.getString("store_num"," ")!!.toInt()
 
         //식당 정보 가져오기
@@ -43,6 +52,7 @@ class MyCartActivity : BaseActivity<ActivityMyCartBinding>(
         binding.pager.adapter = adapter
 
         //장바구니 담겨있는거 가져오기
+
         val adapterCart = MyCartPagerAdapter(CartList)
         binding.cartRecyclerview.adapter = adapterCart
 

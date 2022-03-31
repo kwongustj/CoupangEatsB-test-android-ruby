@@ -5,6 +5,7 @@ import android.os.Handler
 import android.os.Looper
 import android.os.Message
 import android.view.View
+import android.widget.ScrollView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.android_coupangeats.config.ApplicationClass
@@ -210,6 +211,11 @@ InformationRestaurantActivityView{
 
     override fun onReviewgetFailure(message: String) {
         TODO("Not yet implemented")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        binding.scroll.fullScroll(ScrollView.FOCUS_UP)
     }
 
 }

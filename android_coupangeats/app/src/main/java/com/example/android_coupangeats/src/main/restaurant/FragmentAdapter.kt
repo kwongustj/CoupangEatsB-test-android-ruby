@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.android_coupangeats.config.BaseFragment
 import com.example.android_coupangeats.src.main.mycart.MyCartActivity
+import com.example.android_coupangeats.src.main.order.BeForeOrderListFragment
+import com.example.android_coupangeats.src.main.order.OrderFragment
+import com.example.android_coupangeats.src.main.order.ReadyFragment
 
 class FragmentAdapter(fragment: InformationRestaurantActivity) : FragmentStateAdapter(fragment) {
 
@@ -27,6 +30,18 @@ class FragmentAdapterMyCart(fragment: MyCartActivity) : FragmentStateAdapter(fra
             0 -> DeliveryFragment()
             1 -> PackingFragment()
             else -> DeliveryFragment() }
+    }
+}
+
+class FragmentAdapterMyOrder(fragment: OrderFragment) : FragmentStateAdapter(fragment) {
+
+    override fun getItemCount(): Int = 2
+
+    override fun createFragment(position: Int): Fragment {
+        return when (position) {
+            0 -> BeForeOrderListFragment()
+            1 -> ReadyFragment()
+            else -> ReadyFragment() }
     }
 }
 
