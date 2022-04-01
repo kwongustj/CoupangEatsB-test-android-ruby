@@ -47,10 +47,25 @@
   - 있으면 화면에 recyclerview로 출력
  
 < Day 9 > (일)
-- 지도 sdk로 내 위치 구현
+- 지도 sdk로 지도 레이아웃
 
 < Day 10 > (월)
 - 홈화면 가게 ApI 연동
 
-< 현재까지 구현 사항 동영상 >
+< Day 11 > (화)
+- 가게별 상세 레이아웃 & API 연동
+- TabLayout 2개 생성 -> 윗부분, 아래 메뉴 부분
+- Collapsingtoolbarlayout 구현
 
+< Day 12 > (화)
+- 즐겨찾기 추가 Layout & API 연동 
+- 즐겨찾기 내역 Layout & API 연동 
+- 즐겨찾기  Layout & API 연동 
+
+< Day 13 > (수)
+- 장바구니 레이아웃 & API 연동
+- 메뉴 상세 부분 레이아웃 & API 연동
+- 
+< Day 14 > (목)
+- 카테고리별 가게 레이아웃 & API 연동
+- 주문 내역 부분 레이아웃 & API 연동 
