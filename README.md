@@ -1,5 +1,8 @@
 # CoupangEats test - android Ruby
 
+< notion >
+https://www.notion.so/Rising-Camp-Coupang-Eats-B-4a83ab50a5f14d2598d14cc79f142336
+
 <최종 제출 동영상 구글 드라이브>      
 https://drive.google.com/file/d/19KPyj2AFfV7JVOfx9CVcjjqvgk0Js0FF/view?usp=sharing
 
